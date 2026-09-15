@@ -297,3 +297,168 @@ footer{ border-top:1px solid var(--border); }
     transform:translateY(0);
   }
 }
+
+/* =====================================
+   ANIMAÇÕES DE ENTRADA
+===================================== */
+
+@media (prefers-reduced-motion:no-preference){
+
+  .stage-card,
+  .panel,
+  .image-card{
+    opacity:.01;
+    transform:translateY(18px);
+    transition:
+      opacity .6s ease,
+      transform .6s ease,
+      border-color .25s ease,
+      box-shadow .25s ease;
+  }
+
+  .stage-card.is-visible,
+  .panel.is-visible,
+  .image-card.is-visible{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* =====================================
+   CAMINHÃO ANIMADO
+===================================== */
+
+.road-container{
+  position:relative;
+  height:90px;
+  overflow:hidden;
+  margin:40px 0;
+}
+
+.road{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:25px;
+  height:8px;
+  background:var(--border);
+}
+
+.road::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    repeating-linear-gradient(
+      to right,
+      var(--accent) 0 20px,
+      transparent 20px 40px
+    );
+
+  animation:roadMove 1s linear infinite;
+}
+
+.truck{
+  position:absolute;
+  left:-80px;
+  bottom:32px;
+
+  font-size:2.2rem;
+
+  animation:drive 12s linear infinite;
+}
+
+@keyframes drive{
+  from{
+    left:-80px;
+  }
+
+  to{
+    left:110%;
+  }
+}
+
+@keyframes roadMove{
+  from{
+    background-position:0 0;
+  }
+
+  to{
+    background-position:-40px 0;
+  }
+}
+
+/* =====================================
+   RESPONSIVIDADE EXTRA
+===================================== */
+
+@media (max-width:1024px){
+
+  .hero-box{
+    padding:3rem;
+  }
+
+  .flow-row{
+    justify-content:center;
+  }
+
+  .pipeline-image,
+  .refinery-image{
+    height:300px;
+  }
+}
+
+@media (max-width:640px){
+
+  h1{
+    font-size:2.3rem !important;
+    line-height:1.1;
+  }
+
+  h2{
+    font-size:1.8rem !important;
+  }
+
+  .hero-box{
+    padding:1.5rem;
+  }
+
+  .panel,
+  .stage-card{
+    padding:1rem;
+  }
+
+  .flow-step{
+    width:100%;
+    text-align:center;
+  }
+
+  .flow-arrow{
+    display:none;
+  }
+
+  .road-container{
+    height:70px;
+  }
+
+  .truck{
+    font-size:1.8rem;
+  }
+}
+
+@media (max-width:380px){
+
+  .eyebrow{
+    font-size:.62rem;
+  }
+
+  .tag{
+    font-size:.58rem;
+  }
+
+  .to-top{
+    width:36px;
+    height:36px;
+  }
+}
