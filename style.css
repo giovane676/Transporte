@@ -1,14 +1,16 @@
 /* =========================================================
-   PETROLOG — Folha de estilos
+    PETROLOG — Folha de estilos
 ========================================================= */
 
 :root{
-  --bg:#0E1013;
-  --panel:#16191E;
-  --border:#2A2F37;
-  --text:#EDEDEA;
-  --muted:#98A0AC;
-  --accent:#F2A93B;
+  --bg:#F6F8FA;
+  --panel:#FFFFFF;
+  --border:#DCE3EA;
+
+  --text:#1F2937;
+  --muted:#6B7280;
+
+  --accent:#E67E22;
 }
 
 *{ box-sizing:border-box; }
