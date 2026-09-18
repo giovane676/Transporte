@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transporte Ferroviário — PetroLog | Trens-Tanque</title>
+  <meta name="description" content="Modal Ferroviário da PetroLog: trens-tanque para movimentação pesada de petróleo com alta eficiência energética.">
+
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+          </svg>
+        </div>
+        <div>
+          <span class="logo-title">Petro<span>Log</span></span>
+          <span class="logo-subtitle">Transporte de Petróleo</span>
+        </div>
+      </a>
+
+      <nav aria-label="Navegação Principal">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="dutoviario.html" class="nav-link">Oleodutos <span class="badge-destaque">Destaque</span></a></li>
+          <li><a href="rodoviario.html" class="nav-link">Rodoviário</a></li>
+          <li><a href="maritimo.html" class="nav-link">Marítimo</a></li>
+          <li><a href="ferroviario.html" class="nav-link active">Ferroviário</a></li>
+          <li><a href="equipe.html" class="nav-link" style="color: var(--orange-accent); font-weight: 700;">Equipe</a></li>
+        </ul>
+      </nav>
+
+      <button id="mobileMenuBtn" class="mobile-btn" aria-label="Abrir Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div id="mobileDrawer" class="mobile-menu-drawer">
+      <a href="index.html" class="nav-link">Início</a>
+      <a href="dutoviario.html" class="nav-link">Oleodutos (Destaque)</a>
+      <a href="rodoviario.html" class="nav-link">Rodoviário</a>
+      <a href="maritimo.html" class="nav-link">Marítimo</a>
+      <a href="ferroviario.html" class="nav-link active">Ferroviário</a>
+      <a href="equipe.html" class="nav-link" style="color: var(--orange-accent);">Equipe do Projeto</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-wrapper">
+      <canvas id="pipelineCanvas"></canvas>
+
+      <div class="container hero-content">
+        <div class="eyebrow-tag">
+          MODAL FERROVIÁRIO • CARGAS PESADAS
+        </div>
+
+        <h1 class="hero-title">
+          Trens-Tanque <span class="highlight-gradient">nos Trilhos</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Potência para puxar centenas de milhares de litros de petróleo em longas distâncias terrestres, reduzindo trânsito e economizando combustível.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- Animação do Trem nos Trilhos -->
+        <div class="stage-rail">
+          <div class="rail-track"></div>
+
+          <div class="train-graphic">
+            <!-- Locomotiva -->
+            <svg width="145" height="72" viewBox="0 0 145 72" fill="none">
+              <rect x="5" y="14" width="130" height="40" rx="6" fill="#002B49" stroke="#00B4D8" stroke-width="1.8"/>
+              <path d="M115 14 L138 28 L138 54 L115 54 Z" fill="#002B49"/>
+              <rect x="118" y="20" width="15" height="12" fill="#00F0FF" opacity="0.8"/>
+              <circle cx="134" cy="44" r="4" fill="#FFB703"/>
+              <rect x="15" y="20" width="85" height="7" fill="#FF6B00"/>
+              <text x="32" y="42" fill="#FFFFFF" font-family="'JetBrains Mono'" font-size="9" font-weight="700">PETROLOG</text>
+              <circle cx="24" cy="58" r="7" fill="#090D16" stroke="#94A3B8" stroke-width="2"/>
+              <circle cx="44" cy="58" r="7" fill="#090D16" stroke="#94A3B8" stroke-width="2"/>
+              <circle cx="102" cy="58" r="7" fill="#090D16" stroke="#94A3B8" stroke-width="2"/>
+              <circle cx="122" cy="58" r="7" fill="#090D16" stroke="#94A3B8" stroke-width="2"/>
+            </svg>
+
+            <!-- Vagão 1 -->
+            <svg width="115" height="72" viewBox="0 0 115 72" fill="none">
+              <rect x="5" y="16" width="100" height="36" rx="14" fill="#64748B" stroke="#CBD5E1" stroke-width="1.8"/>
+              <rect x="42" y="11" width="25" height="5" fill="#FF6B00"/>
+              <text x="30" y="39" fill="#FFFFFF" font-family="'JetBrains Mono'" font-size="8" font-weight="700">TC-80.000L</text>
+              <circle cx="22" cy="58" r="7" fill="#090D16" stroke="#94A3B8" stroke-width="2"/>
+              <circle cx="92" cy="58" r="7" fill="#090D16" stroke="#94A3B8" stroke-width="2"/>
+            </svg>
+
+            <!-- Vagão 2 -->
+            <svg width="115" height="72" viewBox="0 0 115 72" fill="none">
+              <rect x="5" y="16" width="100" height="36" rx="14" fill="#64748B" stroke="#CBD5E1" stroke-width="1.8"/>
+              <rect x="42" y="11" width="25" height="5" fill="#FF6B00"/>
+              <text x="30" y="39" fill="#FFFFFF" font-family="'JetBrains Mono'" font-size="8" font-weight="700">TC-80.000L</text>
+              <circle cx="22" cy="58" r="7" fill="#090D16" stroke="#94A3B8" stroke-width="2"/>
+              <circle cx="92" cy="58" r="7" fill="#090D16" stroke="#94A3B8" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 3.5rem; display: flex; justify-content: center; gap: 1rem; align-items: center; flex-wrap: wrap;">
+          <button id="addWagonBtn" class="btn btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Simular Tamanho da Composição
+          </button>
+          <span id="wagonCounterDisplay" style="font-family: var(--font-mono); font-size: 0.95rem; font-weight: 700; color: var(--navy-dark); background: var(--bg-surface); padding: 8px 16px; border-radius: 8px; border: 1px solid var(--border-light);">
+            60 Vagões-Tanque
+          </span>
+        </div>
+
+        <!-- 3 Cards Arejados -->
+        <div class="clean-cards-grid">
+          <div class="card-clean">
+            <div class="card-badge" style="background: rgba(255, 183, 3, 0.12); color: #B45309;">
+              GRANDE ESCALA
+            </div>
+            <h3 class="card-heading">1 Trem = 200+ Caminhões</h3>
+            <p class="card-paragraph">
+              Uma única viagem de trem transporta o equivalente a mais de duas centenas de carretas, aliviando o tráfego nas rodovias.
+            </p>
+          </div>
+
+          <div class="card-clean">
+            <div class="card-badge" style="background: rgba(10, 147, 150, 0.1); color: var(--teal-petro);">
+              ISOLAMENTO TÉRMICO
+            </div>
+            <h3 class="card-heading">Vagões Isotérmicos</h3>
+            <p class="card-paragraph">
+              Construídos com mantas térmicas que evitam que o petróleo esfrie e aumente sua viscosidade ao longo de longas viagens continentais.
+            </p>
+          </div>
+
+          <div class="card-clean">
+            <div class="card-badge" style="background: rgba(0, 43, 73, 0.08); color: var(--navy-deep);">
+              EFICIÊNCIA
+            </div>
+            <h3 class="card-heading">Economia de Combustível</h3>
+            <p class="card-paragraph">
+              O atrito do aço da roda sobre o trilho é muito menor que o pneu no asfalto, reduzindo o consumo de diesel por tonelada transportada.
+            </p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem;">
+          <a href="equipe.html" class="btn btn-accent btn-lg">
+            Conhecer os Criadores (Página Equipe) ➔
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">Petro<span>Log</span></div>
+      <p class="footer-text">Trabalho Escolar • Transporte de Petróleo • Foco nos Modais</p>
+      <div class="footer-nav">
+        <a href="index.html">Início</a>
+        <a href="dutoviario.html">Oleodutos</a>
+        <a href="rodoviario.html">Rodoviário</a>
+        <a href="maritimo.html">Marítimo</a>
+        <a href="ferroviario.html">Ferroviário</a>
+        <a href="equipe.html" style="color: var(--orange-accent);">Equipe</a>
+      </div>
+      <div class="footer-copyright">© 2026 PetroLog — Projeto Escolar</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

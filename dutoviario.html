@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transporte Dutoviário — PetroLog | Oleodutos</title>
+  <meta name="description" content="Modal Dutoviário da PetroLog: oleodutos de alta vazão com fluxo contínuo de petróleo preto e robô PIG inteligente.">
+
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-badge">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+          </svg>
+        </div>
+        <div>
+          <span class="logo-title">Petro<span>Log</span></span>
+          <span class="logo-subtitle">Transporte de Petróleo</span>
+        </div>
+      </a>
+
+      <nav aria-label="Navegação Principal">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li>
+            <a href="dutoviario.html" class="nav-link active">
+              Oleodutos
+              <span class="badge-destaque">Destaque</span>
+            </a>
+          </li>
+          <li><a href="rodoviario.html" class="nav-link">Rodoviário</a></li>
+          <li><a href="maritimo.html" class="nav-link">Marítimo</a></li>
+          <li><a href="ferroviario.html" class="nav-link">Ferroviário</a></li>
+          <li><a href="equipe.html" class="nav-link" style="color: var(--orange-energy); font-weight: 800;">Equipe</a></li>
+        </ul>
+      </nav>
+
+      <button id="mobileMenuBtn" class="mobile-btn" aria-label="Abrir Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div id="mobileDrawer" class="mobile-menu-drawer">
+      <a href="index.html" class="nav-link">Início</a>
+      <a href="dutoviario.html" class="nav-link active">Oleodutos (Destaque)</a>
+      <a href="rodoviario.html" class="nav-link">Rodoviário</a>
+      <a href="maritimo.html" class="nav-link">Marítimo</a>
+      <a href="ferroviario.html" class="nav-link">Ferroviário</a>
+      <a href="equipe.html" class="nav-link" style="color: var(--orange-energy); font-weight: 800;">Equipe do Projeto</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero com Oleodutos Industriais em Fundo Sutil -->
+    <section class="hero-wrapper">
+      <canvas id="pipelineCanvas"></canvas>
+
+      <div class="container hero-content">
+        <div class="eyebrow-tag" style="background: rgba(15, 76, 129, 0.12); color: var(--petro-blue); border-color: rgba(15, 76, 129, 0.3);">
+          ★ PRINCIPAL DESTAQUE DO PROJETO • AZUL PETRÓLEO
+        </div>
+
+        <h1 class="hero-title">
+          Transporte <span class="highlight-gradient">Dutoviário</span> (Oleodutos)
+        </h1>
+
+        <p class="hero-subtitle">
+          A espinha dorsal do transporte contínuo. Tubulações reforçadas de aço carbono operando 24 horas por dia para movimentar petróleo com máxima segurança e menor pegada de carbono.
+        </p>
+      </div>
+    </section>
+
+    <!-- Seção do Simulador de Duto -->
+    <section class="section section-alt-blue">
+      <div class="container">
+        <div class="duto-showcase">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--petro-blue); font-weight: 700; text-transform: uppercase;">CORTE TRANSVERSAL ESQUEMÁTICO</span>
+              <h2 style="font-family: var(--font-heading); font-size: 1.65rem; color: var(--navy-dark); margin: 0.25rem 0 0;">
+                Fluxo Contínuo de Petróleo Preto
+              </h2>
+            </div>
+            <div class="badge-blue card-badge" style="margin-bottom: 0;">
+              ● Bombeamento 100% Ativo
+            </div>
+          </div>
+
+          <!-- Tubo com o Óleo Preto em Movimento -->
+          <div class="tube-container">
+            <div class="oil-stream-black">
+              <!-- Robô PIG Inteligente Amarelo/Dourado -->
+              <div id="smartPig" class="pig-device">
+                PIG 01
+              </div>
+            </div>
+          </div>
+
+          <!-- Painel Interativo -->
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem; background: var(--bg-soft-blue); padding: 1.5rem 1.75rem; border-radius: 14px; border: 1px solid rgba(15, 76, 129, 0.15);">
+            <div style="flex: 1; min-width: 250px;">
+              <label for="dutoSpeedSlider" style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.92rem; margin-bottom: 0.5rem; color: var(--navy-dark);">
+                <span>Velocidade de Bombeamento:</span>
+                <span id="speedValue" style="color: var(--orange-energy); font-family: var(--font-mono); font-weight: 800;">1.0x</span>
+              </label>
+              <input type="range" id="dutoSpeedSlider" min="0.5" max="2.5" step="0.5" value="1" style="width: 100%; cursor: pointer;">
+            </div>
+
+            <div>
+              <button id="launchPigBtn" class="btn btn-blue">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                Lançar Robô PIG no Tubo
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Cards Arejados e Coloridos -->
+        <div class="clean-cards-grid">
+          <div class="card-clean">
+            <div class="card-badge badge-blue">
+              24 HORAS POR DIA
+            </div>
+            <h3 class="card-heading">Fluxo Ininterrupto</h3>
+            <p class="card-paragraph">
+              Diferente de estradas ou navios sujeitos a clima e congestionamento, os dutos bombeiam petróleo ininterruptamente dia e noite sem paradas.
+            </p>
+          </div>
+
+          <div class="card-clean accent-orange">
+            <div class="card-badge badge-orange">
+              MEIO AMBIENTE
+            </div>
+            <h3 class="card-heading">Proteção do Solo</h3>
+            <p class="card-paragraph">
+              Ficam enterrados com proteção de aço API 5L e revestimento anticorrosivo tripla camada, isolando o óleo totalmente da superfície.
+            </p>
+          </div>
+
+          <div class="card-clean accent-gold">
+            <div class="card-badge badge-gold">
+              TECNOLOGIA
+            </div>
+            <h3 class="card-heading">Robôs PIGs Inteligentes</h3>
+            <p class="card-paragraph">
+              Dispositivos cilíndricos que viajam impulsionados pelo próprio petróleo para raspar impurezas e inspecionar a espessura do aço com precisão.
+            </p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 4.5rem;">
+          <a href="rodoviario.html" class="btn btn-orange btn-lg">
+            Próximo: Modal Rodoviário (Laranja) ➔
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">Petro<span>Log</span></div>
+      <p class="footer-text">Trabalho Escolar • Transporte de Petróleo • Modal Dutoviário em Destaque</p>
+      <div class="footer-nav">
+        <a href="index.html">Início</a>
+        <a href="dutoviario.html">Oleodutos</a>
+        <a href="rodoviario.html">Rodoviário</a>
+        <a href="maritimo.html">Marítimo</a>
+        <a href="ferroviario.html">Ferroviário</a>
+        <a href="equipe.html" style="color: var(--gold-energy);">Equipe</a>
+      </div>
+      <div class="footer-copyright">© 2026 PetroLog — Projeto Escolar</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

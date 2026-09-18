@@ -1,581 +1,246 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PETROLOG — Transporte, Oleodutos e Logística do Petróleo</title>
-<meta name="description" content="Trabalho acadêmico sobre a cadeia logística do petróleo: extração, transporte, oleodutos, refino e distribuição de derivados.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetroLog — O Futuro do Transporte de Petróleo</title>
+  <meta name="description" content="Projeto escolar da PetroLog focado no transporte de petróleo pelos modais dutoviário, rodoviário, marítimo e ferroviário.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
-
-<!-- Tailwind CSS (utilitários de layout, espaçamento e responsividade usados no HTML) -->
-<script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ============ HEADER ============ -->
-<header class="site">
-  <div class="max-w-6xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
-    <a href="#inicio" class="flex items-center gap-2">
-      <div class="font-display font-bold text-lg">PETROLOG</div>
-    </a>
-
-    <nav class="hidden lg:flex items-center gap-7">
-      <a href="#cadeia" class="nav-link">Cadeia do Petróleo</a>
-      <a href="#oleodutos" class="nav-link">Oleodutos</a>
-      <a href="#rodoviario" class="nav-link">Transporte Rodoviário</a>
-      <a href="#seguranca" class="nav-link">Segurança</a>
-      <a href="#impactos" class="nav-link">Impactos</a>
-      <a href="#legislacao" class="nav-link">Legislação</a>
-      <a href="#conclusao" class="nav-link">Conclusão</a>
-    </nav>
-
-    <button id="menuBtn" aria-label="Abrir menu" aria-expanded="false" class="lg:hidden p-2 border border-[var(--border)] rounded-lg">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EDEDEA" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </button>
-  </div>
-
-  <div id="mobileMenu" class="mobile-menu lg:hidden">
-    <div class="px-5 py-3 flex flex-col gap-1">
-      <a href="#inicio" class="py-2 nav-link mobile-link">Início</a>
-      <a href="#cadeia" class="py-2 nav-link mobile-link">Cadeia do Petróleo</a>
-      <a href="#oleodutos" class="py-2 nav-link mobile-link">Oleodutos</a>
-      <a href="#rodoviario" class="py-2 nav-link mobile-link">Transporte Rodoviário</a>
-      <a href="#seguranca" class="py-2 nav-link mobile-link">Segurança</a>
-      <a href="#impactos" class="py-2 nav-link mobile-link">Impactos</a>
-      <a href="#legislacao" class="py-2 nav-link mobile-link">Legislação</a>
-      <a href="#conclusao" class="py-2 nav-link mobile-link">Conclusão</a>
-    </div>
-  </div>
-</header>
-
-<main>
-
-<!-- ============ HERO ============ -->
-<section id="inicio" class="px-5 md:px-8 py-16 md:py-20">
-  <div class="max-w-6xl mx-auto hero-box px-6 md:px-14 py-14 md:py-20">
-    <p class="eyebrow mb-4">TRANSPORTE • ENERGIA • LOGÍSTICA</p>
-
-    <h1 class="font-display font-bold text-4xl sm:text-5xl md:text-6xl leading-tight max-w-2xl">
-      Do poço ao posto
-    </h1>
-
-    <p class="mt-5 max-w-xl text-[var(--muted)] text-base md:text-lg leading-relaxed">
-      Como o petróleo é transportado, refinado e distribuído por meio de uma rede logística multimodal — dutos, navios, terminais e caminhões trabalhando de forma integrada.
-    </p>
-
-    <div class="mt-8 flex flex-wrap gap-3">
-      <a href="#cadeia" class="px-5 py-3 rounded-lg bg-[var(--accent)] text-[#0E1013] font-semibold text-sm">Conheça a cadeia</a>
-      <a href="#oleodutos" class="px-5 py-3 rounded-lg border border-[var(--border)] text-[var(--text)] text-sm">Como funcionam os oleodutos</a>
-    </div>
-
-    <div class="image-card hero-image mt-10">
-      <img loading="eager" src="https://lh7-us.googleusercontent.com/MJsVUedvKydxIh5YzBiR0Z9U3qNYdbUAEYAmwwIMJFS-f5Hd5MW0jwlyvYSM4-VkHoSGJ42VljW0z3q7sYrCHKVH6VK8FFdOP72X_uW6amXF6NBCHgrwnaOc1ZvFkw3aYi4sX35hgxhb"
-           alt="Plataforma de petróleo em alto-mar">
-      <div class="image-caption">Infraestrutura de produção de petróleo offshore</div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SEÇÃO 1 — CADEIA DO PETRÓLEO ============ -->
-<section id="cadeia" class="py-20 px-5 md:px-8">
-  <div class="max-w-6xl mx-auto">
-    <p class="eyebrow">01 — Visão geral</p>
-    <h2 class="font-display font-bold text-3xl md:text-4xl mt-2 max-w-2xl">Da extração à distribuição</h2>
-    <div class="divider my-5"></div>
-    <p class="max-w-2xl text-[var(--muted)] leading-relaxed">
-      O petróleo bruto é extraído de campos terrestres ou de plataformas offshore. A partir daí, é movimentado até instalações de processamento, terminais ou refinarias por diferentes meios de transporte. Após o refino, os derivados — como gasolina, diesel e querosene — podem ser armazenados e distribuídos por diferentes modais até chegarem aos consumidores. <strong class="text-[var(--text)]">Não existe uma única sequência obrigatória:</strong> a rota real depende do produto, da origem e da infraestrutura disponível.
-    </p>
-
-    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      <div class="stage-card p-5">
-        <span class="font-mono text-[var(--accent)] text-xs">01</span>
-        <h3 class="font-display font-semibold mt-2">Extração</h3>
-        <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">O petróleo bruto é retirado de reservatórios em campos terrestres ou em plataformas offshore, no mar.</p>
-      </div>
-      <div class="stage-card p-5">
-        <span class="font-mono text-[var(--accent)] text-xs">02</span>
-        <h3 class="font-display font-semibold mt-2">Transporte inicial</h3>
-        <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">É movimentado por navios, oleodutos ou uma combinação de modais até terminais ou diretamente até refinarias.</p>
-      </div>
-      <div class="stage-card p-5">
-        <span class="font-mono text-[var(--accent)] text-xs">03</span>
-        <h3 class="font-display font-semibold mt-2">Terminais</h3>
-        <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">Instalações que recebem, armazenam temporariamente e transferem petróleo ou derivados entre modais.</p>
-      </div>
-      <div class="stage-card p-5">
-        <span class="font-mono text-[var(--accent)] text-xs">04</span>
-        <h3 class="font-display font-semibold mt-2">Refino</h3>
-        <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">Em refinarias, o petróleo bruto é transformado em derivados como gasolina, diesel, querosene e GLP.</p>
-      </div>
-      <div class="stage-card p-5">
-        <span class="font-mono text-[var(--accent)] text-xs">05</span>
-        <h3 class="font-display font-semibold mt-2">Distribuição</h3>
-        <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">Os derivados são armazenados em bases e distribuídos por dutos, navios ou caminhões até pontos de venda.</p>
-      </div>
-      <div class="stage-card p-5">
-        <span class="font-mono text-[var(--accent)] text-xs">06</span>
-        <h3 class="font-display font-semibold mt-2">Consumidor</h3>
-        <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">O derivado chega ao consumidor final — em postos de combustível, indústrias ou outros pontos de consumo.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SEÇÃO 2 — MODAIS ============ -->
-<section class="py-20 px-5 md:px-8 bg-[var(--panel)] border-y border-[var(--border)]">
-  <div class="max-w-6xl mx-auto">
-    <p class="eyebrow">02 — Comparativo</p>
-    <h2 class="font-display font-bold text-3xl md:text-4xl mt-2 max-w-2xl">Transporte do petróleo e seus derivados</h2>
-    <div class="divider my-5"></div>
-    <p class="max-w-2xl text-[var(--muted)] leading-relaxed">A movimentação pode envolver diferentes modais, muitas vezes de forma combinada (multimodal), conforme o produto, a distância e a infraestrutura disponível.</p>
-
-    <div class="grid md:grid-cols-3 gap-4 mt-10">
-      <div class="panel p-6">
-        <h3 class="font-display font-semibold text-lg">Transporte dutoviário</h3>
-        <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">Movimentação contínua por meio de oleodutos, ligando pontos fixos como campos, terminais e refinarias.</p>
-      </div>
-      <div class="panel p-6">
-        <h3 class="font-display font-semibold text-lg">Transporte aquaviário</h3>
-        <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">Navios e embarcações utilizados principalmente para grandes volumes e longas distâncias.</p>
-      </div>
-      <div class="panel p-6">
-        <h3 class="font-display font-semibold text-lg">Transporte rodoviário</h3>
-        <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">Caminhões-tanque utilizados sobretudo na distribuição e em trechos onde outros modais não estão disponíveis.</p>
-      </div>
-    </div>
-
-    <div class="mt-10 panel p-2 overflow-x-auto">
-      <table class="w-full text-sm min-w-[600px]">
-        <thead>
-          <tr class="text-left text-[var(--muted)] font-mono text-xs uppercase">
-            <th class="p-4">Critério</th>
-            <th class="p-4">Dutoviário</th>
-            <th class="p-4">Aquaviário</th>
-            <th class="p-4">Rodoviário</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="p-4 font-medium">Capacidade</td><td class="p-4 text-[var(--muted)]">Alta, contínua</td><td class="p-4 text-[var(--muted)]">Muito alta por viagem</td><td class="p-4 text-[var(--muted)]">Baixa a média</td></tr>
-          <tr><td class="p-4 font-medium">Flexibilidade de destino</td><td class="p-4 text-[var(--muted)]">Baixa (rota fixa)</td><td class="p-4 text-[var(--muted)]">Média (portos)</td><td class="p-4 text-[var(--muted)]">Alta</td></tr>
-          <tr><td class="p-4 font-medium">Uso típico</td><td class="p-4 text-[var(--muted)]">Grandes volumes contínuos</td><td class="p-4 text-[var(--muted)]">Longas distâncias/exportação</td><td class="p-4 text-[var(--muted)]">Distribuição final</td></tr>
-          <tr><td class="p-4 font-medium">Principal risco</td><td class="p-4 text-[var(--muted)]">Vazamento ao longo da rota</td><td class="p-4 text-[var(--muted)]">Derramamento em água</td><td class="p-4 text-[var(--muted)]">Acidente rodoviário</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SEÇÃO 3 — OLEODUTOS ============ -->
-<section id="oleodutos" class="py-20 px-5 md:px-8">
-  <div class="max-w-6xl mx-auto">
-    <p class="eyebrow">03 — As artérias da logística</p>
-    <h2 class="font-display font-bold text-3xl md:text-4xl mt-2 max-w-3xl">Oleodutos: as artérias da logística do petróleo</h2>
-    <div class="divider my-5"></div>
-    <p class="max-w-2xl text-[var(--muted)] leading-relaxed">
-      Um oleoduto é um sistema de tubos — terrestre ou submarino — utilizado para transportar petróleo, derivados líquidos e outros líquidos regulados. <strong class="text-[var(--text)]">Nem todo oleoduto transporta apenas petróleo bruto:</strong> muitos movimentam derivados e outros produtos, inclusive de forma sequencial pelo mesmo duto.
-    </p>
-
-    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-      <div class="panel p-5">
-        <p class="tag">Tipo</p>
-        <h4 class="font-display font-semibold mt-2 text-sm">Oleodutos de transporte</h4>
-        <p class="text-xs text-[var(--muted)] mt-2">Movimentam grandes volumes entre unidades, a longa distância.</p>
-      </div>
-      <div class="panel p-5">
-        <p class="tag">Tipo</p>
-        <h4 class="font-display font-semibold mt-2 text-sm">Oleodutos de transferência</h4>
-        <p class="text-xs text-[var(--muted)] mt-2">Ligam instalações próximas, como terminal e refinaria.</p>
-      </div>
-      <div class="panel p-5">
-        <p class="tag">Tipo</p>
-        <h4 class="font-display font-semibold mt-2 text-sm">Oleodutos portuários</h4>
-        <p class="text-xs text-[var(--muted)] mt-2">Conectam terminais aquaviários a instalações terrestres.</p>
-      </div>
-      <div class="panel p-5">
-        <p class="tag">Tipo</p>
-        <h4 class="font-display font-semibold mt-2 text-sm">Polidutos</h4>
-        <p class="text-xs text-[var(--muted)] mt-2">Transportam mais de um tipo de derivado, em lotes sequenciais.</p>
-      </div>
-    </div>
-
-    <div class="panel mt-10 p-6 md:p-8 overflow-x-auto">
-      <div class="flow-row min-w-[600px] justify-between">
-        <span class="flow-step">EXTRAÇÃO</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-step">TERMINAL</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-step">OLEODUTO</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-step">REFINARIA</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-step">TERMINAL / BASE</span>
-      </div>
-      <p class="text-xs text-[var(--muted)] mt-4 font-mono">Representação simplificada — a sequência real varia conforme produto e infraestrutura.</p>
-    </div>
-
-    <div class="image-card pipeline-image mt-8">
-      <img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuYmk9WNLcsz1PzC9NIdF1WeAITOaFF6oK6lHSY8SoSg&s=10"
-           alt="Tubulações industriais relacionadas ao transporte de petróleo">
-      <div class="image-caption">Infraestrutura de tubulações e transporte dutoviário</div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SEÇÃO 4 — COMO FUNCIONA UM OLEODUTO ============ -->
-<section class="py-20 px-5 md:px-8 bg-[var(--panel)] border-y border-[var(--border)]">
-  <div class="max-w-6xl mx-auto">
-    <p class="eyebrow">04 — Funcionamento</p>
-    <h2 class="font-display font-bold text-3xl md:text-4xl mt-2">Como funciona um oleoduto</h2>
-    <div class="divider my-5"></div>
-    <p class="max-w-2xl text-[var(--muted)] leading-relaxed">O produto é impulsionado por sistemas de bombeamento e percorre o duto até o destino. Ao longo do sistema existem válvulas e mecanismos de controle destinados a acompanhar a operação e aumentar a segurança.</p>
-
-    <ol class="mt-8 max-w-2xl divide-y divide-[var(--border)]">
-      <li class="flex gap-4 py-3"><span class="font-mono text-[var(--accent)] text-sm w-6">01</span><span class="text-sm text-[var(--muted)]"><strong class="text-[var(--text)]">Ponto de origem</strong> — campo, terminal ou refinaria.</span></li>
-      <li class="flex gap-4 py-3"><span class="font-mono text-[var(--accent)] text-sm w-6">02</span><span class="text-sm text-[var(--muted)]"><strong class="text-[var(--text)]">Estação de bombeamento</strong> — impulsiona o fluido pelo duto.</span></li>
-      <li class="flex gap-4 py-3"><span class="font-mono text-[var(--accent)] text-sm w-6">03</span><span class="text-sm text-[var(--muted)]"><strong class="text-[var(--text)]">Duto</strong> — tubulação terrestre ou submarina.</span></li>
-      <li class="flex gap-4 py-3"><span class="font-mono text-[var(--accent)] text-sm w-6">04</span><span class="text-sm text-[var(--muted)]"><strong class="text-[var(--text)]">Válvulas</strong> — controlam e isolam trechos do sistema.</span></li>
-      <li class="flex gap-4 py-3"><span class="font-mono text-[var(--accent)] text-sm w-6">05</span><span class="text-sm text-[var(--muted)]"><strong class="text-[var(--text)]">Monitoramento</strong> — acompanha pressão, fluxo e integridade.</span></li>
-      <li class="flex gap-4 py-3"><span class="font-mono text-[var(--accent)] text-sm w-6">06</span><span class="text-sm text-[var(--muted)]"><strong class="text-[var(--text)]">Estação intermediária</strong> — reforça a pressão em trechos longos.</span></li>
-      <li class="flex gap-4 py-3"><span class="font-mono text-[var(--accent)] text-sm w-6">07</span><span class="text-sm text-[var(--muted)]"><strong class="text-[var(--text)]">Ponto de destino</strong> — terminal, base ou refinaria.</span></li>
-    </ol>
-  </div>
-</section>
-
-<div class="road-container">
-  <div class="road"></div>
-  <div class="truck">🚛</div>
-</div>
-
-<!-- ============ SEÇÃO 5 — CAMINHÃO-TANQUE ============ -->
-<section id="rodoviario" class="py-20 px-5 md:px-8">
-  <div class="max-w-6xl mx-auto">
-    <p class="eyebrow">05 — Última milha</p>
-    <h2 class="font-display font-bold text-3xl md:text-4xl mt-2 max-w-2xl">Quando o petróleo e seus derivados chegam às estradas</h2>
-    <div class="divider my-5"></div>
-    <p class="max-w-2xl text-[var(--muted)] leading-relaxed">O transporte rodoviário é utilizado para movimentar petróleo e, principalmente, seus derivados líquidos entre terminais, bases de armazenamento, refinarias e pontos de distribuição — sobretudo onde outros modais não alcançam.</p>
-
-    <div class="grid md:grid-cols-2 gap-6 mt-10 items-center">
-      <div class="image-card truck-image">
-        <img loading="lazy" src="https://www.revistacaminhoneiro.com.br/uploads/img/noticias/4518/thumb-1000-0/ce62ac58e58ff2bba6bec1a79480d300.jpg"
-             alt="Caminhão utilizado no transporte rodoviário">
-        <div class="image-caption">Transporte rodoviário por caminhão-tanque</div>
-      </div>
-      <ul class="feature-list text-sm">
-        <li><strong class="text-[var(--text)]">Tanque</strong> — <span class="text-[var(--muted)]">reservatório projetado para transportar líquidos regulados com segurança e estanqueidade.</span></li>
-        <li><strong class="text-[var(--text)]">Sistema de frenagem</strong> — <span class="text-[var(--muted)]">freios inspecionados antes de cada viagem, item crítico para a segurança da operação.</span></li>
-        <li><strong class="text-[var(--text)]">Pneus</strong> — <span class="text-[var(--muted)]">calibragem e estado de conservação verificados na etapa de preparação.</span></li>
-        <li><strong class="text-[var(--text)]">Sinalização</strong> — <span class="text-[var(--muted)]">painéis e rótulos de risco identificam o produto transportado, conforme regulamentação.</span></li>
-        <li><strong class="text-[var(--text)]">Equipamentos de emergência</strong> — <span class="text-[var(--muted)]">kits e dispositivos para resposta rápida a vazamentos ou incidentes.</span></li>
-        <li><strong class="text-[var(--text)]">Rastreamento</strong> — <span class="text-[var(--muted)]">sistemas de GPS e telemetria acompanham o trajeto em tempo real.</span></li>
-      </ul>
-    </div>
-
-    <div class="grid sm:grid-cols-2 md:grid-cols-5 gap-4 mt-14">
-      <div class="panel p-5">
-        <span class="font-mono text-[var(--accent)] text-xs">01 — Preparação</span>
-        <p class="text-sm text-[var(--muted)] mt-2">Inspeção do veículo, tanque, pneus, freios, iluminação, documentação e sinalização.</p>
-      </div>
-      <div class="panel p-5">
-        <span class="font-mono text-[var(--accent)] text-xs">02 — Carregamento</span>
-        <p class="text-sm text-[var(--muted)] mt-2">O produto é transferido para o tanque seguindo procedimentos que reduzem riscos de vazamento.</p>
-      </div>
-      <div class="panel p-5">
-        <span class="font-mono text-[var(--accent)] text-xs">03 — Transporte</span>
-        <p class="text-sm text-[var(--muted)] mt-2">O motorista realiza o trajeto planejado seguindo os procedimentos de segurança.</p>
-      </div>
-      <div class="panel p-5">
-        <span class="font-mono text-[var(--accent)] text-xs">04 — Monitoramento</span>
-        <p class="text-sm text-[var(--muted)] mt-2">GPS e telemetria acompanham localização, velocidade, trajeto, paradas e desvios.</p>
-      </div>
-      <div class="panel p-5">
-        <span class="font-mono text-[var(--accent)] text-xs">05 — Descarga</span>
-        <p class="text-sm text-[var(--muted)] mt-2">O produto é descarregado no destino por meio de equipamentos apropriados.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SEÇÃO 7 — REFINO ============ -->
-<section class="py-20 px-5 md:px-8 bg-[var(--panel)] border-y border-[var(--border)]">
-  <div class="max-w-6xl mx-auto">
-    <p class="eyebrow">06 — Transformação</p>
-    <h2 class="font-display font-bold text-3xl md:text-4xl mt-2 max-w-2xl">Do petróleo bruto aos derivados</h2>
-    <div class="divider my-5"></div>
-    <p class="max-w-2xl text-[var(--muted)] leading-relaxed">O refino transforma o petróleo bruto em diferentes produtos utilizados pela sociedade, por meio de processos realizados em refinarias.</p>
-
-    <div class="mt-10 flex flex-col md:flex-row items-center gap-5">
-      <div class="panel px-8 py-6 text-center w-full md:w-auto">
-        <div class="font-mono text-xs text-[var(--muted)]">ENTRADA</div>
-        <div class="font-display font-semibold mt-1">Petróleo bruto</div>
-      </div>
-      <span class="flow-arrow text-xl">→</span>
-      <div class="panel px-8 py-6 text-center w-full md:w-auto">
-        <div class="font-mono text-xs text-[var(--muted)]">PROCESSO</div>
-        <div class="font-display font-semibold mt-1">Refino</div>
-      </div>
-      <span class="flow-arrow text-xl">→</span>
-      <div class="grid grid-cols-3 gap-2 w-full md:w-auto">
-        <span class="panel px-3 py-2 text-xs text-center">Gasolina</span>
-        <span class="panel px-3 py-2 text-xs text-center">Diesel</span>
-        <span class="panel px-3 py-2 text-xs text-center">Querosene</span>
-        <span class="panel px-3 py-2 text-xs text-center">GLP</span>
-        <span class="panel px-3 py-2 text-xs text-center">Óleo combustível</span>
-        <span class="panel px-3 py-2 text-xs text-center">Asfaltos</span>
-      </div>
-    </div>
-
-    <div class="image-card refinery-image mt-8">
-      <img loading="lazy" src="https://s2.static.brasilescola.uol.com.br/be/2026/03/refinaria-petroleo.jpg"
-           alt="Instalação industrial de refino de petróleo">
-      <div class="image-caption">Complexo industrial de refino e processamento</div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SEÇÃO 8 — ARMAZENAMENTO E DISTRIBUIÇÃO ============ -->
-<section class="py-20 px-5 md:px-8">
-  <div class="max-w-6xl mx-auto">
-    <p class="eyebrow">07 — Armazenamento e distribuição</p>
-    <h2 class="font-display font-bold text-3xl md:text-4xl mt-2 max-w-2xl">Da refinaria até o consumidor</h2>
-    <div class="divider my-5"></div>
-    <p class="max-w-2xl text-[var(--muted)] leading-relaxed mb-8">Uma configuração possível — entre outras — é a que segue abaixo. Nem todos os produtos percorrem exatamente essa mesma rota.</p>
-
-    <div class="flow-row overflow-x-auto">
-      <span class="flow-step">Refinaria</span>
-      <span class="flow-arrow">→</span>
-      <span class="flow-step">Terminal</span>
-      <span class="flow-arrow">→</span>
-      <span class="flow-step">Base de distribuição</span>
-      <span class="flow-arrow">→</span>
-      <span class="flow-step">Caminhão</span>
-      <span class="flow-arrow">→</span>
-      <span class="flow-step">Posto / consumidor</span>
-    </div>
-
-    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-      <div class="panel p-5"><h4 class="font-display font-semibold text-sm">Terminais</h4><p class="text-xs text-[var(--muted)] mt-2">Recebem, armazenam e transferem petróleo e derivados entre modais.</p></div>
-      <div class="panel p-5"><h4 class="font-display font-semibold text-sm">Tanques de armazenamento</h4><p class="text-xs text-[var(--muted)] mt-2">Guardam volumes até a próxima etapa da cadeia.</p></div>
-      <div class="panel p-5"><h4 class="font-display font-semibold text-sm">Bases de distribuição</h4><p class="text-xs text-[var(--muted)] mt-2">Preparam o produto para a distribuição final aos pontos de venda.</p></div>
-      <div class="panel p-5"><h4 class="font-display font-semibold text-sm">Caminhões</h4><p class="text-xs text-[var(--muted)] mt-2">Realizam a última etapa até postos e outros consumidores.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SEÇÃO 9 — SEGURANÇA ============ -->
-<section id="seguranca" class="py-20 px-5 md:px-8 bg-[var(--panel)] border-y border-[var(--border)]">
-  <div class="max-w-6xl mx-auto">
-    <p class="eyebrow">08 — Segurança operacional</p>
-    <h2 class="font-display font-bold text-3xl md:text-4xl mt-2 max-w-2xl">Transportar petróleo exige segurança em todas as etapas</h2>
-    <div class="divider my-5"></div>
-
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
-      <div class="panel p-6"><span class="text-xl">🔥</span><h4 class="font-display font-semibold mt-3 text-sm">Prevenção de incêndios</h4></div>
-      <div class="panel p-6"><span class="text-xl">🌱</span><h4 class="font-display font-semibold mt-3 text-sm">Proteção ambiental</h4></div>
-      <div class="panel p-6"><span class="text-xl">🚨</span><h4 class="font-display font-semibold mt-3 text-sm">Planos de emergência</h4></div>
-      <div class="panel p-6"><span class="text-xl">📡</span><h4 class="font-display font-semibold mt-3 text-sm">Monitoramento</h4></div>
-      <div class="panel p-6"><span class="text-xl">🛢️</span><h4 class="font-display font-semibold mt-3 text-sm">Inspeção de equipamentos</h4></div>
-      <div class="panel p-6"><span class="text-xl">👷</span><h4 class="font-display font-semibold mt-3 text-sm">Segurança dos trabalhadores</h4></div>
-    </div>
-
-    <p class="max-w-2xl text-[var(--muted)] leading-relaxed mt-8">Falhas ao longo da cadeia podem provocar vazamentos, incêndios, explosões, contaminação do solo e da água, danos à fauna e à flora, além de riscos às comunidades próximas — por isso a segurança é tratada em todas as etapas, não apenas no transporte.</p>
-
-    <div class="panel mt-10 p-6">
-      <div class="flex items-center justify-between flex-wrap gap-2">
-        <span class="tag">Painel de monitoramento — representação didática</span>
-        <span class="text-[10px] font-mono text-[var(--muted)]">Não representa um sistema operacional real</span>
-      </div>
-      <div class="grid sm:grid-cols-2 md:grid-cols-5 gap-4 mt-5">
-        <div class="p-4 border border-[var(--border)] rounded-lg">
-          <div class="flex items-center gap-2 text-xs text-[var(--muted)] font-mono"><span class="status-dot"></span>STATUS</div>
-          <div class="font-display font-semibold mt-2 text-sm">Operação normal</div>
+  <!-- Header & Navegação -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-badge">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+          </svg>
         </div>
-        <div class="p-4 border border-[var(--border)] rounded-lg">
-          <div class="text-xs text-[var(--muted)] font-mono">PRESSÃO</div>
-          <div class="font-display font-semibold mt-2 text-sm">Normal</div>
+        <div>
+          <span class="logo-title">Petro<span>Log</span></span>
+          <span class="logo-subtitle">Transporte de Petróleo</span>
         </div>
-        <div class="p-4 border border-[var(--border)] rounded-lg">
-          <div class="text-xs text-[var(--muted)] font-mono">FLUXO</div>
-          <div class="font-display font-semibold mt-2 text-sm">Normal</div>
-        </div>
-        <div class="p-4 border border-[var(--border)] rounded-lg">
-          <div class="text-xs text-[var(--muted)] font-mono">TEMPERATURA</div>
-          <div class="font-display font-semibold mt-2 text-sm">Normal</div>
-        </div>
-        <div class="p-4 border border-[var(--border)] rounded-lg">
-          <div class="text-xs text-[var(--muted)] font-mono">INTEGRIDADE</div>
-          <div class="font-display font-semibold mt-2 text-sm">Monitorada</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </a>
 
-<!-- ============ SEÇÃO 10 — CURIOSIDADES ============ -->
-<section class="py-20 px-5 md:px-8">
-  <div class="max-w-6xl mx-auto">
-    <p class="eyebrow">09 — Você sabia?</p>
-    <h2 class="font-display font-bold text-3xl md:text-4xl mt-2 max-w-2xl">Dados e curiosidades</h2>
-    <div class="divider my-5"></div>
-
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
-      <div class="panel p-5"><p class="text-sm">Um sistema dutoviário pode transportar grandes volumes de forma contínua.</p></div>
-      <div class="panel p-5"><p class="text-sm">Os oleodutos podem ser terrestres ou submarinos.</p></div>
-      <div class="panel p-5"><p class="text-sm">Nem todo oleoduto transporta petróleo bruto.</p></div>
-      <div class="panel p-5"><p class="text-sm">O transporte rodoviário possui regras específicas para produtos perigosos.</p></div>
-      <div class="panel p-5"><p class="text-sm">O petróleo bruto precisa passar por processos de refino para originar diversos derivados.</p></div>
-      <div class="panel p-5"><p class="text-sm">A logística de distribuição costuma ser multimodal, combinando mais de um tipo de transporte.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SEÇÃO 11 — IMPACTOS ============ -->
-<section id="impactos" class="py-20 px-5 md:px-8 bg-[var(--panel)] border-y border-[var(--border)]">
-  <div class="max-w-6xl mx-auto">
-    <p class="eyebrow">10 — Impactos ambientais</p>
-    <h2 class="font-display font-bold text-3xl md:text-4xl mt-2 max-w-2xl">Benefícios e desafios dos oleodutos</h2>
-    <div class="divider my-5"></div>
-
-    <div class="grid md:grid-cols-2 gap-6 mt-8">
-      <div class="panel p-6">
-        <h3 class="font-display font-semibold text-lg text-[var(--accent)]">Benefícios</h3>
-        <ul class="mt-4 space-y-2 text-sm text-[var(--muted)]">
-          <li>— Grande capacidade de transporte</li>
-          <li>— Operação contínua</li>
-          <li>— Menor necessidade de veículos rodoviários em determinados trechos</li>
-          <li>— Eficiência para grandes volumes</li>
+      <nav aria-label="Navegação Principal">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Início</a></li>
+          <li>
+            <a href="dutoviario.html" class="nav-link">
+              Oleodutos
+              <span class="badge-destaque">Destaque</span>
+            </a>
+          </li>
+          <li><a href="rodoviario.html" class="nav-link">Rodoviário</a></li>
+          <li><a href="maritimo.html" class="nav-link">Marítimo</a></li>
+          <li><a href="ferroviario.html" class="nav-link">Ferroviário</a></li>
+          <li><a href="equipe.html" class="nav-link" style="color: var(--orange-energy); font-weight: 800;">Equipe</a></li>
         </ul>
+      </nav>
+
+      <button id="mobileMenuBtn" class="mobile-btn" aria-label="Abrir Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileDrawer" class="mobile-menu-drawer">
+      <a href="index.html" class="nav-link active">Início</a>
+      <a href="dutoviario.html" class="nav-link">Oleodutos (Destaque)</a>
+      <a href="rodoviario.html" class="nav-link">Rodoviário</a>
+      <a href="maritimo.html" class="nav-link">Marítimo</a>
+      <a href="ferroviario.html" class="nav-link">Ferroviário</a>
+      <a href="equipe.html" class="nav-link" style="color: var(--orange-energy); font-weight: 800;">Equipe do Projeto</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION: COM FUNDO DEGRADÊ SUAVE, LUZES E OLEODUTOS INDUSTRIAIS
+         ========================================================================== -->
+    <section class="hero-wrapper">
+      <canvas id="pipelineCanvas"></canvas>
+
+      <div class="container hero-content">
+        <div class="eyebrow-tag">
+          ⚡ PROJETO ESCOLAR CRIATIVO • LOGÍSTICA DE PETRÓLEO
+        </div>
+
+        <h1 class="hero-title">
+          PetroLog: <span class="highlight-gradient">Energia em Movimento</span> pelo Mundo
+        </h1>
+
+        <p class="hero-subtitle">
+          Descubra de forma rápida, visual e interativa como o petróleo viaja através de uma rede integrada de dutos contínuos, carretas pesadas, navios de cabotagem e trens de alta capacidade.
+        </p>
+
+        <div style="display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap;">
+          <a href="dutoviario.html" class="btn btn-orange btn-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+            Explorar Oleodutos (Destaque)
+          </a>
+          <a href="equipe.html" class="btn btn-blue btn-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            Conhecer a Equipe de Alunos
+          </a>
+        </div>
+
+        <!-- Vitrine com os 4 Modais Coloridos -->
+        <div class="hero-modals-nav">
+          <!-- Dutoviário: Azul Petróleo (#0F4C81) -->
+          <a href="dutoviario.html" class="modal-nav-card theme-duto">
+            <div class="modal-icon-circle icon-duto">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
+            </div>
+            <strong class="modal-nav-title">Oleodutos</strong>
+            <span class="modal-nav-desc" style="color: var(--petro-blue);">Fluxo 24h • Destaque</span>
+          </a>
+
+          <!-- Rodoviário: Laranja Energético (#FF7A00) -->
+          <a href="rodoviario.html" class="modal-nav-card theme-rodo">
+            <div class="modal-icon-circle icon-rodo">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <strong class="modal-nav-title">Rodoviário</strong>
+            <span class="modal-nav-desc" style="color: var(--orange-energy);">Caminhões Ágeis</span>
+          </a>
+
+          <!-- Marítimo: Azul Claro (#4EA8DE) -->
+          <a href="maritimo.html" class="modal-nav-card theme-mari">
+            <div class="modal-icon-circle icon-mari">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 20a6 6 0 0 0 10 0 6 6 0 0 0 10 0M4 16l2-8h12l2 8"/></svg>
+            </div>
+            <strong class="modal-nav-title">Marítimo</strong>
+            <span class="modal-nav-desc" style="color: var(--sky-blue);">Grandes Volumes</span>
+          </a>
+
+          <!-- Ferroviário: Dourado (#FFC857) -->
+          <a href="ferroviario.html" class="modal-nav-card theme-ferro">
+            <div class="modal-icon-circle icon-ferro">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19l-3 3M16 19l3 3"/></svg>
+            </div>
+            <strong class="modal-nav-title">Ferroviário</strong>
+            <span class="modal-nav-desc" style="color: #D97706;">Força nos Trilhos</span>
+          </a>
+        </div>
       </div>
-      <div class="panel p-6">
-        <h3 class="font-display font-semibold text-lg">Desafios</h3>
-        <ul class="mt-4 space-y-2 text-sm text-[var(--muted)]">
-          <li>— Risco de vazamentos</li>
-          <li>— Necessidade de manutenção</li>
-          <li>— Impactos ambientais</li>
-          <li>— Necessidade de monitoramento</li>
-          <li>— Custos elevados de implantação</li>
-          <li>— Necessidade de planejamento territorial</li>
-        </ul>
+    </section>
+
+    <!-- ==========================================================================
+         SEÇÃO COM CARDS MODERNOS E BORDAS EM GRADIENTE
+         ========================================================================== -->
+    <section class="section section-alt-blue">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow-tag" style="background: rgba(15, 76, 129, 0.1); color: var(--petro-blue);">
+            LOGÍSTICA EM AÇÃO
+          </span>
+          <h2 class="section-title">Como o Petróleo Chega ao Destino</h2>
+          <div class="gradient-bar"></div>
+          <p class="section-desc">
+            Cada modal tem características únicas para garantir transporte rápido, seguro e sem desperdícios.
+          </p>
+        </div>
+
+        <div class="clean-cards-grid">
+          <!-- Card 1: Dutoviário -->
+          <div class="card-clean">
+            <div class="card-badge badge-blue">
+              MODAL DUTOVIÁRIO
+            </div>
+            <h3 class="card-heading">Tubulações Contínuas</h3>
+            <p class="card-paragraph">
+              Tubos de aço carbono enterrados que transportam rios de petróleo sem parar. Operam dia e noite com zero interferência do tráfego urbano e menor emissão de carbono.
+            </p>
+            <div style="margin-top: auto; padding-top: 1.5rem;">
+              <a href="dutoviario.html" class="btn btn-outline-custom" style="border-color: var(--petro-blue); color: var(--petro-blue);">
+                Explorar Oleodutos ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: Rodoviário -->
+          <div class="card-clean accent-orange">
+            <div class="card-badge badge-orange">
+              MODAL RODOVIÁRIO
+            </div>
+            <h3 class="card-heading">Caminhões Especializados</h3>
+            <p class="card-paragraph">
+              Carretas herméticas com tanques selados de alumínio e freios anti-tombamento para levar o petróleo com rapidez pelas estradas até os pontos de abastecimento.
+            </p>
+            <div style="margin-top: auto; padding-top: 1.5rem;">
+              <a href="rodoviario.html" class="btn btn-outline-custom" style="border-color: var(--orange-energy); color: var(--orange-energy);">
+                Ver os Caminhões ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Marítimo -->
+          <div class="card-clean accent-sky">
+            <div class="card-badge badge-sky">
+              MODAL MARÍTIMO
+            </div>
+            <h3 class="card-heading">Navios de Casco Duplo</h3>
+            <p class="card-paragraph">
+              Embarcações oceânicas reforçadas que transportam milhões de barris ao longo do litoral brasileiro e em alto-mar, protegendo a vida marinha com tecnologia de ponta.
+            </p>
+            <div style="margin-top: auto; padding-top: 1.5rem;">
+              <a href="maritimo.html" class="btn btn-outline-custom" style="border-color: var(--sky-blue); color: #0284C7;">
+                Conhecer Navegação ➔
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ============ SEÇÃO 12 — LEGISLAÇÃO ============ -->
-<section id="legislacao" class="py-20 px-5 md:px-8">
-  <div class="max-w-6xl mx-auto">
-    <p class="eyebrow">11 — Regulamentação</p>
-    <h2 class="font-display font-bold text-3xl md:text-4xl mt-2 max-w-2xl">Como o transporte é regulamentado?</h2>
-    <div class="divider my-5"></div>
-
-    <div class="grid md:grid-cols-2 gap-6 mt-8">
-      <div class="panel p-6">
-        <span class="tag">Órgão regulador</span>
-        <h3 class="font-display font-semibold text-xl mt-2">ANP</h3>
-        <p class="text-xs text-[var(--muted)] mt-1">Agência Nacional do Petróleo, Gás Natural e Biocombustíveis</p>
-        <p class="text-sm text-[var(--muted)] mt-3 leading-relaxed">Atua na regulação do setor de petróleo, derivados e da movimentação de produtos líquidos, incluindo o Regulamento Técnico de Dutos Terrestres (RTDT), que estabelece requisitos técnicos e padrões de segurança para dutos terrestres.</p>
-        <a href="https://www.gov.br/anp/pt-br" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-xs text-[var(--accent)] mt-4 hover:underline">gov.br/anp →</a>
+    <!-- ==========================================================================
+         CALL TO ACTION DA EQUIPE: FAIXA COM DEGRADÊ AQUECIDO E COLORIDO
+         ========================================================================== -->
+    <section class="section section-alt-warm">
+      <div class="container" style="text-align: center;">
+        <div style="max-width: 680px; margin: 0 auto;">
+          <span class="eyebrow-tag" style="color: var(--orange-energy); background: rgba(255, 122, 0, 0.1); border-color: rgba(255, 122, 0, 0.3);">
+            HISTÓRIA DA STARTUP ESCOLAR
+          </span>
+          <h2 class="section-title">Conheça Quem Criou a PetroLog</h2>
+          <div class="gradient-bar"></div>
+          <p class="section-desc" style="margin-bottom: 2rem;">
+            A PetroLog nasceu da curiosidade de quatro estudantes sobre a jornada do petróleo. Descubra a história e as funções de Giovanni, Guilherme, Gabriela e Isa no projeto.
+          </p>
+          <a href="equipe.html" class="btn btn-orange btn-lg">
+            Ver a História & os Integrantes ➔
+          </a>
+        </div>
       </div>
-      <div class="panel p-6">
-        <span class="tag">Órgão regulador</span>
-        <h3 class="font-display font-semibold text-xl mt-2">ANTT</h3>
-        <p class="text-xs text-[var(--muted)] mt-1">Agência Nacional de Transportes Terrestres</p>
-        <p class="text-sm text-[var(--muted)] mt-3 leading-relaxed">Regulamenta o transporte rodoviário de produtos perigosos. Entre as principais normas está a Resolução ANTT nº 5.998/2022, que atualiza o regulamento para esse tipo de transporte e suas instruções complementares.</p>
-        <a href="https://www.gov.br/antt/pt-br" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-xs text-[var(--accent)] mt-4 hover:underline">gov.br/antt →</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">Petro<span>Log</span></div>
+      <p class="footer-text">Trabalho Escolar sobre Transporte de Petróleo • Foco nos Modais e Criatividade</p>
+      <div class="footer-nav">
+        <a href="index.html">Início</a>
+        <a href="dutoviario.html">Oleodutos</a>
+        <a href="rodoviario.html">Rodoviário</a>
+        <a href="maritimo.html">Marítimo</a>
+        <a href="ferroviario.html">Ferroviário</a>
+        <a href="equipe.html" style="color: var(--gold-energy);">Equipe</a>
       </div>
+      <div class="footer-copyright">© 2026 PetroLog — Projeto Escolar</div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- ============ SEÇÃO 14 — FLUXO COMPLETO ============ -->
-<section class="py-20 px-5 md:px-8 bg-[var(--panel)] border-y border-[var(--border)]">
-  <div class="max-w-6xl mx-auto">
-    <p class="eyebrow">12 — Síntese</p>
-    <h2 class="font-display font-bold text-3xl md:text-4xl mt-2 max-w-2xl">O fluxo completo, do poço ao posto</h2>
-    <div class="divider my-5"></div>
-
-    <div class="panel p-6 mt-8 overflow-x-auto">
-      <div class="flex items-center gap-3 min-w-[760px] justify-between font-mono text-xs text-[var(--muted)] text-center">
-        <div class="flex flex-col items-center gap-2 w-24"><span class="text-xl">🛢️</span>Extração</div>
-        <span class="flow-arrow">→</span>
-        <div class="flex flex-col items-center gap-2 w-24"><span class="text-xl">🚢</span>Transporte</div>
-        <span class="flow-arrow">→</span>
-        <div class="flex flex-col items-center gap-2 w-24"><span class="text-xl">🏭</span>Refinaria</div>
-        <span class="flow-arrow">→</span>
-        <div class="flex flex-col items-center gap-2 w-24"><span class="text-xl">🛢️</span>Armazenamento</div>
-        <span class="flow-arrow">→</span>
-        <div class="flex flex-col items-center gap-2 w-24"><span class="text-xl">🚛</span>Distribuição</div>
-        <span class="flow-arrow">→</span>
-        <div class="flex flex-col items-center gap-2 w-24"><span class="text-xl">⛽</span>Consumidor</div>
-      </div>
-    </div>
-    <p class="text-xs text-[var(--muted)] mt-4 font-mono">Representação simplificada — os caminhos reais podem variar conforme o produto e a região.</p>
-  </div>
-</section>
-
-<!-- ============ SEÇÃO 15 — CONCLUSÃO ============ -->
-<section id="conclusao" class="py-24 px-5 md:px-8">
-  <div class="max-w-3xl mx-auto text-center">
-    <p class="eyebrow">13 — Conclusão</p>
-    <h2 class="font-display font-bold text-3xl md:text-4xl mt-2">Por que essa logística é tão importante?</h2>
-    <div class="divider my-5 mx-auto"></div>
-    <p class="text-[var(--muted)] leading-relaxed text-base">
-      O transporte de petróleo e de seus derivados é uma etapa essencial para o funcionamento da sociedade moderna. A cadeia depende da integração entre diferentes modais, instalações de armazenamento, terminais, refinarias, oleodutos e veículos de transporte. Entre essas estruturas, os oleodutos possuem papel importante na movimentação contínua de grandes volumes, enquanto o transporte rodoviário oferece flexibilidade para atender diferentes destinos.
-    </p>
-    <div class="mt-8 flex flex-wrap justify-center gap-2 font-mono text-xs uppercase">
-      <span class="px-4 py-2 rounded-full border border-[var(--border)]">Eficiência</span>
-      <span class="px-4 py-2 rounded-full border border-[var(--border)]">Segurança</span>
-      <span class="px-4 py-2 rounded-full border border-[var(--border)]">Tecnologia</span>
-      <span class="px-4 py-2 rounded-full border border-[var(--border)]">Responsabilidade ambiental</span>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SEÇÃO 16 — FONTES ============ -->
-<section id="fontes" class="py-20 px-5 md:px-8 bg-[var(--panel)] border-y border-[var(--border)]">
-  <div class="max-w-3xl mx-auto">
-    <p class="eyebrow">14 — Referências</p>
-    <h2 class="font-display font-bold text-3xl mt-2">Fontes e referências</h2>
-    <div class="divider my-5"></div>
-    <ul class="space-y-3">
-      <li class="panel p-4 flex justify-between items-center gap-4"><span class="text-sm">Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP)</span><a href="https://www.gov.br/anp/pt-br" target="_blank" rel="noopener" class="text-xs text-[var(--accent)] hover:underline shrink-0">Acessar ↗</a></li>
-      <li class="panel p-4 flex justify-between items-center gap-4"><span class="text-sm">Agência Nacional de Transportes Terrestres (ANTT)</span><a href="https://www.gov.br/antt/pt-br" target="_blank" rel="noopener" class="text-xs text-[var(--accent)] hover:underline shrink-0">Acessar ↗</a></li>
-      <li class="panel p-4"><span class="text-sm">Petrobras — utilizada como fonte institucional quando aplicável</span></li>
-      <li class="panel p-4"><span class="text-sm">Legislação e documentos oficiais relacionados ao setor de petróleo e transporte de produtos perigosos</span></li>
-    </ul>
-  </div>
-</section>
-
-</main>
-
-<!-- ============ FOOTER ============ -->
-<footer class="px-5 md:px-8 py-12">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-8">
-    <div>
-      <div class="font-display font-bold text-lg">PETROLOG</div>
-      <p class="text-xs text-[var(--muted)] mt-1 max-w-xs">Transporte, Oleodutos e Logística do Petróleo</p>
-      <p class="text-[10px] text-[var(--muted)] font-mono mt-4">Projeto acadêmico — TCC · Desenvolvido para fins educacionais.</p>
-    </div>
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-x-8 gap-y-2 text-sm text-[var(--muted)]">
-      <a href="#inicio" class="nav-link">Início</a>
-      <a href="#cadeia" class="nav-link">Cadeia</a>
-      <a href="#oleodutos" class="nav-link">Oleodutos</a>
-      <a href="#rodoviario" class="nav-link">Transporte</a>
-      <a href="#seguranca" class="nav-link">Segurança</a>
-      <a href="#legislacao" class="nav-link">Legislação</a>
-      <a href="#fontes" class="nav-link">Fontes</a>
-    </div>
-  </div>
-</footer>
-
-<button class="to-top" id="toTop" aria-label="Voltar ao topo">
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F2A93B" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-</button>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

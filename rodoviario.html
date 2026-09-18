@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transporte Rodoviário — PetroLog | Caminhões-Tanque</title>
+  <meta name="description" content="Modal Rodoviário da PetroLog: caminhões-tanque modernos para transporte ágil e seguro de petróleo pelas rodovias.">
+
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-badge">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+          </svg>
+        </div>
+        <div>
+          <span class="logo-title">Petro<span>Log</span></span>
+          <span class="logo-subtitle">Transporte de Petróleo</span>
+        </div>
+      </a>
+
+      <nav aria-label="Navegação Principal">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="dutoviario.html" class="nav-link">Oleodutos <span class="badge-destaque">Destaque</span></a></li>
+          <li><a href="rodoviario.html" class="nav-link active">Rodoviário</a></li>
+          <li><a href="maritimo.html" class="nav-link">Marítimo</a></li>
+          <li><a href="ferroviario.html" class="nav-link">Ferroviário</a></li>
+          <li><a href="equipe.html" class="nav-link" style="color: var(--orange-energy); font-weight: 800;">Equipe</a></li>
+        </ul>
+      </nav>
+
+      <button id="mobileMenuBtn" class="mobile-btn" aria-label="Abrir Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div id="mobileDrawer" class="mobile-menu-drawer">
+      <a href="index.html" class="nav-link">Início</a>
+      <a href="dutoviario.html" class="nav-link">Oleodutos (Destaque)</a>
+      <a href="rodoviario.html" class="nav-link active">Rodoviário</a>
+      <a href="maritimo.html" class="nav-link">Marítimo</a>
+      <a href="ferroviario.html" class="nav-link">Ferroviário</a>
+      <a href="equipe.html" class="nav-link" style="color: var(--orange-energy); font-weight: 800;">Equipe do Projeto</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-wrapper">
+      <canvas id="pipelineCanvas"></canvas>
+
+      <div class="container hero-content">
+        <div class="eyebrow-tag" style="background: rgba(255, 122, 0, 0.12); color: var(--orange-energy); border-color: rgba(255, 122, 0, 0.35);">
+          🚛 MODAL RODOVIÁRIO • LARANJA ENERGÉTICO
+        </div>
+
+        <h1 class="hero-title">
+          Caminhões-Tanque <span class="highlight-gradient">nas Rodovias</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Carretas herméticas equipadas com sistemas anti-tombamento e tanques de alumínio reforçado para levar o combustível com rapidez até os pontos de distribuição.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-alt-warm">
+      <div class="container">
+        <!-- Animação do Caminhão Suave -->
+        <div class="stage-highway">
+          <div class="dashes-lane"></div>
+
+          <div class="truck-graphic">
+            <svg width="240" height="95" viewBox="0 0 240 95" fill="none">
+              <!-- Cabine -->
+              <path d="M15 65 L15 22 L48 22 L70 42 L70 65 Z" fill="#002B49" stroke="#00B4D8" stroke-width="2"/>
+              <path d="M48 26 L66 42 L48 42 Z" fill="#00F0FF" opacity="0.8"/>
+              <circle cx="62" cy="52" r="5" fill="#FFB703"/>
+
+              <!-- Tanque 1 -->
+              <rect x="80" y="18" width="65" height="46" rx="14" fill="#64748B" stroke="#CBD5E1" stroke-width="2"/>
+              <rect x="85" y="24" width="55" height="6" rx="3" fill="#FF7A00"/>
+              <text x="90" y="44" fill="#FFFFFF" font-family="'JetBrains Mono'" font-size="9" font-weight="700">PETROLOG</text>
+
+              <!-- Tanque 2 -->
+              <rect x="155" y="18" width="70" height="46" rx="14" fill="#64748B" stroke="#CBD5E1" stroke-width="2"/>
+              <rect x="160" y="24" width="60" height="6" rx="3" fill="#FF7A00"/>
+              <text x="168" y="44" fill="#FFFFFF" font-family="'JetBrains Mono'" font-size="9" font-weight="700">62.000L</text>
+
+              <!-- Rodas -->
+              <circle cx="30" cy="68" r="10" fill="#090D16" stroke="#CBD5E1" stroke-width="2.5"/>
+              <circle cx="52" cy="68" r="10" fill="#090D16" stroke="#CBD5E1" stroke-width="2.5"/>
+              <circle cx="102" cy="68" r="10" fill="#090D16" stroke="#CBD5E1" stroke-width="2.5"/>
+              <circle cx="130" cy="68" r="10" fill="#090D16" stroke="#CBD5E1" stroke-width="2.5"/>
+              <circle cx="178" cy="68" r="10" fill="#090D16" stroke="#CBD5E1" stroke-width="2.5"/>
+              <circle cx="210" cy="68" r="10" fill="#090D16" stroke="#CBD5E1" stroke-width="2.5"/>
+            </svg>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 3.5rem;">
+          <button id="boostTruckBtn" class="btn btn-orange">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            Acelerar Caminhão na Rodovia
+          </button>
+        </div>
+
+        <!-- 3 Cards Arejados -->
+        <div class="clean-cards-grid">
+          <div class="card-clean accent-orange">
+            <div class="card-badge badge-orange">
+              FLEXIBILIDADE
+            </div>
+            <h3 class="card-heading">Acesso a Qualquer Ponto</h3>
+            <p class="card-paragraph">
+              O modal rodoviário é indispensável para a entrega final, conectando os grandes terminais e bases às distribuidoras regionais.
+            </p>
+          </div>
+
+          <div class="card-clean">
+            <div class="card-badge badge-blue">
+              SEGURANÇA
+            </div>
+            <h3 class="card-heading">Tanques Selados de Alumínio</h3>
+            <p class="card-paragraph">
+              Construídos com ligas de alumínio de alta resistência e válvulas que impedem vazamento de vapores inflamáveis para a atmosfera.
+            </p>
+          </div>
+
+          <div class="card-clean accent-gold">
+            <div class="card-badge badge-gold">
+              ESTABILIDADE
+            </div>
+            <h3 class="card-heading">Controle Anti-Tombamento</h3>
+            <p class="card-paragraph">
+              Sistemas eletrônicos de estabilidade que auxiliam o motorista em curvas e frenagens bruscas, garantindo viagens tranquilas.
+            </p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 4.5rem;">
+          <a href="maritimo.html" class="btn btn-blue btn-lg">
+            Próximo: Modal Marítimo (Azul Claro) ➔
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">Petro<span>Log</span></div>
+      <p class="footer-text">Trabalho Escolar • Transporte de Petróleo • Modal Rodoviário</p>
+      <div class="footer-nav">
+        <a href="index.html">Início</a>
+        <a href="dutoviario.html">Oleodutos</a>
+        <a href="rodoviario.html">Rodoviário</a>
+        <a href="maritimo.html">Marítimo</a>
+        <a href="ferroviario.html">Ferroviário</a>
+        <a href="equipe.html" style="color: var(--gold-energy);">Equipe</a>
+      </div>
+      <div class="footer-copyright">© 2026 PetroLog — Projeto Escolar</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

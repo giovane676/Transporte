@@ -1,466 +1,1123 @@
-/* =========================================================
-    PETROLOG — Folha de estilos
-========================================================= */
+/* ==========================================================================
+   PETROLOG — DESIGN VIBRANTE & MODERNO (60% LIMPO + 40% COLORIDO)
+   Paleta: Azul Petróleo (#0F4C81), Azul Escuro (#0A2342), Azul Claro (#4EA8DE),
+   Laranja Energético (#FF7A00), Dourado (#FFC857), Cinza Metálico (#6C757D) e Branco (#FFFFFF)
+   ========================================================================== */
 
-:root{
-  --bg:#F6F8FA;
-  --panel:#FFFFFF;
-  --border:#DCE3EA;
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap');
 
-  --text:#1F2937;
-  --muted:#6B7280;
+/* ==========================================================================
+   PALETA DE CORES OFICIAL
+   ========================================================================== */
+:root {
+  /* Cores Principais Solicitadas */
+  --petro-blue: #0F4C81;      /* Azul Petróleo */
+  --navy-dark: #0A2342;       /* Azul Escuro */
+  --sky-blue: #4EA8DE;        /* Azul Claro */
+  --orange-energy: #FF7A00;   /* Laranja Energético */
+  --gold-energy: #FFC857;     /* Dourado */
+  --metallic-gray: #6C757D;   /* Cinza Metálico */
+  --white: #FFFFFF;           /* Branco */
 
-  --accent:#E67E22;
+  /* Cores de Fundo Neutras e Arejadas */
+  --bg-page: #FFFFFF;
+  --bg-soft-blue: #F4F9FD;
+  --bg-soft-orange: #FFF8F2;
+  --border-subtle: #E3E8EF;
+
+  /* Petróleo Preto nos Tubos */
+  --oil-black: #090D16;
+
+  /* Tipografia */
+  --font-heading: 'Space Grotesk', -apple-system, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Sombras Modernas com Brilho Colorido Sutil */
+  --shadow-sm: 0 2px 5px rgba(10, 35, 66, 0.05);
+  --shadow-card: 0 10px 25px -4px rgba(10, 35, 66, 0.08), 0 4px 10px -2px rgba(15, 76, 129, 0.05);
+  --shadow-orange: 0 12px 28px -6px rgba(255, 122, 0, 0.35);
+  --shadow-blue: 0 12px 28px -6px rgba(15, 76, 129, 0.3);
+  --shadow-sky: 0 12px 28px -6px rgba(78, 168, 222, 0.35);
+  --shadow-gold: 0 12px 28px -6px rgba(255, 200, 87, 0.4);
+
+  /* Transição */
+  --transition: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-*{ box-sizing:border-box; }
-
-html{ scroll-behavior:smooth; }
-
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:'IBM Plex Sans',sans-serif;
-  -webkit-font-smoothing:antialiased;
+/* ==========================================================================
+   RESET & FUNDOS
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-h1,h2,h3,h4,.font-display{
-  font-family:'Space Grotesk',sans-serif;
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
 }
 
-.font-mono{
-  font-family:'IBM Plex Mono',monospace;
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-page);
+  color: var(--navy-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
 }
 
-.eyebrow{
-  font-family:'IBM Plex Mono',monospace;
-  font-size:.72rem;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  color:var(--accent);
+/* ==========================================================================
+   CANVAS DE OLEODUTO INDUSTRIAL COM ÓLEO PRETO EM MOVIMENTO
+   ========================================================================== */
+#pipelineCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.7;
 }
 
-.tag{
-  font-family:'IBM Plex Mono',monospace;
-  font-size:.68rem;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  color:var(--muted);
+/* Hero Wrapper com Gradiente de Branco para Azul Suave e Toque Quente */
+.hero-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 85% 15%, rgba(78, 168, 222, 0.16) 0%, transparent 45%),
+              radial-gradient(circle at 12% 85%, rgba(255, 122, 0, 0.12) 0%, transparent 40%),
+              radial-gradient(circle at 50% 50%, rgba(255, 200, 87, 0.08) 0%, transparent 60%),
+              linear-gradient(180deg, #FFFFFF 0%, #F2F8FD 65%, #FFFFFF 100%);
+  border-bottom: 2px solid rgba(15, 76, 129, 0.12);
+  padding: 5rem 0 6rem;
 }
 
-a:focus-visible,button:focus-visible{
-  outline:2px solid var(--accent);
-  outline-offset:2px;
-  border-radius:4px;
+@media (min-width: 768px) {
+  .hero-wrapper {
+    padding: 6.5rem 0 7.5rem;
+  }
 }
 
-.panel{
-  background:var(--panel);
-  border:1px solid var(--border);
-  border-radius:10px;
+/* ==========================================================================
+   CONTAINER & SEÇÕES AREJADAS COM TRANSIÇÃO COLORIDA
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 2;
 }
 
-.divider{
-  height:1px;
-  width:48px;
-  background:var(--accent);
+.section {
+  padding: 5rem 0;
+  position: relative;
 }
 
-header.site{
-  position:sticky;
-  top:0;
-  z-index:50;
-  background:rgba(14,16,19,.96);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--border);
+@media (min-width: 768px) {
+  .section {
+    padding: 6.5rem 0;
+  }
 }
 
-.nav-link{
-  color:var(--muted);
-  font-size:.85rem;
-  text-decoration:none;
-  transition:color .2s ease;
+/* Faixas com Gradientes Suaves Alternados para Eliminar Áreas Brancas Vazias */
+.section-alt-blue {
+  background: linear-gradient(180deg, #FFFFFF 0%, var(--bg-soft-blue) 50%, #FFFFFF 100%);
+  border-top: 1px solid rgba(78, 168, 222, 0.15);
+  border-bottom: 1px solid rgba(78, 168, 222, 0.15);
 }
 
-.nav-link:hover{ color:var(--text); }
-
-.mobile-menu{
-  display:none;
-  border-top:1px solid var(--border);
+.section-alt-warm {
+  background: linear-gradient(180deg, #FFFFFF 0%, var(--bg-soft-orange) 50%, #FFFFFF 100%);
+  border-top: 1px solid rgba(255, 122, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 122, 0, 0.15);
 }
 
-.mobile-menu.open{ display:block; }
-
-.hero-box{
-  background:
-    radial-gradient(circle at 85% 20%,rgba(242,169,59,.08),transparent 30%),
-    var(--panel);
-  border:1px solid var(--border);
-  border-radius:14px;
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
 }
 
-.stage-card{
-  background:var(--panel);
-  border:1px solid var(--border);
-  border-radius:10px;
-  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 2.85rem);
+  font-weight: 800;
+  color: var(--navy-dark);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 0.85rem;
 }
 
-.stage-card:hover{
-  transform:translateY(-4px);
-  border-color:rgba(242,169,59,.45);
-  box-shadow:0 12px 30px rgba(0,0,0,.22);
+.section-desc {
+  font-size: 1.05rem;
+  color: #4A5568;
+  line-height: 1.6;
 }
 
-.flow-row{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  flex-wrap:wrap;
+/* Linha Divisória Multicolorida */
+.gradient-bar {
+  height: 4px;
+  width: 70px;
+  margin: 1rem auto 1.5rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--petro-blue), var(--sky-blue), var(--orange-energy), var(--gold-energy));
 }
 
-.flow-step{
-  border:1px solid var(--border);
-  border-radius:8px;
-  padding:10px 14px;
-  font-family:'IBM Plex Mono',monospace;
-  font-size:.75rem;
-  color:var(--muted);
-  background:var(--bg);
+/* ==========================================================================
+   HEADER & NAVBAR COLORIDA E ELEGANTE
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 2px solid transparent;
+  background-image: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(90deg, var(--petro-blue), var(--sky-blue), var(--orange-energy), var(--gold-energy));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  transition: box-shadow var(--transition);
 }
 
-.flow-arrow{ color:var(--accent); }
-
-.feature-list li{
-  border-bottom:1px solid var(--border);
-  padding:10px 0;
+.site-header.scrolled {
+  box-shadow: 0 4px 20px rgba(10, 35, 66, 0.08);
 }
 
-.feature-list li:last-child{ border-bottom:none; }
-
-table{ border-collapse:collapse; }
-
-th,td{ border-bottom:1px solid var(--border); }
-
-.status-dot{
-  display:inline-block;
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background:#72D68C;
-  box-shadow:0 0 10px rgba(114,214,140,.45);
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.6rem;
 }
 
-.to-top{
-  position:fixed;
-  right:16px;
-  bottom:16px;
-  z-index:50;
-  width:40px;
-  height:40px;
-  border-radius:50%;
-  background:var(--panel);
-  border:1px solid var(--border);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  opacity:0;
-  pointer-events:none;
-  transition:opacity .2s ease,transform .2s ease;
+/* Logo com Destaque Colorido */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
 }
 
-.to-top.show{
-  opacity:1;
-  pointer-events:auto;
+.logo-badge {
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--orange-energy) 0%, var(--gold-energy) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(255, 122, 0, 0.35);
+  transition: transform var(--transition), box-shadow var(--transition);
 }
 
-.to-top:hover{ transform:translateY(-3px); }
-
-footer{ border-top:1px solid var(--border); }
-
-/* =========================
-   IMAGENS
-========================= */
-
-.image-card{
-  position:relative;
-  overflow:hidden;
-  border:1px solid var(--border);
-  border-radius:14px;
-  background:#111;
-  min-height:220px;
-  isolation:isolate;
+.brand-logo:hover .logo-badge {
+  transform: scale(1.08) rotate(3deg);
+  box-shadow: 0 6px 20px rgba(255, 122, 0, 0.45);
 }
 
-.image-card img{
-  display:block;
-  width:100%;
-  height:100%;
-  min-height:inherit;
-  object-fit:cover;
-  transition:transform .6s cubic-bezier(.2,.7,.2,1),filter .4s ease;
+.logo-title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--navy-dark);
+  letter-spacing: -0.02em;
 }
 
-.image-card:hover img{
-  transform:scale(1.04);
-  filter:saturate(1.08);
+.logo-title span {
+  color: var(--orange-energy);
 }
 
-.image-card::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:1;
-  background:linear-gradient(
-    180deg,
-    rgba(14,16,19,.04) 15%,
-    rgba(14,16,19,.18) 55%,
-    rgba(14,16,19,.78) 100%
+.logo-subtitle {
+  font-size: 0.65rem;
+  font-family: var(--font-mono);
+  color: var(--petro-blue);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  display: block;
+}
+
+/* Menu */
+.nav-menu {
+  display: none;
+  align-items: center;
+  gap: 0.4rem;
+  list-style: none;
+}
+
+@media (min-width: 960px) {
+  .nav-menu {
+    display: flex;
+  }
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--navy-dark);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--orange-energy);
+  background: rgba(255, 122, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+.nav-link.active {
+  color: #FFFFFF;
+  background: linear-gradient(135deg, var(--petro-blue) 0%, var(--sky-blue) 100%);
+  box-shadow: 0 4px 12px rgba(15, 76, 129, 0.25);
+}
+
+.badge-destaque {
+  font-size: 0.65rem;
+  font-family: var(--font-mono);
+  background: linear-gradient(135deg, var(--orange-energy), var(--gold-energy));
+  color: #FFFFFF;
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 6px rgba(255, 122, 0, 0.3);
+}
+
+/* Mobile Toggle */
+.mobile-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 8px;
+  border: 2px solid var(--border-subtle);
+  background: #FFFFFF;
+  color: var(--navy-dark);
+  cursor: pointer;
+}
+
+@media (min-width: 960px) {
+  .mobile-btn {
+    display: none;
+  }
+}
+
+.mobile-menu-drawer {
+  position: fixed;
+  top: 4.6rem;
+  left: 0;
+  width: 100%;
+  background: #FFFFFF;
+  border-bottom: 2px solid var(--border-subtle);
+  padding: 1.25rem 1.5rem;
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 99;
+  box-shadow: var(--shadow-card);
+}
+
+.mobile-menu-drawer.open {
+  display: flex;
+}
+
+/* ==========================================================================
+   BOTÕES VIBRANTES E CHAMATIVOS
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn-orange {
+  background: linear-gradient(135deg, var(--orange-energy) 0%, #FF9E00 100%);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-orange);
+}
+
+.btn-orange:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 16px 32px -4px rgba(255, 122, 0, 0.45);
+}
+
+.btn-blue {
+  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--petro-blue) 60%, var(--sky-blue) 100%);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-blue);
+}
+
+.btn-blue:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 16px 32px -4px rgba(15, 76, 129, 0.4);
+}
+
+.btn-outline-custom {
+  background: #FFFFFF;
+  color: var(--navy-dark);
+  border: 2px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-outline-custom:hover {
+  border-color: var(--petro-blue);
+  color: var(--petro-blue);
+  background: var(--bg-soft-blue);
+  transform: translateY(-2px);
+}
+
+.btn-lg {
+  padding: 1rem 2.2rem;
+  font-size: 1.05rem;
+}
+
+/* ==========================================================================
+   HERO COM PERSONALIDADE & CORES
+   ========================================================================== */
+.hero-content {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--petro-blue);
+  background: rgba(78, 168, 222, 0.12);
+  border: 1px solid rgba(78, 168, 222, 0.35);
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 1.25rem;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5.5vw, 4.1rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--navy-dark);
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+}
+
+.highlight-gradient {
+  background: linear-gradient(135deg, var(--petro-blue) 0%, var(--sky-blue) 40%, var(--orange-energy) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.1rem, 2.2vw, 1.28rem);
+  color: #4A5568;
+  line-height: 1.65;
+  margin-bottom: 2.25rem;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==========================================================================
+   CARDS DOS MODAIS COM IDENTIDADE CROMÁTICA ESPECÍFICA
+   ========================================================================== */
+.hero-modals-nav {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .hero-modals-nav {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.modal-nav-card {
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+/* Borda com cor específica no hover */
+.modal-nav-card.theme-duto {
+  border-color: rgba(15, 76, 129, 0.2);
+}
+.modal-nav-card.theme-duto:hover {
+  border-color: var(--petro-blue);
+  box-shadow: var(--shadow-blue);
+  transform: translateY(-6px);
+}
+
+.modal-nav-card.theme-rodo {
+  border-color: rgba(255, 122, 0, 0.2);
+}
+.modal-nav-card.theme-rodo:hover {
+  border-color: var(--orange-energy);
+  box-shadow: var(--shadow-orange);
+  transform: translateY(-6px);
+}
+
+.modal-nav-card.theme-mari {
+  border-color: rgba(78, 168, 222, 0.25);
+}
+.modal-nav-card.theme-mari:hover {
+  border-color: var(--sky-blue);
+  box-shadow: var(--shadow-sky);
+  transform: translateY(-6px);
+}
+
+.modal-nav-card.theme-ferro {
+  border-color: rgba(255, 200, 87, 0.35);
+}
+.modal-nav-card.theme-ferro:hover {
+  border-color: var(--gold-energy);
+  box-shadow: var(--shadow-gold);
+  transform: translateY(-6px);
+}
+
+/* Ícones dos Modais com Cores Oficiais */
+.modal-icon-circle {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: transform var(--transition);
+}
+
+.modal-nav-card:hover .modal-icon-circle {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Ícone Dutoviário → Azul Petróleo (#0F4C81) */
+.icon-duto {
+  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--petro-blue) 100%);
+}
+
+/* Ícone Rodoviário → Laranja Energético (#FF7A00) */
+.icon-rodo {
+  background: linear-gradient(135deg, var(--orange-energy) 0%, #FF9E00 100%);
+}
+
+/* Ícone Marítimo → Azul Claro (#4EA8DE) */
+.icon-mari {
+  background: linear-gradient(135deg, var(--petro-blue) 0%, var(--sky-blue) 100%);
+}
+
+/* Ícone Ferroviário → Dourado (#FFC857) */
+.icon-ferro {
+  background: linear-gradient(135deg, #E69500 0%, var(--gold-energy) 100%);
+}
+
+.modal-nav-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--navy-dark);
+  margin-bottom: 0.3rem;
+}
+
+.modal-nav-desc {
+  font-size: 0.82rem;
+  color: var(--metallic-gray);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   CARDS DE CONTEÚDO VIBRANTES (BORDAS COLORIDAS & SOMBRAS MODERNAS)
+   ========================================================================== */
+.clean-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+@media (min-width: 640px) {
+  .clean-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .clean-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card-clean {
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 2.25rem 1.75rem;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+
+/* Faixa Superior com Gradiente */
+.card-clean::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--petro-blue), var(--sky-blue));
+}
+
+.card-clean.accent-orange::before {
+  background: linear-gradient(90deg, var(--orange-energy), var(--gold-energy));
+}
+
+.card-clean.accent-gold::before {
+  background: linear-gradient(90deg, var(--gold-energy), var(--orange-energy));
+}
+
+.card-clean.accent-sky::before {
+  background: linear-gradient(90deg, var(--sky-blue), var(--petro-blue));
+}
+
+.card-clean:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px -6px rgba(10, 35, 66, 0.14);
+}
+
+.card-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+
+.badge-blue {
+  background: rgba(15, 76, 129, 0.1);
+  color: var(--petro-blue);
+  border: 1px solid rgba(15, 76, 129, 0.2);
+}
+
+.badge-orange {
+  background: rgba(255, 122, 0, 0.12);
+  color: var(--orange-energy);
+  border: 1px solid rgba(255, 122, 0, 0.25);
+}
+
+.badge-sky {
+  background: rgba(78, 168, 222, 0.14);
+  color: var(--petro-blue);
+  border: 1px solid rgba(78, 168, 222, 0.3);
+}
+
+.badge-gold {
+  background: rgba(255, 200, 87, 0.2);
+  color: #B46900;
+  border: 1px solid rgba(255, 200, 87, 0.4);
+}
+
+.card-heading {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--navy-dark);
+  margin-bottom: 0.6rem;
+}
+
+.card-paragraph {
+  font-size: 0.96rem;
+  color: #4A5568;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   SIMULADOR DE OLEODUTO (DUTOVIÁRIO)
+   ========================================================================== */
+.duto-showcase {
+  background: #FFFFFF;
+  border: 2px solid rgba(15, 76, 129, 0.2);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 15px 35px -5px rgba(15, 76, 129, 0.12);
+  margin-bottom: 3.5rem;
+}
+
+.tube-container {
+  height: 85px;
+  background: linear-gradient(180deg, #475569 0%, #1E293B 30%, #0F172A 60%, #334155 100%);
+  border-radius: 14px;
+  border: 2px solid #64748B;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin: 1.75rem 0;
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.oil-stream-black {
+  width: 100%;
+  height: 54px;
+  background: repeating-linear-gradient(
+    90deg,
+    #090D16 0px,
+    #111827 30px,
+    #1E293B 50px,
+    #090D16 80px
   );
-  pointer-events:none;
+  background-size: 200px 100%;
+  animation: oilRun 2.8s infinite linear;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
-.image-caption{
-  position:absolute;
-  z-index:2;
-  left:18px;
-  right:18px;
-  bottom:16px;
-  color:#fff;
-  font-family:'IBM Plex Mono',monospace;
-  font-size:.68rem;
-  letter-spacing:.04em;
-  text-transform:uppercase;
-  text-shadow:0 2px 10px rgba(0,0,0,.7);
+@keyframes oilRun {
+  0% { background-position: 0 0; }
+  100% { background-position: -200px 0; }
 }
 
-.hero-image{
-  height:390px;
+.pig-device {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--gold-energy) 0%, var(--orange-energy) 100%);
+  border-radius: 8px;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(255, 200, 87, 0.8);
+  transition: left 1s ease-in-out;
+  z-index: 5;
 }
 
-.pipeline-image{
-  height:360px;
+/* ==========================================================================
+   ESTÁGIOS ANIMADOS DOS OUTROS MODAIS
+   ========================================================================== */
+
+/* Rodovia do Caminhão */
+.stage-highway {
+  background: linear-gradient(180deg, #FFF8F2 0%, #E2E8F0 68%, #334155 69%, #0F172A 100%);
+  border-radius: 18px;
+  height: 190px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(255, 122, 0, 0.2);
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 25px -4px rgba(255, 122, 0, 0.15);
 }
 
-.truck-image{
-  height:310px;
+.dashes-lane {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 200%;
+  height: 5px;
+  background: repeating-linear-gradient(90deg, var(--gold-energy) 0, var(--gold-energy) 35px, transparent 35px, transparent 75px);
+  animation: roadMotion 1.2s infinite linear;
 }
 
-.refinery-image{
-  height:350px;
+@keyframes roadMotion {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-75px); }
 }
 
-@media (max-width:768px){
-  .hero-image{ height:260px; }
-  .pipeline-image{ height:260px; }
-  .truck-image{ height:240px; }
-  .refinery-image{ height:260px; }
-
-  .to-top{
-    right:12px;
-    bottom:12px;
-  }
+.truck-graphic {
+  position: absolute;
+  bottom: 22px;
+  left: 10%;
+  animation: truckSlightVibe 0.4s infinite alternate ease-in-out;
 }
 
-@media (prefers-reduced-motion:reduce){
-  html{ scroll-behavior:auto; }
-  *,*::before,*::after{
-    animation-duration:.01ms !important;
-    animation-iteration-count:1 !important;
-    transition-duration:.01ms !important;
-  }
+@keyframes truckSlightVibe {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-2px); }
 }
 
-/* Entrada suave dos elementos */
-.image-card,
-.stage-card,
-.panel{
-  opacity:1;
+/* Oceano do Navio */
+.stage-sea {
+  background: linear-gradient(180deg, #F0F8FD 0%, #BAE6FD 55%, #0284C7 56%, #0369A1 100%);
+  border-radius: 18px;
+  height: 210px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(78, 168, 222, 0.25);
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 25px -4px rgba(78, 168, 222, 0.18);
 }
 
-@media (prefers-reduced-motion:no-preference){
-  .image-card,
-  .stage-card{
-    transition:
-      opacity .55s ease,
-      transform .55s ease,
-      border-color .25s ease,
-      box-shadow .25s ease;
-  }
-
-  .stage-card{
-    opacity:.01;
-    transform:translateY(14px);
-  }
-
-  .stage-card.is-visible{
-    opacity:1;
-    transform:translateY(0);
-  }
+.gentle-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 55px;
+  background-image: radial-gradient(circle at 50% 0, transparent 45%, #0284C7 50%);
+  background-repeat: repeat-x;
+  background-size: 50px 100%;
+  animation: seaRoll 6s infinite linear;
 }
 
-/* =====================================
-   ANIMAÇÕES DE ENTRADA
-===================================== */
-
-@media (prefers-reduced-motion:no-preference){
-
-  .stage-card,
-  .panel,
-  .image-card{
-    opacity:.01;
-    transform:translateY(18px);
-    transition:
-      opacity .6s ease,
-      transform .6s ease,
-      border-color .25s ease,
-      box-shadow .25s ease;
-  }
-
-  .stage-card.is-visible,
-  .panel.is-visible,
-  .image-card.is-visible{
-    opacity:1;
-    transform:translateY(0);
-  }
+@keyframes seaRoll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50px); }
 }
 
-/* =====================================
-   CAMINHÃO ANIMADO
-===================================== */
-
-.road-container{
-  position:relative;
-  height:90px;
-  overflow:hidden;
-  margin:40px 0;
+.ship-graphic {
+  position: absolute;
+  bottom: 32px;
+  left: -200px;
+  animation: shipNavigate 16s infinite linear;
 }
 
-.road{
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:25px;
-  height:8px;
-  background:var(--border);
+@keyframes shipNavigate {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(100vw + 250px)); }
 }
 
-.road::after{
-  content:"";
-  position:absolute;
-  inset:0;
-
-  background:
-    repeating-linear-gradient(
-      to right,
-      var(--accent) 0 20px,
-      transparent 20px 40px
-    );
-
-  animation:roadMove 1s linear infinite;
+/* Ferrovia do Trem */
+.stage-rail {
+  background: linear-gradient(180deg, #FFFDF8 0%, #E2E8F0 68%, #475569 69%, #1E293B 100%);
+  border-radius: 18px;
+  height: 190px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(255, 200, 87, 0.3);
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 25px -4px rgba(255, 200, 87, 0.18);
 }
 
-.truck{
-  position:absolute;
-  left:-80px;
-  bottom:32px;
-
-  font-size:2.2rem;
-
-  animation:drive 12s linear infinite;
+.rail-track {
+  position: absolute;
+  bottom: 26px;
+  left: 0;
+  width: 200%;
+  height: 8px;
+  background: repeating-linear-gradient(90deg, #0F172A 0, #0F172A 12px, transparent 12px, transparent 30px);
+  animation: railMotion 0.8s infinite linear;
 }
 
-@keyframes drive{
-  from{
-    left:-80px;
-  }
-
-  to{
-    left:110%;
-  }
+@keyframes railMotion {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-60px); }
 }
 
-@keyframes roadMove{
-  from{
-    background-position:0 0;
-  }
-
-  to{
-    background-position:-40px 0;
-  }
+.train-graphic {
+  position: absolute;
+  bottom: 28px;
+  display: flex;
+  gap: 6px;
+  animation: trainMotion 14s infinite linear;
 }
 
-/* =====================================
-   RESPONSIVIDADE EXTRA
-===================================== */
-
-@media (max-width:1024px){
-
-  .hero-box{
-    padding:3rem;
-  }
-
-  .flow-row{
-    justify-content:center;
-  }
-
-  .pipeline-image,
-  .refinery-image{
-    height:300px;
-  }
+@keyframes trainMotion {
+  0% { transform: translateX(100vw); }
+  100% { transform: translateX(-700px); }
 }
 
-@media (max-width:640px){
+/* ==========================================================================
+   PÁGINA DA EQUIPE: HISTÓRIA, TIMELINE MULTICOLORIDA & CARDS
+   ========================================================================== */
+.story-box {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 2.75rem 2.25rem;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 4.5rem;
+  border: 2px solid transparent;
+  background-image: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(135deg, var(--petro-blue), var(--sky-blue), var(--orange-energy), var(--gold-energy));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
 
-  h1{
-    font-size:2.3rem !important;
-    line-height:1.1;
-  }
+.story-text {
+  font-size: 1.05rem;
+  color: #334155;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
 
-  h2{
-    font-size:1.8rem !important;
-  }
+.story-text:last-child {
+  margin-bottom: 0;
+}
 
-  .hero-box{
-    padding:1.5rem;
-  }
+/* Timeline Multicolorida */
+.creation-timeline {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 3rem 0 4.5rem;
+}
 
-  .panel,
-  .stage-card{
-    padding:1rem;
-  }
-
-  .flow-step{
-    width:100%;
-    text-align:center;
-  }
-
-  .flow-arrow{
-    display:none;
-  }
-
-  .road-container{
-    height:70px;
-  }
-
-  .truck{
-    font-size:1.8rem;
+@media (min-width: 768px) {
+  .creation-timeline {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
-@media (max-width:380px){
+.timeline-milestone {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 1.75rem 1.25rem;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  transition: all var(--transition);
+  border-top: 5px solid var(--metallic-gray);
+}
 
-  .eyebrow{
-    font-size:.62rem;
-  }
+.timeline-milestone.step-1 {
+  border-top-color: var(--petro-blue);
+}
+.timeline-milestone.step-1 .milestone-num { color: var(--petro-blue); }
 
-  .tag{
-    font-size:.58rem;
-  }
+.timeline-milestone.step-2 {
+  border-top-color: var(--sky-blue);
+}
+.timeline-milestone.step-2 .milestone-num { color: #0284C7; }
 
-  .to-top{
-    width:36px;
-    height:36px;
+.timeline-milestone.step-3 {
+  border-top-color: var(--orange-energy);
+}
+.timeline-milestone.step-3 .milestone-num { color: var(--orange-energy); }
+
+.timeline-milestone.step-4 {
+  border-top-color: var(--gold-energy);
+}
+.timeline-milestone.step-4 .milestone-num { color: #D97706; }
+
+.timeline-milestone:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 28px -4px rgba(10, 35, 66, 0.12);
+}
+
+.milestone-num {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.milestone-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy-dark);
+  margin-bottom: 0.4rem;
+}
+
+.milestone-desc {
+  font-size: 0.88rem;
+  color: #4A5568;
+  line-height: 1.55;
+}
+
+/* Cards Individuais dos Integrantes */
+.members-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+@media (min-width: 640px) {
+  .members-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media (min-width: 1024px) {
+  .members-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.member-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 2.25rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid var(--border-subtle);
+  position: relative;
+}
+
+.member-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--orange-energy);
+  box-shadow: var(--shadow-orange);
+}
+
+/* Moldura em Gradiente ao Redor do Avatar */
+.avatar-gradient-frame {
+  padding: 4px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--petro-blue), var(--sky-blue), var(--orange-energy), var(--gold-energy));
+  margin-bottom: 1.25rem;
+  display: inline-block;
+  box-shadow: 0 8px 18px rgba(10, 35, 66, 0.15);
+  transition: transform var(--transition);
+}
+
+.member-card:hover .avatar-gradient-frame {
+  transform: scale(1.08) rotate(4deg);
+}
+
+.member-avatar-inner {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  background: var(--navy-dark);
+}
+
+.member-name {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--navy-dark);
+  margin-bottom: 0.25rem;
+}
+
+.member-role {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--orange-energy);
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.member-bio {
+  font-size: 0.92rem;
+  color: #4A5568;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.site-footer {
+  background: var(--navy-dark);
+  color: #94A3B8;
+  padding: 3.5rem 0;
+  border-top: 3px solid transparent;
+  background-image: linear-gradient(var(--navy-dark), var(--navy-dark)), linear-gradient(90deg, var(--petro-blue), var(--sky-blue), var(--orange-energy), var(--gold-energy));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-brand {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+
+.footer-brand span {
+  color: var(--orange-energy);
+}
+
+.footer-text {
+  font-size: 0.92rem;
+  color: #CBD5E1;
+  margin-bottom: 1.5rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-nav a {
+  color: #CBD5E1;
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+.footer-nav a:hover {
+  color: var(--gold-energy);
+}
+
+.footer-copyright {
+  font-size: 0.8rem;
+  color: #64748B;
 }

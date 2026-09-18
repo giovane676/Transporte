@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Equipe — PetroLog | Os Estudantes Criadores</title>
+  <meta name="description" content="Conheça os alunos criadores da PetroLog: Giovanni, Guilherme, Gabriela e Isa. História da startup escolar fictícia de transporte de petróleo.">
+
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-badge">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+          </svg>
+        </div>
+        <div>
+          <span class="logo-title">Petro<span>Log</span></span>
+          <span class="logo-subtitle">Transporte de Petróleo</span>
+        </div>
+      </a>
+
+      <nav aria-label="Navegação Principal">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="dutoviario.html" class="nav-link">Oleodutos <span class="badge-destaque">Destaque</span></a></li>
+          <li><a href="rodoviario.html" class="nav-link">Rodoviário</a></li>
+          <li><a href="maritimo.html" class="nav-link">Marítimo</a></li>
+          <li><a href="ferroviario.html" class="nav-link">Ferroviário</a></li>
+          <li><a href="equipe.html" class="nav-link active">Equipe</a></li>
+        </ul>
+      </nav>
+
+      <button id="mobileMenuBtn" class="mobile-btn" aria-label="Abrir Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div id="mobileDrawer" class="mobile-menu-drawer">
+      <a href="index.html" class="nav-link">Início</a>
+      <a href="dutoviario.html" class="nav-link">Oleodutos (Destaque)</a>
+      <a href="rodoviario.html" class="nav-link">Rodoviário</a>
+      <a href="maritimo.html" class="nav-link">Marítimo</a>
+      <a href="ferroviario.html" class="nav-link">Ferroviário</a>
+      <a href="equipe.html" class="nav-link active">Equipe do Projeto</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero da Equipe com Oleodutos Industriais -->
+    <section class="hero-wrapper">
+      <canvas id="pipelineCanvas"></canvas>
+
+      <div class="container hero-content">
+        <div class="eyebrow-tag">
+          PROJETO ESCOLAR CRIATIVO • QUATRO INTEGRANTES
+        </div>
+
+        <h1 class="hero-title">
+          A Equipe por Trás da <span class="highlight-gradient">PetroLog</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Quatro estudantes que transformaram o aprendizado sobre logística de energia em uma startup moderna, unindo estratégia, engenharia, design e comunicação.
+        </p>
+      </div>
+    </section>
+
+    <!-- Conteúdo da Equipe -->
+    <section class="section section-alt-blue">
+      <div class="container">
+        
+        <!-- Box com a História Oficial da PetroLog -->
+        <div class="story-box">
+          <div style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 1.5rem;">
+            <div style="width: 2.6rem; height: 2.6rem; border-radius: 10px; background: linear-gradient(135deg, var(--petro-blue), var(--sky-blue)); color: #FFFFFF; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(15, 76, 129, 0.25);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <div>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--petro-blue); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">A ORIGEM DO PROJETO</span>
+              <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--navy-dark); margin: 0;">História da PetroLog</h2>
+            </div>
+          </div>
+
+          <p class="story-text">
+            A PetroLog surgiu a partir da ideia de quatro estudantes que buscavam entender melhor como o petróleo é transportado pelo mundo. Durante pesquisas sobre logística, perceberam que grande parte das pessoas conhece o petróleo, mas poucas sabem como ele chega aos diferentes destinos de forma segura e eficiente.
+          </p>
+
+          <p class="story-text">
+            Com isso, nasceu a PetroLog, uma empresa fictícia criada para representar soluções modernas de transporte de petróleo por meio dos modais rodoviário, dutoviário, ferroviário e marítimo. O projeto foi desenvolvido com o objetivo de apresentar, de forma visual e interativa, os principais métodos utilizados para movimentar petróleo entre diferentes regiões.
+          </p>
+
+          <p class="story-text" style="font-weight: 700; color: var(--petro-blue);">
+            Mais do que um site, a PetroLog representa o trabalho em equipe, a criatividade e a aplicação dos conhecimentos adquiridos durante o curso.
+          </p>
+        </div>
+
+        <!-- Linha do Tempo Multicolorida da Criação -->
+        <div class="section-header" style="margin-bottom: 2rem;">
+          <span class="card-badge badge-blue">
+            PASSO A PASSO
+          </span>
+          <h2 class="section-title">Linha do Tempo da Criação</h2>
+          <div class="gradient-bar"></div>
+          <p class="section-desc">
+            Veja como a ideia dos alunos evoluiu desde a primeira conversa até o portal interativo.
+          </p>
+        </div>
+
+        <div class="creation-timeline">
+          <!-- Passo 1: Azul Petróleo (#0F4C81) -->
+          <div class="timeline-milestone step-1">
+            <span class="milestone-num">01. CURIOSIDADE</span>
+            <h3 class="milestone-title">O Ponto de Partida</h3>
+            <p class="milestone-desc">
+              O grupo notou que muitas pessoas sabem o que é petróleo, mas desconhecem a logística complexa para transportá-lo.
+            </p>
+          </div>
+
+          <!-- Passo 2: Azul Claro (#4EA8DE) -->
+          <div class="timeline-milestone step-2">
+            <span class="milestone-num">02. PESQUISA</span>
+            <h3 class="milestone-title">Os 4 Modais</h3>
+            <p class="milestone-desc">
+              Pesquisa aprofundada sobre dutos, carretas, navios e trens, identificando a função e o diferencial de cada um.
+            </p>
+          </div>
+
+          <!-- Passo 3: Laranja (#FF7A00) -->
+          <div class="timeline-milestone step-3">
+            <span class="milestone-num">03. CONCEITO</span>
+            <h3 class="milestone-title">A Marca PetroLog</h3>
+            <p class="milestone-desc">
+              Criação da identidade visual com cores vibrantes, logo moderno e propósito de ensinar com movimento e dinamismo.
+            </p>
+          </div>
+
+          <!-- Passo 4: Dourado (#FFC857) -->
+          <div class="timeline-milestone step-4">
+            <span class="milestone-num">04. APRESENTAÇÃO</span>
+            <h3 class="milestone-title">Portal Escolar</h3>
+            <p class="milestone-desc">
+              Construção do site completo com simuladores interativos e navegação fluida para apresentação em sala de aula.
+            </p>
+          </div>
+        </div>
+
+        <!-- Cards dos 4 Integrantes com Moldura em Gradiente -->
+        <div class="section-header" style="margin-bottom: 2.5rem; margin-top: 4rem;">
+          <span class="card-badge badge-orange">
+            OS ESTUDANTES
+          </span>
+          <h2 class="section-title">Integrantes da Equipe</h2>
+          <div class="gradient-bar"></div>
+          <p class="section-desc">
+            Cada aluno contribuiu com uma habilidade essencial para o sucesso da PetroLog.
+          </p>
+        </div>
+
+        <div class="members-grid">
+          <!-- Card 1: Giovanni -->
+          <div class="member-card">
+            <div class="avatar-gradient-frame">
+              <div class="member-avatar-inner" style="background: linear-gradient(135deg, var(--navy-dark) 0%, var(--petro-blue) 100%);">
+                <!-- Ícone de Logística e Navegação -->
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="member-name">Giovanni</h3>
+            <div class="member-role" style="color: var(--petro-blue);">Estratégia & Coordenação</div>
+            <p class="member-bio">
+              Liderou o planejamento do projeto escolar, estruturou a visão geral de startup e a integração dos 4 modais.
+            </p>
+          </div>
+
+          <!-- Card 2: Guilherme -->
+          <div class="member-card">
+            <div class="avatar-gradient-frame">
+              <div class="member-avatar-inner" style="background: linear-gradient(135deg, var(--orange-energy) 0%, #FF9E00 100%);">
+                <!-- Ícone de Engenharia e Dutos -->
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="member-name">Guilherme</h3>
+            <div class="member-role" style="color: var(--orange-energy);">Engenharia dos Modais</div>
+            <p class="member-bio">
+              Estruturou o funcionamento técnico dos oleodutos, a vazão contínua do petróleo preto e a logística dos vagões.
+            </p>
+          </div>
+
+          <!-- Card 3: Gabriela -->
+          <div class="member-card">
+            <div class="avatar-gradient-frame">
+              <div class="member-avatar-inner" style="background: linear-gradient(135deg, var(--petro-blue) 0%, var(--sky-blue) 100%);">
+                <!-- Ícone de Criatividade e Cores -->
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="13.5" cy="6.5" r=".5" fill="#FFFFFF"/>
+                  <circle cx="17.5" cy="10.5" r=".5" fill="#FFFFFF"/>
+                  <circle cx="8.5" cy="7.5" r=".5" fill="#FFFFFF"/>
+                  <circle cx="6.5" cy="12.5" r=".5" fill="#FFFFFF"/>
+                  <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="member-name">Gabriela</h3>
+            <div class="member-role" style="color: #0284C7;">Design & Identidade Visual</div>
+            <p class="member-bio">
+              Criou a combinação de cores vibrantes, a harmonia dos elementos gráficos e garantiu uma experiência visual viva e moderna.
+            </p>
+          </div>
+
+          <!-- Card 4: Isa -->
+          <div class="member-card">
+            <div class="avatar-gradient-frame">
+              <div class="member-avatar-inner" style="background: linear-gradient(135deg, #E69500 0%, var(--gold-energy) 100%);">
+                <!-- Ícone de Comunicação e Síntese -->
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="member-name">Isa</h3>
+            <div class="member-role" style="color: #D97706;">Comunicação & Síntese</div>
+            <p class="member-bio">
+              Transformou o conteúdo em explicações rápidas e didáticas, garantindo clareza e ritmo ideal para a apresentação.
+            </p>
+          </div>
+        </div>
+
+        <!-- Botão Voltar ao Início -->
+        <div style="text-align: center; margin-top: 4.5rem;">
+          <a href="index.html" class="btn btn-blue btn-lg">
+            Voltar ao Início do Site ➔
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">Petro<span>Log</span></div>
+      <p class="footer-text">Trabalho Escolar • Desenvolvido por Giovanni, Guilherme, Gabriela e Isa</p>
+      <div class="footer-nav">
+        <a href="index.html">Início</a>
+        <a href="dutoviario.html">Oleodutos</a>
+        <a href="rodoviario.html">Rodoviário</a>
+        <a href="maritimo.html">Marítimo</a>
+        <a href="ferroviario.html">Ferroviário</a>
+        <a href="equipe.html" style="color: var(--gold-energy);">Equipe</a>
+      </div>
+      <div class="footer-copyright">© 2026 PetroLog — Projeto Escolar</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
