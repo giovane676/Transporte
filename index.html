@@ -68,63 +68,70 @@
       <canvas id="pipelineCanvas"></canvas>
 
       <div class="container hero-content">
-        <div class="eyebrow-tag">
-          ⚡ PROJETO ESCOLAR • LOGÍSTICA DE PETRÓLEO
-        </div>
-
-        <h1 class="hero-title">
-          PetroLog: <span class="highlight-gradient">Energia em Movimento</span>
-        </h1>
-
-        <p class="hero-subtitle">
-          Transporte de petróleo com segurança, tecnologia e eficiência em quatro modalidades.
-        </p>
-
-        <!-- Vitrine com os 4 Modais -->
-        <div class="hero-modals-nav">
-          <!-- Dutoviário -->
-          <a href="dutoviario.html" class="modal-nav-card theme-duto">
-            <div class="modal-icon-circle icon-duto">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
+        <div class="hero-split-container">
+          <!-- Coluna Esquerda: Apresentação & 4 Modais -->
+          <div class="hero-text-col">
+            <div class="eyebrow-tag">
+              ⚡ PROJETO ESCOLAR • LOGÍSTICA DE PETRÓLEO
             </div>
-            <strong class="modal-nav-title">Oleodutos</strong>
-            <span class="modal-nav-desc" style="color: var(--petro-blue);">Fluxo 24h • Destaque</span>
-          </a>
 
-          <!-- Rodoviário -->
-          <a href="rodoviario.html" class="modal-nav-card theme-rodo">
-            <div class="modal-icon-circle icon-rodo">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <h1 class="hero-title" style="text-align: left; margin: 0.8rem 0;">
+              PetroLog: <span class="highlight-gradient">Energia em Movimento</span>
+            </h1>
+
+            <p class="hero-subtitle" style="text-align: left; margin: 0 0 1.5rem; max-width: 100%;">
+              Transporte de petróleo com segurança, tecnologia e eficiência em quatro modalidades essenciais.
+            </p>
+
+            <!-- Vitrine com os 4 Modais em Grid 2x2 -->
+            <div class="hero-modals-grid">
+              <!-- Dutoviário -->
+              <a href="dutoviario.html" class="modal-nav-card theme-duto">
+                <div class="modal-icon-circle icon-duto">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
+                </div>
+                <strong class="modal-nav-title">Oleodutos</strong>
+                <span class="modal-nav-desc" style="color: var(--petro-blue);">Fluxo 24h • Destaque</span>
+              </a>
+
+              <!-- Rodoviário -->
+              <a href="rodoviario.html" class="modal-nav-card theme-rodo">
+                <div class="modal-icon-circle icon-rodo">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                </div>
+                <strong class="modal-nav-title">Rodoviário</strong>
+                <span class="modal-nav-desc" style="color: var(--orange-energy);">Caminhões Ágeis</span>
+              </a>
+
+              <!-- Marítimo -->
+              <a href="maritimo.html" class="modal-nav-card theme-mari">
+                <div class="modal-icon-circle icon-mari">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 20a6 6 0 0 0 10 0 6 6 0 0 0 10 0M4 16l2-8h12l2 8"/></svg>
+                </div>
+                <strong class="modal-nav-title">Marítimo</strong>
+                <span class="modal-nav-desc" style="color: var(--sky-blue);">Grandes Volumes</span>
+              </a>
+
+              <!-- Ferroviário -->
+              <a href="ferroviario.html" class="modal-nav-card theme-ferro">
+                <div class="modal-icon-circle icon-ferro">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19l-3 3M16 19l3 3"/></svg>
+                </div>
+                <strong class="modal-nav-title">Ferroviário</strong>
+                <span class="modal-nav-desc" style="color: #D97706;">Força nos Trilhos</span>
+              </a>
             </div>
-            <strong class="modal-nav-title">Rodoviário</strong>
-            <span class="modal-nav-desc" style="color: var(--orange-energy);">Caminhões Ágeis</span>
-          </a>
+          </div>
 
-          <!-- Marítimo -->
-          <a href="maritimo.html" class="modal-nav-card theme-mari">
-            <div class="modal-icon-circle icon-mari">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 20a6 6 0 0 0 10 0 6 6 0 0 0 10 0M4 16l2-8h12l2 8"/></svg>
+          <!-- Coluna Direita (~46%): Card com Fotografia Principal da Home -->
+          <div class="hero-media-wrap">
+            <div class="hero-compact-card">
+              <img src="images/photo-1572970321684-466a06878540.avif" alt="Operação e Transporte Geral de Petróleo — PetroLog" class="hero-compact-img">
+              <div class="hero-compact-caption">
+                <span class="photo-badge orange">📷 FOTOGRAFIA REAL</span>
+                <span>Operação de transporte e logística</span>
+              </div>
             </div>
-            <strong class="modal-nav-title">Marítimo</strong>
-            <span class="modal-nav-desc" style="color: var(--sky-blue);">Grandes Volumes</span>
-          </a>
-
-          <!-- Ferroviário -->
-          <a href="ferroviario.html" class="modal-nav-card theme-ferro">
-            <div class="modal-icon-circle icon-ferro">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19l-3 3M16 19l3 3"/></svg>
-            </div>
-            <strong class="modal-nav-title">Ferroviário</strong>
-            <span class="modal-nav-desc" style="color: #D97706;">Força nos Trilhos</span>
-          </a>
-        </div>
-
-        <!-- Fotografia Principal da Home: Logística de Petróleo -->
-        <div class="hero-image-showcase">
-          <img src="images/photo-1572970321684-466a06878540.avif" alt="Operação e Transporte Geral de Petróleo — PetroLog" class="real-photo-hero">
-          <div class="photo-caption-bar">
-            <span class="photo-badge orange">📷 FOTOGRAFIA REAL • OPERAÇÃO PETROLOG</span>
-            <span>Transporte de petróleo e apoio a terminais de abastecimento</span>
           </div>
         </div>
       </div>
@@ -200,41 +207,52 @@
     <!-- ========== SEÇÃO MONITORAMENTO E SALA DE CONTROLE ========== -->
     <section class="section" id="monitoramento" style="background: #FFFFFF;">
       <div class="container">
-        <div class="section-header">
-          <span class="eyebrow-tag" style="background: rgba(0, 180, 216, 0.12); color: #0077B6; border-color: rgba(0, 180, 216, 0.3);">
-            📡 CENTRO DE CONTROLE OPERACIONAL
-          </span>
-          <h2 class="section-title">Monitoramento em Tempo Real</h2>
-          <div class="gradient-bar"></div>
-          <p class="section-desc">
-            Supervisão contínua 24h com telemetria digital, rastreamento de rotas e segurança operacional.
-          </p>
-        </div>
-
-        <div class="monitoring-showcase-card">
-          <div class="monitoring-photo-wrap">
-            <img src="images/pexels-photo-19317897.avif" alt="Sala de Controle e Monitoramento de Transporte de Petróleo" class="real-photo-monitoring">
+        <div class="split-showcase">
+          <!-- Coluna Esquerda (~42%): Foto da Sala de Controle -->
+          <div class="split-media-col">
+            <div class="compact-photo-card">
+              <img src="images/pexels-photo-19317897.avif" alt="Sala de Controle e Monitoramento de Transporte de Petróleo" class="compact-photo-img">
+              <div class="compact-photo-caption">
+                <span class="photo-badge cyan">📷 FOTOGRAFIA REAL</span>
+                <span>Centro de Controle Operacional (CCO)</span>
+              </div>
+            </div>
           </div>
-          <div class="monitoring-pills-bar">
-            <div class="monitoring-pill-item">
-              <span class="pill-dot green"></span>
-              <div>
-                <strong style="color: var(--navy-dark);">Supervisão 24/7</strong>
-                <div style="font-size: 0.85rem; color: #64748B;">Acompanhamento contínuo de todos os modais de transporte.</div>
-              </div>
+
+          <!-- Coluna Direita (~58%): Informações e Destaques ao Lado -->
+          <div class="split-content-col">
+            <div class="split-content-header">
+              <span class="eyebrow-tag" style="background: rgba(0, 180, 216, 0.12); color: #0077B6; border-color: rgba(0, 180, 216, 0.3);">
+                📡 SUPERVISÃO DIGITAL
+              </span>
+              <h2 class="split-content-title">Monitoramento em Tempo Real</h2>
+              <p class="split-content-desc">
+                Supervisão contínua 24h integrando telemetria digital, rastreamento de rotas e sensores preventivos para todos os modais.
+              </p>
             </div>
-            <div class="monitoring-pill-item">
-              <span class="pill-dot cyan"></span>
-              <div>
-                <strong style="color: var(--navy-dark);">Sensores de Telemetria</strong>
-                <div style="font-size: 0.85rem; color: #64748B;">Pressão, vazão e temperatura checados a cada segundo.</div>
+
+            <!-- Pílulas Informativas de Monitoramento -->
+            <div class="monitoring-split-pills">
+              <div class="monitoring-split-pill">
+                <span class="pill-dot green"></span>
+                <div>
+                  <strong>Supervisão 24/7</strong>
+                  <p>Acompanhamento centralizado e ininterrupto de toda a frota e rede.</p>
+                </div>
               </div>
-            </div>
-            <div class="monitoring-pill-item">
-              <span class="pill-dot orange"></span>
-              <div>
-                <strong style="color: var(--navy-dark);">Prevenção Imediata</strong>
-                <div style="font-size: 0.85rem; color: #64748B;">Resposta rápida para garantir segurança de toda a operação.</div>
+              <div class="monitoring-split-pill">
+                <span class="pill-dot cyan"></span>
+                <div>
+                  <strong>Sensores de Telemetria</strong>
+                  <p>Medição de pressão, vazão e temperatura atualizadas a cada segundo.</p>
+                </div>
+              </div>
+              <div class="monitoring-split-pill">
+                <span class="pill-dot orange"></span>
+                <div>
+                  <strong>Prevenção Imediata</strong>
+                  <p>Acionamento ágil de equipes para neutralizar riscos com precisão.</p>
+                </div>
               </div>
             </div>
           </div>
