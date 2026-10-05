@@ -36,7 +36,7 @@
           <li><a href="rodoviario.html" class="nav-link">Rodoviário</a></li>
           <li><a href="maritimo.html" class="nav-link active">Marítimo</a></li>
           <li><a href="ferroviario.html" class="nav-link">Ferroviário</a></li>
-          <li><a href="equipe.html" class="nav-link" style="color: var(--orange-accent); font-weight: 700;">Equipe</a></li>
+          <li><a href="equipe.html" class="nav-link" style="color: var(--orange-energy); font-weight: 800;">Equipe</a></li>
         </ul>
       </nav>
 
@@ -51,17 +51,18 @@
       <a href="rodoviario.html" class="nav-link">Rodoviário</a>
       <a href="maritimo.html" class="nav-link active">Marítimo</a>
       <a href="ferroviario.html" class="nav-link">Ferroviário</a>
-      <a href="equipe.html" class="nav-link" style="color: var(--orange-accent);">Equipe do Projeto</a>
+      <a href="equipe.html" class="nav-link" style="color: var(--orange-energy); font-weight: 800;">Equipe do Projeto</a>
     </div>
   </header>
 
   <main>
+    <!-- ========== HERO ========== -->
     <section class="hero-wrapper">
       <canvas id="pipelineCanvas"></canvas>
 
       <div class="container hero-content">
-        <div class="eyebrow-tag">
-          MODAL MARÍTIMO • CABOTAGEM & OCEANOS
+        <div class="eyebrow-tag" style="background: rgba(78, 168, 222, 0.14); color: var(--petro-blue); border-color: rgba(78, 168, 222, 0.3);">
+          🚢 MODAL MARÍTIMO
         </div>
 
         <h1 class="hero-title">
@@ -69,24 +70,25 @@
         </h1>
 
         <p class="hero-subtitle">
-          Embarcações projetadas com casco duplo e alta capacidade para transportar milhões de litros de petróleo cru entre portos e terminais offshore.
+          Milhões de litros transportados com segurança através dos oceanos.
         </p>
       </div>
     </section>
 
+    <!-- ========== ANIMAÇÃO + CONTEÚDO ========== -->
     <section class="section">
       <div class="container">
-        <!-- Animação do Navio e das Ondas Suaves -->
+        <!-- Animação do Navio -->
         <div class="stage-sea">
           <div class="gentle-wave"></div>
 
           <div class="ship-graphic">
             <svg width="260" height="90" viewBox="0 0 260 90" fill="none">
-              <!-- Casco com Dupla Parede -->
+              <!-- Casco -->
               <path d="M12 65 L40 76 L230 76 L252 46 L232 46 L210 50 L20 50 Z" fill="#B91C1C" stroke="#991B1B" stroke-width="1.8"/>
               <rect x="36" y="42" width="180" height="10" fill="#001D3D"/>
               <line x1="45" y1="42" x2="205" y2="42" stroke="#FFB703" stroke-width="2.5"/>
-              
+
               <!-- Cabine e Chaminé -->
               <rect x="42" y="18" width="32" height="24" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
               <rect x="46" y="24" width="24" height="4" fill="#00B4D8"/>
@@ -96,138 +98,98 @@
           </div>
         </div>
 
-        <!-- 3 Cards Arejados -->
-        <div class="clean-cards-grid">
-          <div class="card-clean">
-            <div class="card-badge" style="background: rgba(0, 43, 73, 0.08); color: var(--navy-deep);">
-              PROTEÇÃO TOTAL
-            </div>
-            <h3 class="card-heading">Casco Duplo Blindado</h3>
-            <p class="card-paragraph">
-              Dois cascos de aço independentes garantem que, mesmo em caso de atrito na parte externa, os tanques de carga fiquem completamente intocados.
-            </p>
+        <!-- ========== COMO FUNCIONA? — 4 ETAPAS ========== -->
+        <div class="section-header" style="margin-top: 2rem;">
+          <h2 class="section-title">Como funciona?</h2>
+          <div class="gradient-bar"></div>
+        </div>
+
+        <div class="visual-process-grid">
+          <div class="visual-process-step">
+            <div class="process-step-number" style="background: linear-gradient(135deg, var(--petro-blue), var(--sky-blue));">01</div>
+            <div class="process-step-emoji">🚢</div>
+            <h3>Navio</h3>
+            <p>Carga embarcada no porto.</p>
           </div>
 
-          <div class="card-clean">
-            <div class="card-badge" style="background: rgba(10, 147, 150, 0.1); color: var(--teal-petro);">
-              CABOTAGEM
-            </div>
-            <h3 class="card-heading">Rotas Costeiras</h3>
-            <p class="card-paragraph">
-              Navegam pelo litoral brasileiro conectando os polos produtores aos grandes portos industriais sem sobrecarregar a malha viária terrestre.
-            </p>
+          <div class="visual-process-step">
+            <div class="process-step-number" style="background: linear-gradient(135deg, var(--petro-blue), var(--sky-blue));">02</div>
+            <div class="process-step-emoji">🌊</div>
+            <h3>Rota</h3>
+            <p>Navegação pela costa ou alto-mar.</p>
           </div>
 
-          <div class="card-clean">
-            <div class="card-badge" style="background: rgba(255, 107, 0, 0.1); color: var(--orange-accent);">
-              ALTO-MAR
+          <div class="visual-process-step">
+            <div class="process-step-number" style="background: linear-gradient(135deg, var(--petro-blue), var(--sky-blue));">03</div>
+            <div class="process-step-emoji">📍</div>
+            <h3>Monitoramento</h3>
+            <p>Posição rastreada via satélite.</p>
+          </div>
+
+          <div class="visual-process-step">
+            <div class="process-step-number" style="background: linear-gradient(135deg, var(--petro-blue), var(--sky-blue));">04</div>
+            <div class="process-step-emoji">⚓</div>
+            <h3>Destino</h3>
+            <p>Atracação e descarga no terminal.</p>
+          </div>
+        </div>
+
+        <!-- ========== 3 CARDS VISUAIS ========== -->
+        <div class="info-cards-visual" style="margin-top: 3.5rem;">
+          <div class="info-visual-card" style="border-top: 4px solid var(--petro-blue);">
+            <div class="info-visual-icon">📡</div>
+            <h3>Rastreamento</h3>
+            <p>A posição e a rota do navio são acompanhadas.</p>
+          </div>
+
+          <div class="info-visual-card" style="border-top: 4px solid var(--sky-blue);">
+            <div class="info-visual-icon">🗺️</div>
+            <h3>Prevenção</h3>
+            <p>A viagem é planejada considerando condições da rota.</p>
+          </div>
+
+          <div class="info-visual-card" style="border-top: 4px solid #dc2626;">
+            <div class="info-visual-icon">🚨</div>
+            <h3>Problema</h3>
+            <p>A equipe responsável é comunicada e o procedimento é iniciado.</p>
+          </div>
+        </div>
+
+        <!-- ========== FLUXO DE PROBLEMA ========== -->
+        <div class="problem-flow" style="margin-top: 3.5rem;">
+          <h3 class="problem-flow-title">Se detectar um problema:</h3>
+          <div class="problem-flow-steps">
+            <div class="problem-flow-step">
+              <span class="problem-flow-icon">⚠️</span>
+              <span>Detectou problema</span>
             </div>
-            <h3 class="card-heading">Monobóias Offshore</h3>
-            <p class="card-paragraph">
-              Em alto-mar, os navios se conectam a bóias especiais através de mangotes flexíveis de alta pressão para carregar ou descarregar o óleo com estabilidade.
-            </p>
+            <div class="problem-flow-arrow">↓</div>
+            <div class="problem-flow-step">
+              <span class="problem-flow-icon">📢</span>
+              <span>Comunicar equipe</span>
+            </div>
+            <div class="problem-flow-arrow">↓</div>
+            <div class="problem-flow-step">
+              <span class="problem-flow-icon">🔬</span>
+              <span>Avaliar situação</span>
+            </div>
+            <div class="problem-flow-arrow">↓</div>
+            <div class="problem-flow-step">
+              <span class="problem-flow-icon">⚙️</span>
+              <span>Aplicar procedimento</span>
+            </div>
+            <div class="problem-flow-arrow">↓</div>
+            <div class="problem-flow-step">
+              <span class="problem-flow-icon">✅</span>
+              <span>Retomar com segurança</span>
+            </div>
           </div>
         </div>
 
         <div style="text-align: center; margin-top: 4rem;">
           <a href="ferroviario.html" class="btn btn-outline-custom btn-lg" style="border-color: var(--gold-energy); color: #b45309;">
-            Próximo: Modal Ferroviário ➔
+            Próximo: Ferroviário ➔
           </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         COMO FUNCIONA NA PRÁTICA — TRANSPORTE MARÍTIMO
-         ========================================================================== -->
-    <section class="section section-dark-blue">
-      <div class="container">
-        <div class="section-header">
-          <span class="eyebrow-tag" style="background: rgba(78,168,222,0.14); color: var(--petro-blue); border-color: rgba(78,168,222,0.3);">
-            ⛴️ ENTENDA O PROCESSO
-          </span>
-          <h2 class="section-title">Como Funciona na Prática</h2>
-          <div class="gradient-bar"></div>
-          <p class="section-desc">
-            Veja como os navios petroleiros transportam o petróleo pelos oceanos, como as rotas são controladas e como a segurança é garantida em alto-mar.
-          </p>
-        </div>
-
-        <!-- Mini fluxograma -->
-        <div class="mini-process">
-          <div class="mini-step">
-            <div class="mini-step-dot" style="background: linear-gradient(135deg, var(--petro-blue), var(--sky-blue));">1</div>
-            <div class="mini-step-label">Embarque</div>
-          </div>
-          <div class="mini-connector" style="background: linear-gradient(90deg, var(--petro-blue), var(--sky-blue));"></div>
-          <div class="mini-step">
-            <div class="mini-step-dot" style="background: linear-gradient(135deg, var(--petro-blue), var(--sky-blue));">2</div>
-            <div class="mini-step-label">Navegação</div>
-          </div>
-          <div class="mini-connector" style="background: linear-gradient(90deg, var(--petro-blue), var(--sky-blue));"></div>
-          <div class="mini-step">
-            <div class="mini-step-dot" style="background: linear-gradient(135deg, var(--petro-blue), var(--sky-blue));">3</div>
-            <div class="mini-step-label">Monitoramento</div>
-          </div>
-          <div class="mini-connector" style="background: linear-gradient(90deg, var(--petro-blue), var(--sky-blue));"></div>
-          <div class="mini-step">
-            <div class="mini-step-dot" style="background: linear-gradient(135deg, var(--petro-blue), var(--sky-blue));">4</div>
-            <div class="mini-step-label">Segurança</div>
-          </div>
-          <div class="mini-connector" style="background: linear-gradient(90deg, var(--petro-blue), var(--sky-blue));"></div>
-          <div class="mini-step">
-            <div class="mini-step-dot" style="background: linear-gradient(135deg, var(--petro-blue), var(--sky-blue));">5</div>
-            <div class="mini-step-label">Descarga</div>
-          </div>
-        </div>
-
-        <div class="practice-grid">
-          <div class="practice-card">
-            <div class="practice-card-icon icon-bg-sky">⛴️</div>
-            <div class="practice-card-body">
-              <div class="practice-card-title">Como os Navios Transportam o Petróleo</div>
-              <div class="practice-card-desc">Navios petroleiros possuem tanques de carga gigantes divididos em compartimentos. O petróleo é carregado por dutos conectados ao terminal portuário. Navios VLCC (Very Large Crude Carrier) transportam até 2 milhões de barris em uma única viagem.</div>
-            </div>
-          </div>
-
-          <div class="practice-card">
-            <div class="practice-card-icon icon-bg-blue">🗺️</div>
-            <div class="practice-card-body">
-              <div class="practice-card-title">Como as Rotas São Acompanhadas</div>
-              <div class="practice-card-desc">O sistema AIS (Automatic Identification System) transmite a posição do navio via satélite a cada 3 minutos. Centros de controle marítimo acompanham o trajeto, condições climáticas e tráfego de outras embarcações em tempo real.</div>
-            </div>
-          </div>
-
-          <div class="practice-card">
-            <div class="practice-card-icon icon-bg-green">🛡️</div>
-            <div class="practice-card-body">
-              <div class="practice-card-title">Como a Segurança é Mantida</div>
-              <div class="practice-card-desc">Navios petroleiros modernos têm casco duplo obrigatório desde 2003. Sensores medem continuamente a integridade dos tanques, a temperatura da carga e a presença de gases inflamáveis. Equipes de segurança operam 24h a bordo.</div>
-            </div>
-          </div>
-
-          <div class="practice-card">
-            <div class="practice-card-icon icon-bg-red">🌊</div>
-            <div class="practice-card-body">
-              <div class="practice-card-title">Como São Tratados Imprevistos</div>
-              <div class="practice-card-desc">Em caso de mau tempo severo, o navio para em porto seguro ou reduz velocidade. Se houver avaria, a Guarda Costeira e equipes de salvamento marítimo são acionadas. O plano de emergência SOPEP é ativado para conter qualquer derramamento.</div>
-            </div>
-          </div>
-
-          <div class="practice-card">
-            <div class="practice-card-icon icon-bg-gold">🔒</div>
-            <div class="practice-card-body">
-              <div class="practice-card-title">Como a Carga Continua Protegida</div>
-              <div class="practice-card-desc">O petróleo é mantido a temperatura controlada para evitar alteração de viscosidade. Gases resultantes da evaporação são capturados e reaproveitados. Sistemas de lastro previnem contaminação das águas e garantem estabilidade do navio.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="info-highlight-box">
-          <div class="info-highlight-box-icon">⛴️</div>
-          <div class="info-highlight-box-text">
-            <strong>Escala impressionante:</strong> Um navio petroleiro VLCC pode transportar o equivalente ao abastecimento de petróleo do Brasil por 5 dias inteiros. A cabotagem (navegação entre portos brasileiros) é feita por navios menores e é fundamental para abastecer refinarias como a REPLAN (SP) e REDUC (RJ).
-          </div>
         </div>
       </div>
     </section>
@@ -236,14 +198,14 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-brand">Petro<span>Log</span></div>
-      <p class="footer-text">Trabalho Escolar • Transporte de Petróleo • Foco nos Modais</p>
+      <p class="footer-text">Trabalho Escolar • Transporte de Petróleo • Modal Marítimo</p>
       <div class="footer-nav">
         <a href="index.html">Início</a>
         <a href="dutoviario.html">Oleodutos</a>
         <a href="rodoviario.html">Rodoviário</a>
         <a href="maritimo.html">Marítimo</a>
         <a href="ferroviario.html">Ferroviário</a>
-        <a href="equipe.html" style="color: var(--orange-accent);">Equipe</a>
+        <a href="equipe.html" style="color: var(--gold-energy);">Equipe</a>
       </div>
       <div class="footer-copyright">© 2026 PetroLog — Projeto Escolar</div>
     </div>

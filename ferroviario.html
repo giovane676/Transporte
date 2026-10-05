@@ -36,7 +36,7 @@
           <li><a href="rodoviario.html" class="nav-link">Rodoviário</a></li>
           <li><a href="maritimo.html" class="nav-link">Marítimo</a></li>
           <li><a href="ferroviario.html" class="nav-link active">Ferroviário</a></li>
-          <li><a href="equipe.html" class="nav-link" style="color: var(--orange-accent); font-weight: 700;">Equipe</a></li>
+          <li><a href="equipe.html" class="nav-link" style="color: var(--orange-energy); font-weight: 800;">Equipe</a></li>
         </ul>
       </nav>
 
@@ -51,17 +51,18 @@
       <a href="rodoviario.html" class="nav-link">Rodoviário</a>
       <a href="maritimo.html" class="nav-link">Marítimo</a>
       <a href="ferroviario.html" class="nav-link active">Ferroviário</a>
-      <a href="equipe.html" class="nav-link" style="color: var(--orange-accent);">Equipe do Projeto</a>
+      <a href="equipe.html" class="nav-link" style="color: var(--orange-energy); font-weight: 800;">Equipe do Projeto</a>
     </div>
   </header>
 
   <main>
+    <!-- ========== HERO ========== -->
     <section class="hero-wrapper">
       <canvas id="pipelineCanvas"></canvas>
 
       <div class="container hero-content">
-        <div class="eyebrow-tag">
-          MODAL FERROVIÁRIO • CARGAS PESADAS
+        <div class="eyebrow-tag" style="background: rgba(255, 200, 87, 0.18); color: #B45309; border-color: rgba(255, 200, 87, 0.4);">
+          🚂 MODAL FERROVIÁRIO
         </div>
 
         <h1 class="hero-title">
@@ -69,14 +70,15 @@
         </h1>
 
         <p class="hero-subtitle">
-          Potência para puxar centenas de milhares de litros de petróleo em longas distâncias terrestres, reduzindo trânsito e economizando combustível.
+          Força para transportar grandes volumes de petróleo em longas distâncias.
         </p>
       </div>
     </section>
 
+    <!-- ========== ANIMAÇÃO + CONTEÚDO ========== -->
     <section class="section">
       <div class="container">
-        <!-- Animação do Trem nos Trilhos -->
+        <!-- Animação do Trem -->
         <div class="stage-rail">
           <div class="rail-track"></div>
 
@@ -115,148 +117,108 @@
           </div>
         </div>
 
-        <div style="text-align: center; margin-bottom: 3.5rem; display: flex; justify-content: center; gap: 1rem; align-items: center; flex-wrap: wrap;">
+        <div style="text-align: center; margin-bottom: 3rem; display: flex; justify-content: center; gap: 1rem; align-items: center; flex-wrap: wrap;">
           <button id="addWagonBtn" class="btn btn-outline">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            Simular Tamanho da Composição
+            Simular Composição
           </button>
-          <span id="wagonCounterDisplay" style="font-family: var(--font-mono); font-size: 0.95rem; font-weight: 700; color: var(--navy-dark); background: var(--bg-surface); padding: 8px 16px; border-radius: 8px; border: 1px solid var(--border-light);">
+          <span id="wagonCounterDisplay" style="font-family: var(--font-mono); font-size: 0.95rem; font-weight: 700; color: var(--navy-dark); background: var(--bg-soft-blue); padding: 8px 16px; border-radius: 8px; border: 1px solid var(--border-subtle);">
             60 Vagões-Tanque
           </span>
         </div>
 
-        <!-- 3 Cards Arejados -->
-        <div class="clean-cards-grid">
-          <div class="card-clean">
-            <div class="card-badge" style="background: rgba(255, 183, 3, 0.12); color: #B45309;">
-              GRANDE ESCALA
-            </div>
-            <h3 class="card-heading">1 Trem = 200+ Caminhões</h3>
-            <p class="card-paragraph">
-              Uma única viagem de trem transporta o equivalente a mais de duas centenas de carretas, aliviando o tráfego nas rodovias.
-            </p>
+        <!-- ========== COMO FUNCIONA? — 4 ETAPAS ========== -->
+        <div class="section-header">
+          <h2 class="section-title">Como funciona?</h2>
+          <div class="gradient-bar"></div>
+        </div>
+
+        <div class="visual-process-grid">
+          <div class="visual-process-step">
+            <div class="process-step-number" style="background: linear-gradient(135deg, #D97706, var(--gold-energy));">01</div>
+            <div class="process-step-emoji">🚂</div>
+            <h3>Carregamento</h3>
+            <p>Vagões carregados no terminal.</p>
           </div>
 
-          <div class="card-clean">
-            <div class="card-badge" style="background: rgba(10, 147, 150, 0.1); color: var(--teal-petro);">
-              ISOLAMENTO TÉRMICO
-            </div>
-            <h3 class="card-heading">Vagões Isotérmicos</h3>
-            <p class="card-paragraph">
-              Construídos com mantas térmicas que evitam que o petróleo esfrie e aumente sua viscosidade ao longo de longas viagens continentais.
-            </p>
+          <div class="visual-process-step">
+            <div class="process-step-number" style="background: linear-gradient(135deg, #D97706, var(--gold-energy));">02</div>
+            <div class="process-step-emoji">🛤️</div>
+            <h3>Viagem</h3>
+            <p>Trem segue pelos trilhos.</p>
           </div>
 
-          <div class="card-clean">
-            <div class="card-badge" style="background: rgba(0, 43, 73, 0.08); color: var(--navy-deep);">
-              EFICIÊNCIA
+          <div class="visual-process-step">
+            <div class="process-step-number" style="background: linear-gradient(135deg, #D97706, var(--gold-energy));">03</div>
+            <div class="process-step-emoji">📍</div>
+            <h3>Monitoramento</h3>
+            <p>Rota acompanhada em tempo real.</p>
+          </div>
+
+          <div class="visual-process-step">
+            <div class="process-step-number" style="background: linear-gradient(135deg, #D97706, var(--gold-energy));">04</div>
+            <div class="process-step-emoji">✅</div>
+            <h3>Destino</h3>
+            <p>Carga entregue com segurança.</p>
+          </div>
+        </div>
+
+        <!-- ========== 3 CARDS VISUAIS ========== -->
+        <div class="info-cards-visual" style="margin-top: 3.5rem;">
+          <div class="info-visual-card" style="border-top: 4px solid var(--petro-blue);">
+            <div class="info-visual-icon">📡</div>
+            <h3>Rastreamento</h3>
+            <p>A rota do trem é acompanhada continuamente.</p>
+          </div>
+
+          <div class="info-visual-card" style="border-top: 4px solid var(--gold-energy);">
+            <div class="info-visual-icon">🔍</div>
+            <h3>Prevenção</h3>
+            <p>Vagões e equipamentos são inspecionados.</p>
+          </div>
+
+          <div class="info-visual-card" style="border-top: 4px solid #dc2626;">
+            <div class="info-visual-icon">🚨</div>
+            <h3>Problema</h3>
+            <p>A operação é avaliada e medidas de segurança são tomadas.</p>
+          </div>
+        </div>
+
+        <!-- ========== FLUXO DE PROBLEMA ========== -->
+        <div class="problem-flow" style="margin-top: 3.5rem;">
+          <h3 class="problem-flow-title">Se detectar um problema:</h3>
+          <div class="problem-flow-steps">
+            <div class="problem-flow-step">
+              <span class="problem-flow-icon">⚠️</span>
+              <span>Detectou problema</span>
             </div>
-            <h3 class="card-heading">Economia de Combustível</h3>
-            <p class="card-paragraph">
-              O atrito do aço da roda sobre o trilho é muito menor que o pneu no asfalto, reduzindo o consumo de diesel por tonelada transportada.
-            </p>
+            <div class="problem-flow-arrow">↓</div>
+            <div class="problem-flow-step">
+              <span class="problem-flow-icon">📢</span>
+              <span>Comunicar equipe</span>
+            </div>
+            <div class="problem-flow-arrow">↓</div>
+            <div class="problem-flow-step">
+              <span class="problem-flow-icon">🔬</span>
+              <span>Avaliar situação</span>
+            </div>
+            <div class="problem-flow-arrow">↓</div>
+            <div class="problem-flow-step">
+              <span class="problem-flow-icon">⚙️</span>
+              <span>Aplicar procedimento</span>
+            </div>
+            <div class="problem-flow-arrow">↓</div>
+            <div class="problem-flow-step">
+              <span class="problem-flow-icon">✅</span>
+              <span>Retomar com segurança</span>
+            </div>
           </div>
         </div>
 
         <div style="text-align: center; margin-top: 4rem;">
           <a href="equipe.html" class="btn btn-orange btn-lg">
-            Conhecer os Criadores (Página Equipe) ➔
+            Conhecer a Equipe ➔
           </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         COMO FUNCIONA NA PRÁTICA — TRANSPORTE FERROVIÁRIO
-         ========================================================================== -->
-    <section class="section section-dark-blue">
-      <div class="container">
-        <div class="section-header">
-          <span class="eyebrow-tag" style="background: rgba(255,200,87,0.18); color: #b45309; border-color: rgba(255,200,87,0.4);">
-            🚂 ENTENDA O PROCESSO
-          </span>
-          <h2 class="section-title">Como Funciona na Prática</h2>
-          <div class="gradient-bar"></div>
-          <p class="section-desc">
-            Entenda como os vagões-tanque transportam o petróleo pelos trilhos, como o trajeto é monitorado e o que acontece quando ocorre um problema.
-          </p>
-        </div>
-
-        <!-- Mini fluxograma -->
-        <div class="mini-process">
-          <div class="mini-step">
-            <div class="mini-step-dot" style="background: linear-gradient(135deg, #D97706, var(--gold-energy));">1</div>
-            <div class="mini-step-label">Carregamento</div>
-          </div>
-          <div class="mini-connector" style="background: linear-gradient(90deg, #D97706, var(--gold-energy));"></div>
-          <div class="mini-step">
-            <div class="mini-step-dot" style="background: linear-gradient(135deg, #D97706, var(--gold-energy));">2</div>
-            <div class="mini-step-label">Partida</div>
-          </div>
-          <div class="mini-connector" style="background: linear-gradient(90deg, #D97706, var(--gold-energy));"></div>
-          <div class="mini-step">
-            <div class="mini-step-dot" style="background: linear-gradient(135deg, #D97706, var(--gold-energy));">3</div>
-            <div class="mini-step-label">Monitoramento</div>
-          </div>
-          <div class="mini-connector" style="background: linear-gradient(90deg, #D97706, var(--gold-energy));"></div>
-          <div class="mini-step">
-            <div class="mini-step-dot" style="background: linear-gradient(135deg, #D97706, var(--gold-energy));">4</div>
-            <div class="mini-step-label">Inspeção</div>
-          </div>
-          <div class="mini-connector" style="background: linear-gradient(90deg, #D97706, var(--gold-energy));"></div>
-          <div class="mini-step">
-            <div class="mini-step-dot" style="background: linear-gradient(135deg, #D97706, var(--gold-energy));">5</div>
-            <div class="mini-step-label">Chegada</div>
-          </div>
-        </div>
-
-        <div class="practice-grid">
-          <div class="practice-card">
-            <div class="practice-card-icon icon-bg-gold">🚂</div>
-            <div class="practice-card-body">
-              <div class="practice-card-title">Como Ocorre o Transporte nos Vagões-Tanque</div>
-              <div class="practice-card-desc">O petróleo é carregado por mangueiras de alta pressão nos vagões-tanque cilíndricos. Cada vagão comporta até 80.000 litros. Uma composição típica tem entre 60 e 120 vagões, podendo transportar mais de 8 milhões de litros em uma única viagem.</div>
-            </div>
-          </div>
-
-          <div class="practice-card">
-            <div class="practice-card-icon icon-bg-sky">📡</div>
-            <div class="practice-card-body">
-              <div class="practice-card-title">Como o Trajeto é Monitorado</div>
-              <div class="practice-card-desc">Sistemas de rastreamento ferroviário (ETCS) monitoram velocidade, posição e estado dos vagões em tempo real. Centros de controle ferroviário acompanham o percurso completo e se comunicam diretamente com a cabine do maquinista.</div>
-            </div>
-          </div>
-
-          <div class="practice-card">
-            <div class="practice-card-icon icon-bg-green">🔍</div>
-            <div class="practice-card-body">
-              <div class="practice-card-title">Como São Realizadas as Inspeções</div>
-              <div class="practice-card-desc">Antes de cada viagem, técnicos verificam a integridade dos vagões, válvulas de alívio, sistemas de frenagem e conexões entre carros. Trens passam por postos de inspeção ao longo da malha ferroviária onde sensores detectam aquecimento e anomalias.</div>
-            </div>
-          </div>
-
-          <div class="practice-card">
-            <div class="practice-card-icon icon-bg-orange">⚙️</div>
-            <div class="practice-card-body">
-              <div class="practice-card-title">Como São Resolvidos Problemas Operacionais</div>
-              <div class="practice-card-desc">Falhas mecânicas como problemas nos freios ou no engate dos vagões são tratadas com parada imediata em local seguro. Equipes de manutenção ferroviária são acionadas e chegam ao local. Em casos graves, outro trem é enviado para rebocar a composição.</div>
-            </div>
-          </div>
-
-          <div class="practice-card">
-            <div class="practice-card-icon icon-bg-red">🛡️</div>
-            <div class="practice-card-body">
-              <div class="practice-card-title">Como a Carga Permanece Segura</div>
-              <div class="practice-card-desc">Vagões isotérmicos mantêm a temperatura estável do petróleo durante toda a viagem. Válvulas de pressão automáticas evitam acúmulo de gases. Em caso de acidente, o casco reforçado dos vagões é projetado para resistir a impactos sem romper.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="info-highlight-box">
-          <div class="info-highlight-box-icon">🚂</div>
-          <div class="info-highlight-box-text">
-            <strong>Eficiência comparada:</strong> Um trem com 100 vagões-tanque transporta o equivalente a 200 caminhões-tanque. A ferrovia consome 3 vezes menos combustível por tonelada transportada do que o modal rodoviário, tornando o transporte ferroviário o mais eficiente em termos energéticos para longas distâncias.
-          </div>
         </div>
       </div>
     </section>
@@ -265,14 +227,14 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-brand">Petro<span>Log</span></div>
-      <p class="footer-text">Trabalho Escolar • Transporte de Petróleo • Foco nos Modais</p>
+      <p class="footer-text">Trabalho Escolar • Transporte de Petróleo • Modal Ferroviário</p>
       <div class="footer-nav">
         <a href="index.html">Início</a>
         <a href="dutoviario.html">Oleodutos</a>
         <a href="rodoviario.html">Rodoviário</a>
         <a href="maritimo.html">Marítimo</a>
         <a href="ferroviario.html">Ferroviário</a>
-        <a href="equipe.html" style="color: var(--orange-accent);">Equipe</a>
+        <a href="equipe.html" style="color: var(--gold-energy);">Equipe</a>
       </div>
       <div class="footer-copyright">© 2026 PetroLog — Projeto Escolar</div>
     </div>

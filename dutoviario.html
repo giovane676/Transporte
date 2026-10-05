@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Transporte Dutoviário — PetroLog | Oleodutos</title>
-  <meta name="description" content="Modal Dutoviário da PetroLog: oleodutos de alta vazão com fluxo contínuo de petróleo preto e robô PIG inteligente.">
+  <meta name="description" content="Modal Dutoviário da PetroLog: oleodutos de alta vazão com fluxo contínuo de petróleo e robô PIG inteligente.">
 
   <!-- Fontes do Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,221 +62,146 @@
   </header>
 
   <main>
-    <!-- Hero com Oleodutos Industriais em Fundo Sutil -->
+    <!-- ========== HERO ========== -->
     <section class="hero-wrapper">
       <canvas id="pipelineCanvas"></canvas>
 
       <div class="container hero-content">
         <div class="eyebrow-tag" style="background: rgba(15, 76, 129, 0.12); color: var(--petro-blue); border-color: rgba(15, 76, 129, 0.3);">
-          ★ PRINCIPAL DESTAQUE DO PROJETO • AZUL PETRÓLEO
+          ★ PRINCIPAL DESTAQUE DO PROJETO
         </div>
 
         <h1 class="hero-title">
-          Transporte <span class="highlight-gradient">Dutoviário</span> (Oleodutos)
+          Transporte <span class="highlight-gradient">Dutoviário</span>
         </h1>
 
         <p class="hero-subtitle">
-          A espinha dorsal do transporte contínuo. Tubulações reforçadas de aço carbono operando 24 horas por dia para movimentar petróleo com máxima segurança e menor pegada de carbono.
+          Tubulações de aço operando 24h por dia para movimentar petróleo com segurança e eficiência.
         </p>
       </div>
     </section>
 
-    <!-- Seção do Simulador de Duto -->
+    <!-- ========== ANIMAÇÃO DO OLEODUTO + SIMULADOR ========== -->
     <section class="section section-alt-blue">
       <div class="container">
-        <div class="duto-showcase">
-          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-            <div>
-              <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--petro-blue); font-weight: 700; text-transform: uppercase;">CORTE TRANSVERSAL ESQUEMÁTICO</span>
-              <h2 style="font-family: var(--font-heading); font-size: 1.65rem; color: var(--navy-dark); margin: 0.25rem 0 0;">
-                Fluxo Contínuo de Petróleo Preto
-              </h2>
-            </div>
-            <div class="badge-blue card-badge" style="margin-bottom: 0;">
-              ● Bombeamento 100% Ativo
-            </div>
-          </div>
 
-          <!-- Tubo com o Óleo Preto em Movimento -->
+        <!-- Animação do oleoduto com petróleo fluindo -->
+        <div class="duto-visual-big">
+          <!-- Tubo com Óleo Preto -->
           <div class="tube-container">
             <div class="oil-stream-black">
-              <!-- Robô PIG Inteligente Amarelo/Dourado -->
-              <div id="smartPig" class="pig-device">
-                PIG 01
-              </div>
+              <div id="smartPig" class="pig-device">PIG 01</div>
             </div>
           </div>
 
-          <!-- Painel Interativo -->
-          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem; background: var(--bg-soft-blue); padding: 1.5rem 1.75rem; border-radius: 14px; border: 1px solid rgba(15, 76, 129, 0.15);">
-            <div style="flex: 1; min-width: 250px;">
-              <label for="dutoSpeedSlider" style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.92rem; margin-bottom: 0.5rem; color: var(--navy-dark);">
-                <span>Velocidade de Bombeamento:</span>
-                <span id="speedValue" style="color: var(--orange-energy); font-family: var(--font-mono); font-weight: 800;">1.0x</span>
-              </label>
-              <input type="range" id="dutoSpeedSlider" min="0.5" max="2.5" step="0.5" value="1" style="width: 100%; cursor: pointer;">
+          <!-- Controles -->
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; align-items: center; margin-top: 1.5rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <label for="dutoSpeedSlider" style="font-weight: 700; font-size: 0.88rem; color: var(--navy-dark);">Velocidade:</label>
+              <input type="range" id="dutoSpeedSlider" min="0.5" max="2.5" step="0.5" value="1" style="cursor: pointer; width: 120px;">
+              <span id="speedValue" style="color: var(--orange-energy); font-family: var(--font-mono); font-weight: 800; font-size: 0.88rem;">1.0x</span>
             </div>
 
-            <div>
-              <button id="launchPigBtn" class="btn btn-blue">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
-                Lançar Robô PIG no Tubo
-              </button>
-            </div>
+            <button id="launchPigBtn" class="btn btn-blue">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              Lançar Robô PIG
+            </button>
           </div>
         </div>
 
-        <!-- 3 Cards Arejados e Coloridos -->
-        <div class="clean-cards-grid">
-          <div class="card-clean">
-            <div class="card-badge badge-blue">
-              24 HORAS POR DIA
-            </div>
-            <h3 class="card-heading">Fluxo Ininterrupto</h3>
-            <p class="card-paragraph">
-              Diferente de estradas ou navios sujeitos a clima e congestionamento, os dutos bombeiam petróleo ininterruptamente dia e noite sem paradas.
-            </p>
-          </div>
-
-          <div class="card-clean accent-orange">
-            <div class="card-badge badge-orange">
-              MEIO AMBIENTE
-            </div>
-            <h3 class="card-heading">Proteção do Solo</h3>
-            <p class="card-paragraph">
-              Ficam enterrados com proteção de aço API 5L e revestimento anticorrosivo tripla camada, isolando o óleo totalmente da superfície.
-            </p>
-          </div>
-
-          <div class="card-clean accent-gold">
-            <div class="card-badge badge-gold">
-              TECNOLOGIA
-            </div>
-            <h3 class="card-heading">Robôs PIGs Inteligentes</h3>
-            <p class="card-paragraph">
-              Dispositivos cilíndricos que viajam impulsionados pelo próprio petróleo para raspar impurezas e inspecionar a espessura do aço com precisão.
-            </p>
-          </div>
-        </div>
-
-        <div style="text-align: center; margin-top: 4.5rem;">
-          <a href="rodoviario.html" class="btn btn-orange btn-lg">
-            Próximo: Modal Rodoviário (Laranja) ➔
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         COMO FUNCIONA NA PRÁTICA — TRANSPORTE DUTOVIÁRIO
-         ========================================================================== -->
-    <section class="section section-dark-blue">
-      <div class="container">
-        <div class="section-header">
-          <span class="eyebrow-tag" style="background: rgba(15,76,129,0.10); color: var(--petro-blue); border-color: rgba(15,76,129,0.25);">
-            ⚙️ ENTENDA O PROCESSO
-          </span>
-          <h2 class="section-title">Como Funciona na Prática</h2>
+        <!-- ========== COMO FUNCIONA? — 4 ETAPAS ========== -->
+        <div class="section-header" style="margin-top: 4rem;">
+          <h2 class="section-title">Como funciona?</h2>
           <div class="gradient-bar"></div>
-          <p class="section-desc">
-            Veja passo a passo como o petróleo é transportado pelos oleodutos, como o fluxo é controlado e o que acontece quando ocorre um problema.
-          </p>
         </div>
 
-        <!-- Mini fluxograma do processo -->
-        <div class="mini-process">
-          <div class="mini-step">
-            <div class="mini-step-dot">1</div>
-            <div class="mini-step-label">Bombeamento</div>
+        <!-- Animação visual: Origem → Oleoduto → Monitoramento → Destino -->
+        <div class="visual-process-grid">
+          <div class="visual-process-step">
+            <div class="process-step-number" style="background: linear-gradient(135deg, var(--petro-blue), var(--sky-blue));">01</div>
+            <div class="process-step-emoji">🛢️</div>
+            <h3>Origem</h3>
+            <p>Petróleo é bombeado para o oleoduto.</p>
           </div>
-          <div class="mini-connector"></div>
-          <div class="mini-step">
-            <div class="mini-step-dot">2</div>
-            <div class="mini-step-label">Controle de Fluxo</div>
+
+          <div class="visual-process-step">
+            <div class="process-step-number" style="background: linear-gradient(135deg, var(--petro-blue), var(--sky-blue));">02</div>
+            <div class="process-step-emoji">🔩</div>
+            <h3>Oleoduto</h3>
+            <p>Flui por tubulações de aço 24h.</p>
           </div>
-          <div class="mini-connector"></div>
-          <div class="mini-step">
-            <div class="mini-step-dot">3</div>
-            <div class="mini-step-label">Monitoramento</div>
+
+          <div class="visual-process-step">
+            <div class="process-step-number" style="background: linear-gradient(135deg, var(--petro-blue), var(--sky-blue));">03</div>
+            <div class="process-step-emoji">📡</div>
+            <h3>Monitoramento</h3>
+            <p>Sensores acompanham pressão e fluxo.</p>
           </div>
-          <div class="mini-connector"></div>
-          <div class="mini-step">
-            <div class="mini-step-dot">4</div>
-            <div class="mini-step-label">Detecção</div>
-          </div>
-          <div class="mini-connector"></div>
-          <div class="mini-step">
-            <div class="mini-step-dot">5</div>
-            <div class="mini-step-label">Resposta</div>
-          </div>
-          <div class="mini-connector"></div>
-          <div class="mini-step">
-            <div class="mini-step-dot">6</div>
-            <div class="mini-step-label">Restabelecimento</div>
+
+          <div class="visual-process-step">
+            <div class="process-step-number" style="background: linear-gradient(135deg, var(--petro-blue), var(--sky-blue));">04</div>
+            <div class="process-step-emoji">✅</div>
+            <h3>Destino</h3>
+            <p>Petróleo chega ao terminal.</p>
           </div>
         </div>
 
-        <div class="practice-grid">
-          <!-- Card 1 -->
-          <div class="practice-card">
-            <div class="practice-card-icon icon-bg-blue">🛢️</div>
-            <div class="practice-card-body">
-              <div class="practice-card-title">Como os Oleodutos Funcionam</div>
-              <div class="practice-card-desc">Bombas de alta pressão impulsionam o petróleo por tubulações de aço carbono enterradas a até 1,5 m de profundidade. O petróleo flui continuamente graças à diferença de pressão mantida pelas estações de bombeamento ao longo do trajeto.</div>
-            </div>
+        <!-- ========== 3 CARDS VISUAIS ========== -->
+        <div class="info-cards-visual" style="margin-top: 3.5rem;">
+          <div class="info-visual-card" style="border-top: 4px solid var(--petro-blue);">
+            <div class="info-visual-icon">📡</div>
+            <h3>Rastreamento</h3>
+            <p>Sensores e sistemas acompanham o fluxo continuamente.</p>
           </div>
 
-          <!-- Card 2 -->
-          <div class="practice-card">
-            <div class="practice-card-icon icon-bg-sky">🎛️</div>
-            <div class="practice-card-body">
-              <div class="practice-card-title">Como o Fluxo é Controlado</div>
-              <div class="practice-card-desc">Válvulas automáticas e controladores SCADA (sistema de supervisão) regulam a pressão e a vazão em tempo real. Operadores monitoram tudo de uma sala de controle central e podem ajustar o fluxo remotamente.</div>
-            </div>
+          <div class="info-visual-card" style="border-top: 4px solid var(--orange-energy);">
+            <div class="info-visual-icon">🔧</div>
+            <h3>Prevenção</h3>
+            <p>Inspeções e manutenção ajudam a evitar problemas.</p>
           </div>
 
-          <!-- Card 3 -->
-          <div class="practice-card">
-            <div class="practice-card-icon icon-bg-green">📡</div>
-            <div class="practice-card-body">
-              <div class="practice-card-title">Como a Rede é Monitorada</div>
-              <div class="practice-card-desc">Sensores de pressão, temperatura e fluxo são instalados a cada 10–20 km. Robôs PIG percorrem o interior dos tubos inspecionando a espessura das paredes e identificando pontos de corrosão antes que causem problemas.</div>
-            </div>
+          <div class="info-visual-card" style="border-top: 4px solid #dc2626;">
+            <div class="info-visual-icon">🚧</div>
+            <h3>Problema</h3>
+            <p>O trecho afetado pode ser isolado para avaliação e correção.</p>
           </div>
+        </div>
 
-          <!-- Card 4 -->
-          <div class="practice-card">
-            <div class="practice-card-icon icon-bg-red">🔍</div>
-            <div class="practice-card-body">
-              <div class="practice-card-title">Como São Identificados Vazamentos</div>
-              <div class="practice-card-desc">Qualquer queda de pressão anormal é detectada automaticamente em segundos. Algoritmos comparam os dados em tempo real e emitem alertas imediatos. Patrulhas aéreas e sensores acústicos complementam a vigilância da tubulação.</div>
+        <!-- ========== FLUXO DE PROBLEMA ========== -->
+        <div class="problem-flow" style="margin-top: 3.5rem;">
+          <h3 class="problem-flow-title">Se detectar um problema:</h3>
+          <div class="problem-flow-steps">
+            <div class="problem-flow-step">
+              <span class="problem-flow-icon">⚠️</span>
+              <span>Detectou problema</span>
             </div>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="practice-card">
-            <div class="practice-card-icon icon-bg-orange">🚨</div>
-            <div class="practice-card-body">
-              <div class="practice-card-title">Como a Equipe Responde a Ocorrências</div>
-              <div class="practice-card-desc">Ao detectar um vazamento, o sistema fecha automaticamente as válvulas de isolamento da área afetada. Equipes de emergência são acionadas em minutos e chegam ao local com kits de contenção para evitar contaminação do solo e da água.</div>
+            <div class="problem-flow-arrow">↓</div>
+            <div class="problem-flow-step">
+              <span class="problem-flow-icon">📢</span>
+              <span>Comunicar equipe</span>
             </div>
-          </div>
-
-          <!-- Card 6 -->
-          <div class="practice-card">
-            <div class="practice-card-icon icon-bg-gold">✅</div>
-            <div class="practice-card-body">
-              <div class="practice-card-title">Como a Operação é Restabelecida</div>
-              <div class="practice-card-desc">Após o reparo do trecho danificado, os técnicos realizam testes de pressurização e inspeção ultrassônica. Só com a aprovação técnica completa o fluxo é gradualmente reativado, iniciando pela abertura controlada das válvulas.</div>
+            <div class="problem-flow-arrow">↓</div>
+            <div class="problem-flow-step">
+              <span class="problem-flow-icon">🔬</span>
+              <span>Avaliar situação</span>
+            </div>
+            <div class="problem-flow-arrow">↓</div>
+            <div class="problem-flow-step">
+              <span class="problem-flow-icon">⚙️</span>
+              <span>Aplicar procedimento</span>
+            </div>
+            <div class="problem-flow-arrow">↓</div>
+            <div class="problem-flow-step">
+              <span class="problem-flow-icon">✅</span>
+              <span>Retomar com segurança</span>
             </div>
           </div>
         </div>
 
-        <div class="info-highlight-box">
-          <div class="info-highlight-box-icon">💡</div>
-          <div class="info-highlight-box-text">
-            <strong>Sabia que?</strong> O oleoduto OSPAR da Petrobras, com mais de 1.000 km, transporta petróleo do interior da Bahia até o litoral paulista. São estações de bombeamento a cada 80 km que mantêm o fluxo constante 24 horas por dia, 7 dias por semana.
-          </div>
+        <div style="text-align: center; margin-top: 4rem;">
+          <a href="rodoviario.html" class="btn btn-orange btn-lg">
+            Próximo: Rodoviário ➔
+          </a>
         </div>
       </div>
     </section>
@@ -285,7 +210,7 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-brand">Petro<span>Log</span></div>
-      <p class="footer-text">Trabalho Escolar • Transporte de Petróleo • Modal Dutoviário em Destaque</p>
+      <p class="footer-text">Trabalho Escolar • Transporte de Petróleo • Modal Dutoviário</p>
       <div class="footer-nav">
         <a href="index.html">Início</a>
         <a href="dutoviario.html">Oleodutos</a>

@@ -56,12 +56,13 @@
   </header>
 
   <main>
+    <!-- ========== HERO ========== -->
     <section class="hero-wrapper">
       <canvas id="pipelineCanvas"></canvas>
 
       <div class="container hero-content">
         <div class="eyebrow-tag" style="background: rgba(255, 122, 0, 0.12); color: var(--orange-energy); border-color: rgba(255, 122, 0, 0.35);">
-          🚛 MODAL RODOVIÁRIO • LARANJA ENERGÉTICO
+          🚛 MODAL RODOVIÁRIO
         </div>
 
         <h1 class="hero-title">
@@ -69,197 +70,147 @@
         </h1>
 
         <p class="hero-subtitle">
-          Carretas herméticas equipadas com sistemas anti-tombamento e tanques de alumínio reforçado para levar o combustível com rapidez até os pontos de distribuição.
+          Transporte ágil de petróleo por estradas, conectando terminais a distribuidoras.
         </p>
       </div>
     </section>
 
+    <!-- ========== ANIMAÇÃO DO CAMINHÃO ========== -->
     <section class="section section-alt-warm">
       <div class="container">
-        <!-- Animação do Caminhão Suave -->
         <div class="stage-highway">
           <div class="dashes-lane"></div>
 
-          <div class="truck-graphic">
+          <!-- Caminhão corrigido: cabine à ESQUERDA, tanque à DIREITA, virado para a DIREITA (para frente) -->
+          <div class="truck-graphic" style="transform: scaleX(1);">
             <svg width="240" height="95" viewBox="0 0 240 95" fill="none">
-              <!-- Cabine -->
-              <path d="M15 65 L15 22 L48 22 L70 42 L70 65 Z" fill="#002B49" stroke="#00B4D8" stroke-width="2"/>
-              <path d="M48 26 L66 42 L48 42 Z" fill="#00F0FF" opacity="0.8"/>
-              <circle cx="62" cy="52" r="5" fill="#FFB703"/>
+              <!-- Tanque 2 (traseiro) -->
+              <rect x="5" y="18" width="70" height="46" rx="14" fill="#64748B" stroke="#CBD5E1" stroke-width="2"/>
+              <rect x="10" y="24" width="60" height="6" rx="3" fill="#FF7A00"/>
+              <text x="18" y="44" fill="#FFFFFF" font-family="'JetBrains Mono'" font-size="9" font-weight="700">62.000L</text>
 
-              <!-- Tanque 1 -->
-              <rect x="80" y="18" width="65" height="46" rx="14" fill="#64748B" stroke="#CBD5E1" stroke-width="2"/>
-              <rect x="85" y="24" width="55" height="6" rx="3" fill="#FF7A00"/>
-              <text x="90" y="44" fill="#FFFFFF" font-family="'JetBrains Mono'" font-size="9" font-weight="700">PETROLOG</text>
+              <!-- Tanque 1 (meio) -->
+              <rect x="85" y="18" width="65" height="46" rx="14" fill="#64748B" stroke="#CBD5E1" stroke-width="2"/>
+              <rect x="90" y="24" width="55" height="6" rx="3" fill="#FF7A00"/>
+              <text x="95" y="44" fill="#FFFFFF" font-family="'JetBrains Mono'" font-size="9" font-weight="700">PETROLOG</text>
 
-              <!-- Tanque 2 -->
-              <rect x="155" y="18" width="70" height="46" rx="14" fill="#64748B" stroke="#CBD5E1" stroke-width="2"/>
-              <rect x="160" y="24" width="60" height="6" rx="3" fill="#FF7A00"/>
-              <text x="168" y="44" fill="#FFFFFF" font-family="'JetBrains Mono'" font-size="9" font-weight="700">62.000L</text>
+              <!-- Cabine (direita = frente do caminhão) -->
+              <path d="M170 65 L170 22 L203 22 L225 42 L225 65 Z" fill="#002B49" stroke="#00B4D8" stroke-width="2"/>
+              <!-- Para-brisa -->
+              <path d="M203 26 L221 42 L203 42 Z" fill="#00F0FF" opacity="0.8"/>
+              <!-- Farol -->
+              <circle cx="218" cy="52" r="5" fill="#FFB703"/>
 
               <!-- Rodas -->
-              <circle cx="30" cy="68" r="10" fill="#090D16" stroke="#CBD5E1" stroke-width="2.5"/>
-              <circle cx="52" cy="68" r="10" fill="#090D16" stroke="#CBD5E1" stroke-width="2.5"/>
+              <circle cx="22" cy="68" r="10" fill="#090D16" stroke="#CBD5E1" stroke-width="2.5"/>
+              <circle cx="55" cy="68" r="10" fill="#090D16" stroke="#CBD5E1" stroke-width="2.5"/>
               <circle cx="102" cy="68" r="10" fill="#090D16" stroke="#CBD5E1" stroke-width="2.5"/>
-              <circle cx="130" cy="68" r="10" fill="#090D16" stroke="#CBD5E1" stroke-width="2.5"/>
-              <circle cx="178" cy="68" r="10" fill="#090D16" stroke="#CBD5E1" stroke-width="2.5"/>
-              <circle cx="210" cy="68" r="10" fill="#090D16" stroke="#CBD5E1" stroke-width="2.5"/>
+              <circle cx="135" cy="68" r="10" fill="#090D16" stroke="#CBD5E1" stroke-width="2.5"/>
+              <circle cx="185" cy="68" r="10" fill="#090D16" stroke="#CBD5E1" stroke-width="2.5"/>
+              <circle cx="215" cy="68" r="10" fill="#090D16" stroke="#CBD5E1" stroke-width="2.5"/>
             </svg>
           </div>
         </div>
 
-        <div style="text-align: center; margin-bottom: 3.5rem;">
+        <div style="text-align: center; margin-bottom: 3rem;">
           <button id="boostTruckBtn" class="btn btn-orange">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-            Acelerar Caminhão na Rodovia
+            Acelerar Caminhão
           </button>
         </div>
 
-        <!-- 3 Cards Arejados -->
-        <div class="clean-cards-grid">
-          <div class="card-clean accent-orange">
-            <div class="card-badge badge-orange">
-              FLEXIBILIDADE
-            </div>
-            <h3 class="card-heading">Acesso a Qualquer Ponto</h3>
-            <p class="card-paragraph">
-              O modal rodoviário é indispensável para a entrega final, conectando os grandes terminais e bases às distribuidoras regionais.
-            </p>
-          </div>
-
-          <div class="card-clean">
-            <div class="card-badge badge-blue">
-              SEGURANÇA
-            </div>
-            <h3 class="card-heading">Tanques Selados de Alumínio</h3>
-            <p class="card-paragraph">
-              Construídos com ligas de alumínio de alta resistência e válvulas que impedem vazamento de vapores inflamáveis para a atmosfera.
-            </p>
-          </div>
-
-          <div class="card-clean accent-gold">
-            <div class="card-badge badge-gold">
-              ESTABILIDADE
-            </div>
-            <h3 class="card-heading">Controle Anti-Tombamento</h3>
-            <p class="card-paragraph">
-              Sistemas eletrônicos de estabilidade que auxiliam o motorista em curvas e frenagens bruscas, garantindo viagens tranquilas.
-            </p>
-          </div>
-        </div>
-
-        <div style="text-align: center; margin-top: 4.5rem;">
-          <a href="maritimo.html" class="btn btn-blue btn-lg">
-            Próximo: Modal Marítimo (Azul Claro) ➔
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         COMO FUNCIONA NA PRÁTICA — TRANSPORTE RODOVIÁRIO
-         ========================================================================== -->
-    <section class="section section-dark-blue">
-      <div class="container">
+        <!-- ========== COMO FUNCIONA? — 4 ETAPAS ========== -->
         <div class="section-header">
-          <span class="eyebrow-tag" style="background: rgba(255,122,0,0.12); color: var(--orange-energy); border-color: rgba(255,122,0,0.3);">
-            🚛 ENTENDA O PROCESSO
-          </span>
-          <h2 class="section-title">Como Funciona na Prática</h2>
+          <h2 class="section-title">Como funciona?</h2>
           <div class="gradient-bar"></div>
-          <p class="section-desc">
-            Entenda como o petróleo é transportado pelas rodovias: do carregamento ao destino final, passando pelo monitoramento e segurança.
-          </p>
         </div>
 
-        <!-- Mini fluxograma -->
-        <div class="mini-process">
-          <div class="mini-step">
-            <div class="mini-step-dot" style="background: linear-gradient(135deg,var(--orange-energy),#FF9E00);">1</div>
-            <div class="mini-step-label">Carregamento</div>
+        <div class="visual-process-grid">
+          <div class="visual-process-step">
+            <div class="process-step-number" style="background: linear-gradient(135deg, var(--orange-energy), #FF9E00);">01</div>
+            <div class="process-step-emoji">🚛</div>
+            <h3>Carregamento</h3>
+            <p>Carga preparada no terminal.</p>
           </div>
-          <div class="mini-connector" style="background: linear-gradient(90deg,var(--orange-energy),var(--gold-energy));"></div>
-          <div class="mini-step">
-            <div class="mini-step-dot" style="background: linear-gradient(135deg,var(--orange-energy),#FF9E00);">2</div>
-            <div class="mini-step-label">Trajeto</div>
+
+          <div class="visual-process-step">
+            <div class="process-step-number" style="background: linear-gradient(135deg, var(--orange-energy), #FF9E00);">02</div>
+            <div class="process-step-emoji">🛣️</div>
+            <h3>Saída</h3>
+            <p>Caminhão inicia o trajeto.</p>
           </div>
-          <div class="mini-connector" style="background: linear-gradient(90deg,var(--orange-energy),var(--gold-energy));"></div>
-          <div class="mini-step">
-            <div class="mini-step-dot" style="background: linear-gradient(135deg,var(--orange-energy),#FF9E00);">3</div>
-            <div class="mini-step-label">Monitoramento</div>
+
+          <div class="visual-process-step">
+            <div class="process-step-number" style="background: linear-gradient(135deg, var(--orange-energy), #FF9E00);">03</div>
+            <div class="process-step-emoji">📍</div>
+            <h3>Monitoramento</h3>
+            <p>Rota acompanhada em tempo real.</p>
           </div>
-          <div class="mini-connector" style="background: linear-gradient(90deg,var(--orange-energy),var(--gold-energy));"></div>
-          <div class="mini-step">
-            <div class="mini-step-dot" style="background: linear-gradient(135deg,var(--orange-energy),#FF9E00);">4</div>
-            <div class="mini-step-label">Prevenção</div>
-          </div>
-          <div class="mini-connector" style="background: linear-gradient(90deg,var(--orange-energy),var(--gold-energy));"></div>
-          <div class="mini-step">
-            <div class="mini-step-dot" style="background: linear-gradient(135deg,var(--orange-energy),#FF9E00);">5</div>
-            <div class="mini-step-label">Emergência</div>
-          </div>
-          <div class="mini-connector" style="background: linear-gradient(90deg,var(--orange-energy),var(--gold-energy));"></div>
-          <div class="mini-step">
-            <div class="mini-step-dot" style="background: linear-gradient(135deg,var(--orange-energy),#FF9E00);">6</div>
-            <div class="mini-step-label">Retomada</div>
+
+          <div class="visual-process-step">
+            <div class="process-step-number" style="background: linear-gradient(135deg, var(--orange-energy), #FF9E00);">04</div>
+            <div class="process-step-emoji">📦</div>
+            <h3>Entrega</h3>
+            <p>Carga chega ao destino.</p>
           </div>
         </div>
 
-        <div class="practice-grid">
-          <div class="practice-card">
-            <div class="practice-card-icon icon-bg-orange">🚛</div>
-            <div class="practice-card-body">
-              <div class="practice-card-title">Como a Carga é Transportada</div>
-              <div class="practice-card-desc">O petróleo é bombeado de terminais de armazenamento para tanques herméticos de alumínio nas carretas. Cada caminhão-tanque carrega entre 40.000 e 65.000 litros com compartimentos separados para evitar mistura de produtos.</div>
-            </div>
+        <!-- ========== 3 CARDS VISUAIS ========== -->
+        <div class="info-cards-visual" style="margin-top: 3.5rem;">
+          <div class="info-visual-card" style="border-top: 4px solid var(--petro-blue);">
+            <div class="info-visual-icon">📡</div>
+            <h3>Rastreamento</h3>
+            <p>A localização do caminhão é acompanhada durante o trajeto.</p>
           </div>
 
-          <div class="practice-card">
-            <div class="practice-card-icon icon-bg-sky">📡</div>
-            <div class="practice-card-body">
-              <div class="practice-card-title">Como os Caminhões São Monitorados</div>
-              <div class="practice-card-desc">Cada caminhão possui rastreador GPS que envia localização, velocidade e status do veículo à central a cada 30 segundos. Câmeras de fadiga monitoram o motorista e a central pode falar diretamente com ele pelo rádio.</div>
-            </div>
+          <div class="info-visual-card" style="border-top: 4px solid var(--orange-energy);">
+            <div class="info-visual-icon">🔍</div>
+            <h3>Prevenção</h3>
+            <p>A rota e as condições do veículo são verificadas.</p>
           </div>
 
-          <div class="practice-card">
-            <div class="practice-card-icon icon-bg-red">⚠️</div>
-            <div class="practice-card-body">
-              <div class="practice-card-title">Principais Riscos</div>
-              <div class="practice-card-desc">Os maiores riscos são: tombamento em curvas, colisões com outros veículos, falhas mecânicas nos freios e acidentes em rodovias molhadas. Vazamentos podem ocorrer em casos de impacto severo ou falha nas válvulas.</div>
-            </div>
+          <div class="info-visual-card" style="border-top: 4px solid #dc2626;">
+            <div class="info-visual-icon">🚨</div>
+            <h3>Problema</h3>
+            <p>A equipe é acionada e o transporte é ajustado conforme a situação.</p>
           </div>
+        </div>
 
-          <div class="practice-card">
-            <div class="practice-card-icon icon-bg-green">🛡️</div>
-            <div class="practice-card-body">
-              <div class="practice-card-title">Como os Riscos São Reduzidos</div>
-              <div class="practice-card-desc">Sistemas eletrônicos de estabilidade (ESP), limitadores de velocidade, inspeções obrigatórias antes da partida, treinamentos periódicos para motoristas e seleção criteriosa de rotas com menor histórico de acidentes.</div>
+        <!-- ========== FLUXO DE PROBLEMA ========== -->
+        <div class="problem-flow" style="margin-top: 3.5rem;">
+          <h3 class="problem-flow-title">Se detectar um problema:</h3>
+          <div class="problem-flow-steps">
+            <div class="problem-flow-step">
+              <span class="problem-flow-icon">⚠️</span>
+              <span>Detectou problema</span>
             </div>
-          </div>
-
-          <div class="practice-card">
-            <div class="practice-card-icon icon-bg-orange">🚒</div>
-            <div class="practice-card-body">
-              <div class="practice-card-title">O Que Acontece Quando Ocorre um Problema</div>
-              <div class="practice-card-desc">O motorista aciona o botão de emergência e a central recebe o alerta. A equipe de resposta é despachada, a área é isolada, o trânsito é desviado e os bombeiros são acionados. Kits de contenção evitam que o óleo atinja rios ou solo.</div>
+            <div class="problem-flow-arrow">↓</div>
+            <div class="problem-flow-step">
+              <span class="problem-flow-icon">📢</span>
+              <span>Comunicar equipe</span>
             </div>
-          </div>
-
-          <div class="practice-card">
-            <div class="practice-card-icon icon-bg-gold">🔄</div>
-            <div class="practice-card-body">
-              <div class="practice-card-title">Como a Operação Volta ao Normal</div>
-              <div class="practice-card-desc">Após contenção do acidente e laudo técnico de liberação, um caminhão-reserva assume a carga se necessário. O veículo danificado passa por vistoria completa antes de voltar a operar e o incidente é documentado para prevenção futura.</div>
+            <div class="problem-flow-arrow">↓</div>
+            <div class="problem-flow-step">
+              <span class="problem-flow-icon">🔬</span>
+              <span>Avaliar situação</span>
+            </div>
+            <div class="problem-flow-arrow">↓</div>
+            <div class="problem-flow-step">
+              <span class="problem-flow-icon">⚙️</span>
+              <span>Aplicar procedimento</span>
+            </div>
+            <div class="problem-flow-arrow">↓</div>
+            <div class="problem-flow-step">
+              <span class="problem-flow-icon">✅</span>
+              <span>Retomar com segurança</span>
             </div>
           </div>
         </div>
 
-        <div class="info-highlight-box">
-          <div class="info-highlight-box-icon">🚛</div>
-          <div class="info-highlight-box-text">
-            <strong>No Brasil:</strong> Mais de 60% do petróleo e derivados é transportado por rodovias. A ANP (Agência Nacional do Petróleo) fiscaliza rigorosamente os padrões de segurança dos veículos e exige certificação específica para motoristas de cargas perigosas.
-          </div>
+        <div style="text-align: center; margin-top: 4rem;">
+          <a href="maritimo.html" class="btn btn-blue btn-lg">
+            Próximo: Marítimo ➔
+          </a>
         </div>
       </div>
     </section>

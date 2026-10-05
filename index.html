@@ -63,39 +63,26 @@
   </header>
 
   <main>
-    <!-- ==========================================================================
-         HERO SECTION: COM FUNDO DEGRADÊ SUAVE, LUZES E OLEODUTOS INDUSTRIAIS
-         ========================================================================== -->
+    <!-- ========== HERO: LIMPO, RÁPIDO, IMPACTANTE ========== -->
     <section class="hero-wrapper">
       <canvas id="pipelineCanvas"></canvas>
 
       <div class="container hero-content">
         <div class="eyebrow-tag">
-          ⚡ PROJETO ESCOLAR CRIATIVO • LOGÍSTICA DE PETRÓLEO
+          ⚡ PROJETO ESCOLAR • LOGÍSTICA DE PETRÓLEO
         </div>
 
         <h1 class="hero-title">
-          PetroLog: <span class="highlight-gradient">Energia em Movimento</span> pelo Mundo
+          PetroLog: <span class="highlight-gradient">Energia em Movimento</span>
         </h1>
 
         <p class="hero-subtitle">
-          Descubra de forma rápida, visual e interativa como o petróleo viaja através de uma rede integrada de dutos contínuos, carretas pesadas, navios de cabotagem e trens de alta capacidade.
+          Transporte de petróleo com segurança, tecnologia e eficiência em quatro modalidades.
         </p>
 
-        <div style="display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap;">
-          <a href="dutoviario.html" class="btn btn-orange btn-lg">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
-            Explorar Oleodutos (Destaque)
-          </a>
-          <a href="equipe.html" class="btn btn-blue btn-lg">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-            Conhecer a Equipe de Alunos
-          </a>
-        </div>
-
-        <!-- Vitrine com os 4 Modais Coloridos -->
+        <!-- Vitrine com os 4 Modais -->
         <div class="hero-modals-nav">
-          <!-- Dutoviário: Azul Petróleo (#0F4C81) -->
+          <!-- Dutoviário -->
           <a href="dutoviario.html" class="modal-nav-card theme-duto">
             <div class="modal-icon-circle icon-duto">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
@@ -104,7 +91,7 @@
             <span class="modal-nav-desc" style="color: var(--petro-blue);">Fluxo 24h • Destaque</span>
           </a>
 
-          <!-- Rodoviário: Laranja Energético (#FF7A00) -->
+          <!-- Rodoviário -->
           <a href="rodoviario.html" class="modal-nav-card theme-rodo">
             <div class="modal-icon-circle icon-rodo">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
@@ -113,7 +100,7 @@
             <span class="modal-nav-desc" style="color: var(--orange-energy);">Caminhões Ágeis</span>
           </a>
 
-          <!-- Marítimo: Azul Claro (#4EA8DE) -->
+          <!-- Marítimo -->
           <a href="maritimo.html" class="modal-nav-card theme-mari">
             <div class="modal-icon-circle icon-mari">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 20a6 6 0 0 0 10 0 6 6 0 0 0 10 0M4 16l2-8h12l2 8"/></svg>
@@ -122,7 +109,7 @@
             <span class="modal-nav-desc" style="color: var(--sky-blue);">Grandes Volumes</span>
           </a>
 
-          <!-- Ferroviário: Dourado (#FFC857) -->
+          <!-- Ferroviário -->
           <a href="ferroviario.html" class="modal-nav-card theme-ferro">
             <div class="modal-icon-circle icon-ferro">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M8 19l-3 3M16 19l3 3"/></svg>
@@ -134,312 +121,87 @@
       </div>
     </section>
 
-    <!-- ==========================================================================
-         SEÇÃO: COMO O PETRÓLEO CHEGA AO DESTINO (CARDS DOS MODAIS)
-         ========================================================================== -->
+    <!-- ========== COMO O PETRÓLEO CHEGA AO DESTINO — 4 ETAPAS VISUAIS ========== -->
     <section class="section section-alt-blue">
       <div class="container">
         <div class="section-header">
           <span class="eyebrow-tag" style="background: rgba(15, 76, 129, 0.1); color: var(--petro-blue);">
-            LOGÍSTICA EM AÇÃO
+            🛢️ O CAMINHO DO PETRÓLEO
           </span>
-          <h2 class="section-title">Como o Petróleo Chega ao Destino</h2>
+          <h2 class="section-title">Como o petróleo chega ao destino?</h2>
           <div class="gradient-bar"></div>
-          <p class="section-desc">
-            Cada modal tem características únicas para garantir transporte rápido, seguro e sem desperdícios.
-          </p>
         </div>
 
-        <div class="clean-cards-grid">
-          <!-- Card 1: Dutoviário -->
-          <div class="card-clean">
-            <div class="card-badge badge-blue">
-              MODAL DUTOVIÁRIO
+        <div class="journey-steps">
+          <div class="journey-step" data-step="1">
+            <div class="journey-icon-wrap journey-icon-blue">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6l3-3M12 8l-3-3"/><rect x="3" y="10" width="18" height="11" rx="2"/><path d="M7 15h10"/></svg>
             </div>
-            <h3 class="card-heading">Tubulações Contínuas</h3>
-            <p class="card-paragraph">
-              Tubos de aço carbono enterrados que transportam rios de petróleo sem parar. Operam dia e noite com zero interferência do tráfego urbano e menor emissão de carbono.
-            </p>
-            <div style="margin-top: auto; padding-top: 1.5rem;">
-              <a href="dutoviario.html" class="btn btn-outline-custom" style="border-color: var(--petro-blue); color: var(--petro-blue);">
-                Explorar Oleodutos ➔
-              </a>
-            </div>
+            <h3>Carregamento</h3>
+            <p>A carga é preparada para iniciar o transporte.</p>
           </div>
 
-          <!-- Card 2: Rodoviário -->
-          <div class="card-clean accent-orange">
-            <div class="card-badge badge-orange">
-              MODAL RODOVIÁRIO
-            </div>
-            <h3 class="card-heading">Caminhões Especializados</h3>
-            <p class="card-paragraph">
-              Carretas herméticas com tanques selados de alumínio e freios anti-tombamento para levar o petróleo com rapidez pelas estradas até os pontos de abastecimento.
-            </p>
-            <div style="margin-top: auto; padding-top: 1.5rem;">
-              <a href="rodoviario.html" class="btn btn-outline-custom" style="border-color: var(--orange-energy); color: var(--orange-energy);">
-                Ver os Caminhões ➔
-              </a>
-            </div>
+          <div class="journey-connector">
+            <div class="journey-connector-line"></div>
+            <div class="journey-connector-dot"></div>
           </div>
 
-          <!-- Card 3: Marítimo -->
-          <div class="card-clean accent-sky">
-            <div class="card-badge badge-sky">
-              MODAL MARÍTIMO
+          <div class="journey-step" data-step="2">
+            <div class="journey-icon-wrap journey-icon-orange">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10A15 15 0 0 1 12 2z"/></svg>
             </div>
-            <h3 class="card-heading">Navios de Casco Duplo</h3>
-            <p class="card-paragraph">
-              Embarcações oceânicas reforçadas que transportam milhões de barris ao longo do litoral brasileiro e em alto-mar, protegendo a vida marinha com tecnologia de ponta.
-            </p>
-            <div style="margin-top: auto; padding-top: 1.5rem;">
-              <a href="maritimo.html" class="btn btn-outline-custom" style="border-color: var(--sky-blue); color: #0284C7;">
-                Conhecer Navegação ➔
-              </a>
-            </div>
+            <h3>Transporte</h3>
+            <p>O petróleo segue pelo modal escolhido.</p>
           </div>
+
+          <div class="journey-connector">
+            <div class="journey-connector-line"></div>
+            <div class="journey-connector-dot"></div>
+          </div>
+
+          <div class="journey-step" data-step="3">
+            <div class="journey-icon-wrap journey-icon-sky">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3>Monitoramento</h3>
+            <p>A carga é acompanhada durante o trajeto.</p>
+          </div>
+
+          <div class="journey-connector">
+            <div class="journey-connector-line"></div>
+            <div class="journey-connector-dot"></div>
+          </div>
+
+          <div class="journey-step" data-step="4">
+            <div class="journey-icon-wrap journey-icon-green">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3>Destino</h3>
+            <p>O petróleo chega ao local planejado.</p>
+          </div>
+        </div>
+
+        <!-- Linha de progresso animada -->
+        <div class="journey-progress-bar">
+          <div class="journey-progress-fill"></div>
         </div>
       </div>
     </section>
 
-    <!-- ==========================================================================
-         SEÇÃO: COMO A PETROLOG GARANTE UM TRANSPORTE SEGURO
-         ========================================================================== -->
-    <section class="section" style="background: #fff;">
-      <div class="container">
-
-        <!-- Título da Seção -->
-        <div class="section-header">
-          <span class="eyebrow-tag" style="background: rgba(22,163,74,0.10); color: #16a34a; border-color: rgba(22,163,74,0.3);">
-            🛡️ SEGURANÇA OPERACIONAL
-          </span>
-          <h2 class="section-title">Como a PetroLog Garante um Transporte Seguro</h2>
-          <div class="gradient-bar"></div>
-          <p class="section-desc">
-            Nossa operação combina tecnologia de rastreamento em tempo real, planos de prevenção rigorosos e protocolos de resposta rápida para proteger cada litro de petróleo transportado.
-          </p>
-        </div>
-
-        <!-- ── SUB-SEÇÃO: RASTREAMENTO DAS CARGAS ── -->
-        <div style="margin-bottom: 4.5rem;">
-          <div style="text-align: center; margin-bottom: 2rem;">
-            <span class="section-label label-blue">📡 Rastreamento das Cargas</span>
-            <h3 style="font-family: var(--font-heading); font-size: 1.65rem; font-weight: 800; color: var(--navy-dark); margin-top: 0.4rem;">
-              Monitoramento em Tempo Real
-            </h3>
-            <p style="font-size: 0.95rem; color: #64748b; max-width: 580px; margin: 0.6rem auto 0;">
-              Do ponto de origem ao destino final, cada carga é acompanhada continuamente por nossa central de operações.
-            </p>
-          </div>
-
-          <div class="tracking-flow">
-            <!-- Passo 1 -->
-            <div class="tracking-step">
-              <div class="tracking-icon">🛰️</div>
-              <div class="tracking-card">
-                <div class="tracking-card-title">Monitoramento em Tempo Real</div>
-                <div class="tracking-card-desc">Sensores e GPS transmitem dados a cada segundo para a central de operações</div>
-              </div>
-            </div>
-
-            <!-- Passo 2 -->
-            <div class="tracking-step">
-              <div class="tracking-icon">📍</div>
-              <div class="tracking-card">
-                <div class="tracking-card-title">Localização da Carga</div>
-                <div class="tracking-card-desc">Posição exata do veículo ou navio é exibida em mapa interativo 24h por dia</div>
-              </div>
-            </div>
-
-            <!-- Passo 3 -->
-            <div class="tracking-step">
-              <div class="tracking-icon">🗺️</div>
-              <div class="tracking-card">
-                <div class="tracking-card-title">Controle de Rotas</div>
-                <div class="tracking-card-desc">Rotas são planejadas e ajustadas em tempo real para evitar atrasos e riscos</div>
-              </div>
-            </div>
-
-            <!-- Passo 4 -->
-            <div class="tracking-step">
-              <div class="tracking-icon">✅</div>
-              <div class="tracking-card">
-                <div class="tracking-card-title">Condições de Transporte</div>
-                <div class="tracking-card-desc">Temperatura, pressão e integridade dos tanques são verificadas continuamente</div>
-              </div>
-            </div>
-
-            <!-- Passo 5 -->
-            <div class="tracking-step">
-              <div class="tracking-icon">📡</div>
-              <div class="tracking-card">
-                <div class="tracking-card-title">Comunicação das Equipes</div>
-                <div class="tracking-card-desc">Central de operações, motoristas e equipes de campo conectados em rede segura</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Infográfico visual representativo -->
-          <div class="info-highlight-box">
-            <div class="info-highlight-box-icon">📊</div>
-            <div class="info-highlight-box-text">
-              <strong>Como funciona na prática:</strong> Cada veículo possui um dispositivo rastreador que envia coordenadas GPS, velocidade, nível do tanque e alertas de segurança para a central a cada 30 segundos. A equipe de monitoramento acompanha todas as cargas simultaneamente em um painel unificado.
-            </div>
-          </div>
-        </div>
-
-        <!-- ── SUB-SEÇÃO: COMO EVITAMOS PROBLEMAS ── -->
-        <div style="margin-bottom: 4.5rem;">
-          <div style="text-align: center; margin-bottom: 2rem;">
-            <span class="section-label label-orange">🔍 Prevenção</span>
-            <h3 style="font-family: var(--font-heading); font-size: 1.65rem; font-weight: 800; color: var(--navy-dark); margin-top: 0.4rem;">
-              Como Evitamos Problemas
-            </h3>
-            <p style="font-size: 0.95rem; color: #64748b; max-width: 580px; margin: 0.6rem auto 0;">
-              A melhor ocorrência é aquela que nunca acontece. Por isso investimos fortemente em prevenção.
-            </p>
-          </div>
-
-          <div class="prevention-grid">
-            <div class="prevention-card">
-              <span class="prevention-icon">🔍</span>
-              <div class="prevention-title">Inspeções Periódicas</div>
-              <p style="font-size: 0.78rem; color: #64748b; margin-top: 0.5rem; line-height: 1.5;">Veículos e equipamentos inspecionados antes de cada operação</p>
-            </div>
-            <div class="prevention-card">
-              <span class="prevention-icon">🗺️</span>
-              <div class="prevention-title">Planejamento de Rotas</div>
-              <p style="font-size: 0.78rem; color: #64748b; margin-top: 0.5rem; line-height: 1.5;">Rotas seguras selecionadas com análise de riscos e condições climáticas</p>
-            </div>
-            <div class="prevention-card">
-              <span class="prevention-icon">📊</span>
-              <div class="prevention-title">Monitoramento Contínuo</div>
-              <p style="font-size: 0.78rem; color: #64748b; margin-top: 0.5rem; line-height: 1.5;">Central operacional ativa 24h para detectar anomalias antes que virem problemas</p>
-            </div>
-            <div class="prevention-card">
-              <span class="prevention-icon">🔧</span>
-              <div class="prevention-title">Manutenção Preventiva</div>
-              <p style="font-size: 0.78rem; color: #64748b; margin-top: 0.5rem; line-height: 1.5;">Revisões programadas garantem que equipamentos nunca falhem em campo</p>
-            </div>
-            <div class="prevention-card">
-              <span class="prevention-icon">🎓</span>
-              <div class="prevention-title">Treinamento das Equipes</div>
-              <p style="font-size: 0.78rem; color: #64748b; margin-top: 0.5rem; line-height: 1.5;">Motoristas e operadores treinados continuamente em segurança e emergências</p>
-            </div>
-            <div class="prevention-card">
-              <span class="prevention-icon">🛡️</span>
-              <div class="prevention-title">Protocolos de Segurança</div>
-              <p style="font-size: 0.78rem; color: #64748b; margin-top: 0.5rem; line-height: 1.5;">Procedimentos rigorosos para cada etapa da operação, documentados e auditados</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- ── SUB-SEÇÃO: O QUE FAZER EM CASO DE OCORRÊNCIA ── -->
-        <div>
-          <div style="text-align: center; margin-bottom: 2.5rem;">
-            <span class="section-label label-red">🚨 Resposta a Ocorrências</span>
-            <h3 style="font-family: var(--font-heading); font-size: 1.65rem; font-weight: 800; color: var(--navy-dark); margin-top: 0.4rem;">
-              O Que Fazer em Caso de Ocorrência
-            </h3>
-            <p style="font-size: 0.95rem; color: #64748b; max-width: 580px; margin: 0.6rem auto 0;">
-              Quando um incidente é detectado, nossa equipe segue um protocolo estruturado de 6 etapas para resolver a situação com segurança e rapidez.
-            </p>
-          </div>
-
-          <div class="incident-timeline">
-            <!-- Etapa 1 -->
-            <div class="incident-step">
-              <div class="incident-badge">
-                <span class="incident-badge-icon">🔎</span>
-                <span class="incident-badge-num">ETAPA 1</span>
-              </div>
-              <div class="incident-card">
-                <div class="incident-card-title">Identificação do Problema</div>
-                <div class="incident-card-desc">Sensores automáticos ou equipe de campo detectam a anomalia e registram local, horário e natureza do incidente no sistema.</div>
-              </div>
-            </div>
-
-            <!-- Etapa 2 -->
-            <div class="incident-step">
-              <div class="incident-badge">
-                <span class="incident-badge-icon">📢</span>
-                <span class="incident-badge-num">ETAPA 2</span>
-              </div>
-              <div class="incident-card">
-                <div class="incident-card-title">Comunicação da Equipe Responsável</div>
-                <div class="incident-card-desc">A central de operações aciona imediatamente os supervisores, a equipe de resposta em campo e, se necessário, órgãos regulatórios.</div>
-              </div>
-            </div>
-
-            <!-- Etapa 3 -->
-            <div class="incident-step">
-              <div class="incident-badge">
-                <span class="incident-badge-icon">🚧</span>
-                <span class="incident-badge-num">ETAPA 3</span>
-              </div>
-              <div class="incident-card">
-                <div class="incident-card-title">Isolamento da Área Afetada</div>
-                <div class="incident-card-desc">A área ao redor do incidente é isolada para proteger pessoas, o meio ambiente e os próprios equipamentos, impedindo o agravamento da situação.</div>
-              </div>
-            </div>
-
-            <!-- Etapa 4 -->
-            <div class="incident-step">
-              <div class="incident-badge">
-                <span class="incident-badge-icon">🔬</span>
-                <span class="incident-badge-num">ETAPA 4</span>
-              </div>
-              <div class="incident-card">
-                <div class="incident-card-title">Avaliação da Situação</div>
-                <div class="incident-card-desc">Especialistas avaliam a extensão do problema, os riscos envolvidos e quais recursos serão necessários para a resolução.</div>
-              </div>
-            </div>
-
-            <!-- Etapa 5 -->
-            <div class="incident-step">
-              <div class="incident-badge">
-                <span class="incident-badge-icon">⚙️</span>
-                <span class="incident-badge-num">ETAPA 5</span>
-              </div>
-              <div class="incident-card">
-                <div class="incident-card-title">Aplicação do Plano de Ação</div>
-                <div class="incident-card-desc">O plano de resposta específico para o tipo de incidente é ativado: contenção, reparo, desvio de rota ou acionamento de apoio externo.</div>
-              </div>
-            </div>
-
-            <!-- Etapa 6 -->
-            <div class="incident-step">
-              <div class="incident-badge">
-                <span class="incident-badge-icon">✅</span>
-                <span class="incident-badge-num">ETAPA 6</span>
-              </div>
-              <div class="incident-card">
-                <div class="incident-card-title">Retorno Seguro da Operação</div>
-                <div class="incident-card-desc">Após resolução e verificações técnicas, a operação é retomada com registro completo do ocorrido para prevenção futura.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         CALL TO ACTION DA EQUIPE: FAIXA COM DEGRADÊ AQUECIDO E COLORIDO
-         ========================================================================== -->
+    <!-- ========== CTA EQUIPE ========== -->
     <section class="section section-alt-warm">
       <div class="container" style="text-align: center;">
-        <div style="max-width: 680px; margin: 0 auto;">
+        <div style="max-width: 580px; margin: 0 auto;">
           <span class="eyebrow-tag" style="color: var(--orange-energy); background: rgba(255, 122, 0, 0.1); border-color: rgba(255, 122, 0, 0.3);">
-            HISTÓRIA DA STARTUP ESCOLAR
+            👥 A EQUIPE
           </span>
           <h2 class="section-title">Conheça Quem Criou a PetroLog</h2>
           <div class="gradient-bar"></div>
           <p class="section-desc" style="margin-bottom: 2rem;">
-            A PetroLog nasceu da curiosidade de quatro estudantes sobre a jornada do petróleo. Descubra a história e as funções de Giovanni, Guilherme, Gabriela e Isa no projeto.
+            Giovanni, Guilherme, Gabriela e Isa transformaram curiosidade em projeto.
           </p>
           <a href="equipe.html" class="btn btn-orange btn-lg">
-            Ver a História &amp; os Integrantes ➔
+            Ver a Equipe ➔
           </a>
         </div>
       </div>
@@ -447,11 +209,10 @@
   </main>
 
   <!-- Footer -->
-
   <footer class="site-footer">
     <div class="container">
       <div class="footer-brand">Petro<span>Log</span></div>
-      <p class="footer-text">Trabalho Escolar sobre Transporte de Petróleo • Foco nos Modais e Criatividade</p>
+      <p class="footer-text">Trabalho Escolar sobre Transporte de Petróleo</p>
       <div class="footer-nav">
         <a href="index.html">Início</a>
         <a href="dutoviario.html">Oleodutos</a>
